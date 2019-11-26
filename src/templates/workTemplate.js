@@ -1,4 +1,5 @@
 import React from "react"
+import { Link } from "gatsby"
 import { graphql } from "gatsby"
 
 export default function Template({
@@ -8,15 +9,21 @@ export default function Template({
   const { frontmatter, html } = markdownRemark
   
   return (
-    <div className="blog-post-container">
-      <div className="blog-post">
-        <h1>{frontmatter.title}</h1>
-        <h2>{frontmatter.date}</h2>
-        <div
-          className="blog-post-content"
-          dangerouslySetInnerHTML={{ __html: html }}
-        />
-        <iframe width="90%" height="500" src={frontmatter.workUrl}></iframe>
+    <div>
+      <Link
+        to='/'
+        >← Go back</Link>
+      <div></div>
+      <div className="blog-post-container">
+        <div className="blog-post">
+          <h1>{frontmatter.title}</h1>
+          <h2>{frontmatter.date}</h2>
+          <div
+            className="blog-post-content"
+            dangerouslySetInnerHTML={{ __html: html }}
+          />
+          <iframe width="90%" height="500" src={frontmatter.workUrl} display="block" margin="0 auto"></iframe>
+        </div>
       </div>
     </div>
   )
