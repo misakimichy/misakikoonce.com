@@ -12,11 +12,11 @@ export default function Template({
       <div className="blog-post">
         <h1>{frontmatter.title}</h1>
         <h2>{frontmatter.date}</h2>
-        <a>{frontmatter.workUrl}</a>
         <div
           className="blog-post-content"
           dangerouslySetInnerHTML={{ __html: html }}
         />
+        <iframe width="90%" height="500" src={frontmatter.workUrl}></iframe>
       </div>
     </div>
   )
