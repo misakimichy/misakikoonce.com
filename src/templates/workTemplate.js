@@ -1,12 +1,22 @@
 import React from "react"
 import { Link } from "gatsby"
 import { graphql } from "gatsby"
+import { kebabCase } from "lodash"
+import styled from 'styled-components'
 
 export default function Template({
-  data, // this prop will be injected by the GraphQL query below.
+  data, // this proStackwill beStackinjected by the GraphQL query below.
 }) {
   const { markdownRemark } = data // data.markdownRemark holds your post data
   const { frontmatter, html } = markdownRemark
+
+  // build tags structure for template
+  const tags = frontmatter.tags.map(tag => {
+    return {
+      name: tag,
+      path: `/tags/${kebabCase(tag)}/`,
+    }
+  });
   
   return (
     <div>
@@ -19,9 +29,12 @@ export default function Template({
           <h1>{frontmatter.title}</h1>
           <h2>{frontmatter.date}</h2>
           <ul>
-            {frontmatter.tags.map(tag => {
-              return <li>{tag}</li>
-            })}
+            <Stack>Stack:</Stack>
+            {tags.map(tag =>
+              <Li>
+                <a to={tag.path}>{tag.name}</a>
+              </Li>
+            )}
           </ul>
           <div
             className="blog-post-content"
@@ -46,5 +59,23 @@ export const pageQuery = graphql`
         tags
       }
     }
+  }
+`
+
+const Stack = styled.p`
+  margin-bottom: 0
+`
+
+const Li = styled.li`
+  display: inline-block;
+  margin: 0px;
+
+
+  :before {
+    content: ', ';
+  }
+
+  :nth-child(2):before {
+    display: none;
   }
 `
