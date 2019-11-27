@@ -18,6 +18,11 @@ export default function Template({
         <div className="blog-post">
           <h1>{frontmatter.title}</h1>
           <h2>{frontmatter.date}</h2>
+          <ul>
+            {frontmatter.tags.map(tag => {
+              return <li>{tag}</li>
+            })}
+          </ul>
           <div
             className="blog-post-content"
             dangerouslySetInnerHTML={{ __html: html }}
@@ -38,6 +43,7 @@ export const pageQuery = graphql`
         path
         title
         workUrl
+        tags
       }
     }
   }
