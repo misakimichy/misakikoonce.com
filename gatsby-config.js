@@ -1,21 +1,19 @@
 module.exports = {
     siteMetadata: {
         title: `Misaki Koonce`,
-        description: `Misaki Koonce portfolio by Gatsby`,
-        copyrights: 'Misaki Koonce',
-        author: `@misakimichy`,
-        logo: {
-          src: '',
-          alt: '',
+        description: `This is my personal website. I enjoy frontend software development.`,
+        author: `Misaki Koonce`,
+        siteUrl: `https://misakikoonce.com`,
+        social: {
+          twitter: 'misakimichy',
         },
     },
     plugins: [
         {
             resolve: `gatsby-source-filesystem`,
             options: {
-                name: `markdown-pages`,
                 path: `${__dirname}/src/markdown-pages`,
-                name: `markdown-pages`,
+                name: `works`,
             },
         },
         `gatsby-transformer-remark`,
@@ -25,5 +23,14 @@ module.exports = {
               pathToConfigModule: `src/utils/typography`,
             },
         },
+        {
+            resolve: `gatsby-plugin-typography`,
+            options: {
+              pathToConfigModule: `src/utils/typography`,
+            },
+        },
+        `gatsby-transformer-sharp`,
+        `gatsby-plugin-sharp`,
+        `gatsby-plugin-slug`,
     ],
 }
