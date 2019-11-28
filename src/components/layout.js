@@ -7,12 +7,12 @@ export default ({ children }) => (
   <Container>
     <Sidebar>
       <Profile>
-        <ProfileImage src="/misaki-real.jpg"></ProfileImage>
+        <ProfileImage src="./misaki-real.jpg"></ProfileImage>
         <Link to={`/`}>
           <h1 css={css`font-size: 30px;`}>Misaki Koonce</h1>
         </Link>
         <p>
-          <a href="/ResumeMisakiKoonce.pdf">Resume</a>
+          <a href="./ResumeMisakiKoonce.pdf">Resume</a>
         </p>
         <Link to={`/about/`}>About</Link>
 
