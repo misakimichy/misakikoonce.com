@@ -11,7 +11,7 @@ const Tag = ({ name, count }) => (
 
 export default Tag
 
-// Style Componentss
+// Style Component
 const Li = styled.li`
     display: inline-block;
 

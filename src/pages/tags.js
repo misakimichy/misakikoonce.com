@@ -1,5 +1,5 @@
 import React from "react"
-import { Link, graphql } from "gatsby"
+import { graphql } from "gatsby"
 
 import Tag from '../components/tag'
 
@@ -20,12 +20,6 @@ const TagPage = ({ data }) => {
     const tags = Array.from(Object.keys(mapping)).sort((b, a) =>
         mapping[a] - mapping[b]
     )
-
-    // totalCount
-    // const { totalCount } = allMarkdownRemark
-    // const tagHeader = `${totalCount} tag${
-    // totalCount === 1 ? "" : "s"
-    // }`
 
   return (
     <div>
