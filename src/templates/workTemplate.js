@@ -2,7 +2,7 @@ import React from "react"
 import { Link } from "gatsby"
 import { graphql } from "gatsby"
 import { kebabCase } from "lodash"
-import styled from 'styled-components'
+import { Li } from '../styles/styles'
 
 export default function Template({
   data, // this proStackwill beStackinjected by the GraphQL query below.
@@ -28,14 +28,16 @@ export default function Template({
         <div className="blog-post">
           <h1>{frontmatter.title}</h1>
           <h2>{frontmatter.date}</h2>
-          <ul>
-            <Stack>Stack:</Stack>
-            {tags.map(tag =>
-              <Li>
-                <Link to={tag.path}>{tag.name}</Link>
-              </Li>
-            )}
-          </ul>
+          <div>
+            Stack:
+            <ul>
+              {tags.map(tag =>
+                <Li>
+                  <Link to={tag.path}>{tag.name}</Link>
+                </Li>
+              )}
+            </ul>
+          </div>
           <div
             className="blog-post-content"
             dangerouslySetInnerHTML={{ __html: html }}
@@ -59,24 +61,5 @@ export const pageQuery = graphql`
         tags
       }
     }
-  }
-`
-
-// Style Components
-const Stack = styled.p`
-  margin-bottom: 0
-`
-
-const Li = styled.li`
-  display: inline-block;
-  margin: 0px;
-
-
-  :before {
-    content: ', ';
-  }
-
-  :nth-child(2):before {
-    display: none;
   }
 `

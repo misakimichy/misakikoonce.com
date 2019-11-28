@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import { kebabCase } from 'lodash'
-import styled from 'styled-components'
+import { Li } from '../styles/styles'
 
 const Tag = ({ name, count }) => (
     <Li>
@@ -10,17 +10,3 @@ const Tag = ({ name, count }) => (
 );
 
 export default Tag
-
-// Style Component
-const Li = styled.li`
-    display: inline-block;
-
-
-    :before {
-    content: ', ';
-    }
-
-    :first-child:before {
-    display: none;
-    }
-`
