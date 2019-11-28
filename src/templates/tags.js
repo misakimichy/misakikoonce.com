@@ -1,9 +1,6 @@
 import React from "react"
 import PropTypes from "prop-types"
-import kebabCase from "lodash/kebabCase"
-// Components
 import { Link, graphql } from "gatsby"
-import { Helmet } from "react-helmet"
 
 const Tags = ({ pageContext, data }) => {
   const { tag } = pageContext
@@ -19,9 +16,10 @@ const Tags = ({ pageContext, data }) => {
         {edges.map(({ node }) => {
           const { slug } = node.fields
           const { title } = node.frontmatter
+          const path = `/works/${slug}`
           return (
             <li key={slug}>
-              <Link to={slug}>{title}</Link>
+              <Link to={path}>{title}</Link>
             </li>
           )
         })}

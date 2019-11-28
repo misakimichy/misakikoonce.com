@@ -32,7 +32,7 @@ export default function Template({
             <Stack>Stack:</Stack>
             {tags.map(tag =>
               <Li>
-                <a to={tag.path}>{tag.name}</a>
+                <Link to={tag.path}>{tag.name}</Link>
               </Li>
             )}
           </ul>
@@ -62,6 +62,7 @@ export const pageQuery = graphql`
   }
 `
 
+// Style Components
 const Stack = styled.p`
   margin-bottom: 0
 `
