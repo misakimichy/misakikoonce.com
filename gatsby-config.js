@@ -8,6 +8,7 @@ module.exports = {
           twitter: 'misakimichy',
         },
     },
+    pathPrefix: "/misakikoonce.com",
     plugins: [
         {
             resolve: `gatsby-source-filesystem`,
