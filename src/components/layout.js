@@ -1,34 +1,22 @@
 import React from "react"
-import { css } from "@emotion/core"
 import { Link } from "gatsby"
-import { rhythm } from "../utils/typography"
-import { Container, Sidebar } from "../styles/styles"
+import { css } from "@emotion/core"
+import { Container, Sidebar, Profile, ProfileImage } from "../styles/styles"
 
 export default ({ children }) => (
   <Container>
     <Sidebar>
-      <Link to={`/`}>
-        <h1
-          css={css`
-            margin-bottom: ${rhythm(2)};
-            display: inline-block;
-            font-style: normal;
-          `}
-        >
-          Misaki Koonce
-        </h1>
-      </Link>
-      <p>
-        <a href="/ResumeMisakiKoonce.pdf">Resume</a>
-      </p>
-      <Link
-        to={`/about/`}
-        css={css`
-          float: right;
-        `}
-      >
-        About
-      </Link>
+      <Profile>
+        <ProfileImage src="/misaki-real.jpg"></ProfileImage>
+        <Link to={`/`}>
+          <h1 css={css`font-size: 30px;`}>Misaki Koonce</h1>
+        </Link>
+        <p>
+          <a href="/ResumeMisakiKoonce.pdf">Resume</a>
+        </p>
+        <Link to={`/about/`}>About</Link>
+
+      </Profile>
     </Sidebar>
     {children}
   </Container>
