@@ -19,7 +19,7 @@ export default ({ children }) => (
         </h1>
       </Link>
       <p>
-        <a href="resume/ResumeMisakiKoonce.pdf">Resume</a>
+        <a href="/ResumeMisakiKoonce.pdf">Resume</a>
       </p>
       <Link
         to={`/about/`}
