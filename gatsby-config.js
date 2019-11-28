@@ -5,7 +5,9 @@ module.exports = {
         author: `Misaki Koonce`,
         siteUrl: `https://misakikoonce.com`,
         social: {
-          twitter: 'misakimichy',
+            GitHub: 'misakimichy',
+            LinkedIn: 'https://www.linkedin.com/in/misakikoonce',
+            twitter: 'misakimichy',
         },
     },
     pathPrefix: "/misakikoonce.com",
