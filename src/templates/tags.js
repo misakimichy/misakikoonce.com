@@ -3,7 +3,7 @@ import PropTypes from "prop-types"
 import { Link, graphql } from "gatsby"
 
 const Tags = ({ pageContext, data }) => {
-  const { tag } = pageContext
+    const { tag } = pageContext
   const { edges, totalCount } = data.allMarkdownRemark
   const tagHeader = `${totalCount} post${
     totalCount === 1 ? "" : "s"
@@ -24,10 +24,6 @@ const Tags = ({ pageContext, data }) => {
           )
         })}
       </ul>
-      {/*
-              This links to a page that does not yet exist.
-              You'll come back to it!
-            */}
       <Link to="/tags">All tags</Link>
     </div>
   )
