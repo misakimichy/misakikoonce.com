@@ -1,14 +1,18 @@
 module.exports = {
     siteMetadata: {
-        title: `Misaki Koonce`,
-        description: `This is my personal website. I enjoy frontend software development.`,
-        author: `Misaki Koonce`,
-        siteUrl: `https://misakikoonce.com`,
-        social: {
-            GitHub: 'misakimichy',
-            LinkedIn: 'https://www.linkedin.com/in/misakikoonce',
-            twitter: 'misakimichy',
+        defaultTitle: "Misaki Koonce",
+        logo: "assets/misaki-real.jpg",
+        author: "Misaki Koonce",
+        url: "https://misakikoonce.com",
+        description: "This is my personal website. I enjoy frontend software development.",
+        socialLinks: {
+            twitter: "https://twitter.com/misakimichy",
+            GitHub: "https://github.com/misakimichy",
+            LinkedIn: "https://www.linkedin.com/in/misakikoonce",
         },
+        contact: {
+            email: "email@test.com"
+        }
     },
     pathPrefix: "/misakikoonce.com",
     plugins: [
