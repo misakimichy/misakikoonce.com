@@ -4,7 +4,7 @@ module.exports = {
         logo: './static/misaki-real.jpg',
         author: "Misaki Koonce",
         siteUrl: "https://misakikoonce.com",
-        description: "This is my personal website. I enjoy frontend software development.",
+        description: "Web Developer in training. Originally from Tokyo and now in Seattle. I enjoy frontend software development.",
         socialLinks: {
             twitter: "https://twitter.com/misakimichy",
             GitHub: "https://github.com/misakimichy",
