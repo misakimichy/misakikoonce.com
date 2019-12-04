@@ -3,6 +3,7 @@ import { Link, StaticQuery, graphql } from "gatsby"
 import PropTypes from 'prop-types'
 import { css } from "@emotion/core"
 import { Container, Sidebar, Profile, ProfileImage } from "../styles/styles"
+import logo from './../../static/misaki-real.jpg'
 
 const Layout = ({ children }) => (
   <StaticQuery
@@ -22,7 +23,7 @@ const Layout = ({ children }) => (
         <Container>
           <Sidebar>
             <Profile>
-              <ProfileImage src="./misaki-real.jpg"></ProfileImage>
+              <ProfileImage src={logo}></ProfileImage>
               <Link to={`/`}>
               <h1 css={css`font-size: 30px;`}>{data.site.siteMetadata.defaultTitle}</h1>
               <p>{data.site.siteMetadata.description}</p>
