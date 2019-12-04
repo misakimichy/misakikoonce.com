@@ -3,7 +3,7 @@ import Helmet from 'react-helmet'
 import PropTypes from 'prop-types'
 import { StaticQuery, graphql } from 'gatsby'
 // import {
-//     defaultTitle,
+//     title,
 //     logo,
 //     author,
 //     url,
@@ -13,31 +13,31 @@ import { StaticQuery, graphql } from 'gatsby'
 //     logo
 // } from 'data'
 
-const SEO = ({ defaultTitle, description, logo }) => (
+const SEO = ({ title, description, logo }) => (
     <StaticQuery
         query={query}
         render={({
             site: {
                 siteMetadata: {
-                    defaultTitle,
+                    title,
                     defaultDescription,
-                    url,
+                    siteUrl,
                     defaultImage
                 }
             }
         }) => {
             const seo = {
-                title: title || defaultTitle,
+                title: title || title,
                 description: description || defaultDescription,
-                logo: `${url}${logo || defaultImage}`,
-                url: url,
+                logo: `${siteUrl}${logo || defaultImage}`,
+                siteUrl: siteUrl,
             }
             return (
                 <>
                     <Helmet title={seo.title}>
                         <meta name="description" content={seo.description} />
                         <meta name="logo" content={seo.logo} />
-                        {seo.url && <meta property="og:url" content={seo.url} />}
+                        {seo.siteUrl && <meta property="og:siteUrl" content={seo.siteUrl} />}
                         {seo.title && <meta property="og:title" content={seo.title} />}
                         {seo.description && <meta property="og:description" content={seo.description} />}
                         {seo.logo && <meta property="og:logo" content={seo.logo} />}
@@ -65,9 +65,9 @@ const query = graphql`
     query SEO {
         site {
             siteMetadata {
-                defaultTitle: defaultTitle
+                title: title
                 defaultDescription: description
-                url: url
+                siteUrl: siteUrl
                 logo: logo
             }
         }

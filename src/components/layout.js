@@ -1,7 +1,6 @@
 import React from "react"
 import { Link, StaticQuery, graphql } from "gatsby"
 import PropTypes from 'prop-types'
-import { css } from "@emotion/core"
 import { Container, Sidebar, Profile, ProfileImage } from "../styles/styles"
 import logo from './../../static/misaki-real.jpg'
 
@@ -11,7 +10,7 @@ const Layout = ({ children }) => (
       query SiteQuery {
         site {
           siteMetadata {
-            defaultTitle
+            title
             description
             author
           }
@@ -25,7 +24,7 @@ const Layout = ({ children }) => (
             <Profile>
               <ProfileImage src={logo}></ProfileImage>
               <Link to={`/`}>
-              <h1 css={css`font-size: 30px;`}>{data.site.siteMetadata.defaultTitle}</h1>
+              <h1>{data.site.siteMetadata.title}</h1>
               <p>{data.site.siteMetadata.description}</p>
               </Link>
               <p>

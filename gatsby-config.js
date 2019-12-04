@@ -1,9 +1,9 @@
 module.exports = {
     siteMetadata: {
-        defaultTitle: "Misaki Koonce",
+        title: "Misaki Koonce",
         logo: './static/misaki-real.jpg',
         author: "Misaki Koonce",
-        url: "https://misakikoonce.com",
+        siteUrl: "https://misakikoonce.com",
         description: "This is my personal website. I enjoy frontend software development.",
         socialLinks: {
             twitter: "https://twitter.com/misakimichy",
