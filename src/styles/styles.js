@@ -1,13 +1,12 @@
 import styled from 'styled-components'
 
-
 export const Container = styled.div`
     width: 100%
-    display: flex;
+    display: flex
 `
     
-export const Sidebar = styled.div`
-    width: 22%;
+export const Sidenav = styled.div`
+    width: 22vw;
     height: 100vh
     border-right: 1px solid #efefef
 `
@@ -22,9 +21,12 @@ export const ProfileImage = styled.img`
     border-radius: 50%;
 `
 
+export const Main = styled.div`
+    width: 75%;
+`
+
 export const Li = styled.li`
     display: inline-block;
-
 
     :before {
     content: ', ';
