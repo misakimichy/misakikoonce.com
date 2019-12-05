@@ -2,11 +2,10 @@ import React from "react"
 import { Link, graphql } from "gatsby"
 import { kebabCase } from "lodash"
 import { Li } from '../styles/styles'
+import Layout from '../components/layout'
 
-export default function Template({
-  data, // this proStackwill beStackinjected by the GraphQL query below.
-}) {
-  const { markdownRemark } = data // data.markdownRemark holds your post data
+const Template = ({ data }) => {
+  const { markdownRemark } = data
   const { frontmatter, html } = markdownRemark
 
   // build tags structure for template
@@ -18,35 +17,37 @@ export default function Template({
   });
   
   return (
-    <div>
-      <Link
-        to='/'
-        >← Go back</Link>
-      <div></div>
-      <div className="blog-post-container">
-        <div className="blog-post">
-          <h1>{frontmatter.title}</h1>
-          <h2>{frontmatter.date}</h2>
+    <Layout>
+      <div>
+        <Link
+          to='/'
+          >← Go back</Link>
+        <div>
           <div>
-            Stack:
-            <ul>
-              {tags.map(tag =>
-                <Li>
-                  <Link to={tag.path}>{tag.name}</Link>
-                </Li>
-              )}
-            </ul>
+            <h1>{frontmatter.title}</h1>
+            <h4>{frontmatter.date}</h4>
+            <div>
+              Stack:
+              <ul>
+                {tags.map(tag =>
+                  <Li>
+                    <Link to={tag.path}>{tag.name}</Link>
+                  </Li>
+                )}
+              </ul>
+            </div>
+            <main
+              dangerouslySetInnerHTML={{ __html: html }}
+            />
+            <iframe width="90%" height="500" src={frontmatter.workUrl} display="block" margin="0 auto"></iframe>
           </div>
-          <div
-            className="blog-post-content"
-            dangerouslySetInnerHTML={{ __html: html }}
-          />
-          <iframe width="90%" height="500" src={frontmatter.workUrl} display="block" margin="0 auto"></iframe>
         </div>
       </div>
-    </div>
+    </Layout>
   )
 }
+
+export default Template
 
 export const pageQuery = graphql`
   query($path: String!) {
