@@ -2,6 +2,7 @@ import React from 'react'
 import { graphql } from 'gatsby'
 
 import Tag from '../components/tag'
+import Layout from '../components/layout'
 
 const TagPage = ({ data }) => {
     const { allMarkdownRemark } = data;
@@ -22,14 +23,16 @@ const TagPage = ({ data }) => {
     )
 
   return (
-    <div>
-        <h1>Tag list</h1>
-        <ul>
-            {tags.map(tag => (
-                <Tag key={tag} name={tag} count={mapping[tag]} />
-            ))}
-        </ul>
-    </div>
+    <Layout>
+      <div>
+          <h1>Tag list</h1>
+          <ul>
+              {tags.map(tag => (
+                  <Tag key={tag} name={tag} count={mapping[tag]} />
+              ))}
+          </ul>
+      </div>
+    </Layout>
   )
 }
 export default TagPage;
