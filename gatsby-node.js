@@ -54,7 +54,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   result.data.allMarkdownRemark.edges.forEach(({ node }) => {
     createPage({
       path: `/works/`,
-      component: works,
+      component: workList,
       context: {
         title: workList
       }
