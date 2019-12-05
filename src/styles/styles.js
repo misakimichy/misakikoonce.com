@@ -1,12 +1,11 @@
 import styled from 'styled-components'
 
 export const Container = styled.div`
-    width: 100%
     display: flex
 `
     
-export const Sidenav = styled.div`
-    width: 22vw;
+export const Sidenav = styled.aside`
+    width: 35%
     height: 100vh
     border-right: 1px solid #efefef
 `
@@ -22,7 +21,7 @@ export const ProfileImage = styled.img`
 `
 
 export const Main = styled.div`
-    width: 75%;
+    width: 120vw;
 `
 
 export const Li = styled.li`

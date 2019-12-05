@@ -1,11 +1,11 @@
 import React from 'react'
 import Sidebar from './sidebar'
-import { Container } from '../styles/styles'
+import { Container, Main } from '../styles/styles'
 
 const Layout = ({ children, location }) => (
   <Container>
     <Sidebar location={location}/>
-    {children}
+    <Main>{children}</Main>
   </Container>
 )
 
