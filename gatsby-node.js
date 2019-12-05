@@ -5,6 +5,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions
 
   const workTemplate = path.resolve(`src/templates/workTemplate.js`)
+  const workList = path.resolve(`src/pages/works.js`)
   const tagTemplate = path.resolve("src/templates/tags.js")
 
   const result = await graphql(`
@@ -21,6 +22,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
             frontmatter {
               path
               tags
+              title
             }
           }
         }
@@ -39,7 +41,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     return
   }
 
-  // Create works pages
+  // Create each work pages
   result.data.allMarkdownRemark.edges.forEach(({ node }) => {
     createPage({
       path: node.frontmatter.path,
@@ -48,7 +50,18 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     })
   })
 
-  // Create tags pages
+  // Create works list page
+  result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+    createPage({
+      path: `/works/`,
+      component: works,
+      context: {
+        title: workList
+      }
+    })
+  })
+
+  // Create tags page
   result.data.tagsGroup.group.forEach(tag => {
     createPage({
       path: `/tags/${_.kebabCase(tag.fieldValue)}/`,
