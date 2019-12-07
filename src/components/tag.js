@@ -5,7 +5,7 @@ import { Li } from '../styles/styles'
 
 const Tag = ({ name, count }) => (
     <Li>
-        <Link to={`/tags/${kebabCase(name)}`}>{name} ({count})</Link>
+        <Link to={`/tags/${kebabCase(name)}`}>{name} {count !== null ? (count) : ''}</Link>
     </Li>
 );
 
