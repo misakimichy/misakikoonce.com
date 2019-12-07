@@ -2,6 +2,7 @@ import React from 'react'
 import { Link, StaticQuery, graphql } from 'gatsby'
 import { Sidenav, Profile, ProfileImage } from '../styles/styles'
 import logo from './../../static/misaki-real.jpg'
+import resume from './../../static/ResumeMisakiKoonce.pdf'
 
 const Sidebar = () => (
     <StaticQuery
@@ -20,12 +21,12 @@ const Sidebar = () => (
             <>
                 <Sidenav>
                     <Profile>
-                        <ProfileImage src={logo}></ProfileImage>
                         <Link to="/">
+                            <ProfileImage src={logo}></ProfileImage>
                             <h1>{data.site.siteMetadata.title}</h1>
-                            <p>{data.site.siteMetadata.description}</p>
                         </Link>
-                        <p><a href="./ResumeMisakiKoonce.pdf">Resume</a></p>
+                            <p>{data.site.siteMetadata.description}</p>
+                        <p><a href={resume}>Resume</a></p>
                         <Link to="/about/">About</Link>     
                     </Profile>
                 </Sidenav>
