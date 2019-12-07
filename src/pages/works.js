@@ -4,7 +4,7 @@ import Works from '../components/works'
 import Layout from '../components/layout'
 
 const WorkPage = ({ data }) => {
-    const { allMarkdownRemark } = data;
+    const { allMarkdownRemark } = data
     const titles = []
     allMarkdownRemark.edges.forEach(({ node }) => {
         const { title } = node.frontmatter;

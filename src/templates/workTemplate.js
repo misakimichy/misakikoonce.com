@@ -29,8 +29,8 @@ const Template = ({ data }) => {
             <div>
               Stack:
               <ul>
-                {tags.map(tag =>
-                  <Li>
+                {tags.map((tag, index) =>
+                  <Li key={index}>
                     <Link to={tag.path}>{tag.name}</Link>
                   </Li>
                 )}

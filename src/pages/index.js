@@ -1,15 +1,47 @@
 import React from 'react'
-import { Link } from 'gatsby'
+import { Link, graphql } from 'gatsby'
+import { kebabCase } from "lodash"
+
 import Layout from "../components/layout"
 
-export default () => (
-    <Layout>
-        <main>
-            <h1>Work</h1>
-            <ul>
-                <li><Link to="/works/brown-and-cony">Brown and Cony</Link></li>
-                <li><Link to="/works/project-miguel">Project Miguel</Link></li>
-            </ul>
-        </main>
-    </Layout>
-)
+const Main = ({ data }) => {
+    const { allMarkdownRemark } = data
+    const titles = allMarkdownRemark.edges.map(({ node }) => {
+        const { title } = node.frontmatter
+        return {
+            name: title,
+            path: `/works/${kebabCase(title)}/`,
+        }
+    })
+    
+    return (
+        <Layout>
+            <main>
+                <h1>Work</h1>
+                <ul>
+                    {titles.map((title, index) =>
+                        <li key={index}>
+                            <Link to={title.path}>{title.name}</Link>
+                        </li>
+                    )}
+                </ul>
+            </main>
+        </Layout>
+    )
+}
+
+export default Main
+
+export const pageQuery = graphql`
+    query {
+        allMarkdownRemark {
+            edges {
+                node {
+                    frontmatter {
+                        title
+                    }
+                }
+            }
+        }
+    }
+`
