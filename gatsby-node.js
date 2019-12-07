@@ -6,7 +6,8 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
   const workTemplate = path.resolve(`src/templates/workTemplate.js`)
   const workList = path.resolve(`src/pages/works.js`)
-  const tagTemplate = path.resolve("src/templates/tags.js")
+  const tagTemplate = path.resolve(`src/templates/tags.js`)
+  const notFound = path.resolve(`src/pages/404.js`)
 
   const result = await graphql(`
     {
@@ -71,4 +72,11 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       },
     })
   })
+}
+
+// Set the custom 404 Page
+exports.onCreatePage = ({ page }) => {
+  if(page.path.startsWith('/404')) {
+    page.layout = '404.index'
+  }
 }
