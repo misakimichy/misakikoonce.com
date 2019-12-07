@@ -25,7 +25,6 @@ const Sidebar = () => (
                     siteMetadata {
                         title
                         description
-                        author
                         socialLinks {
                             twitter
                             github
@@ -53,11 +52,11 @@ const Sidebar = () => (
                             />
                             <SocialIcon
                                 href={data.site.siteMetadata.socialLinks.github}
-                                icon={['fab', 'github']}
+                                icon={['fab', 'github-alt']}
                             />
                             <SocialIcon
                                 href={data.site.siteMetadata.socialLinks.linkedin}
-                                icon={['fab', 'linkedin']}
+                                icon={['fab', 'linkedin-in']}
                             />
                         </div>
                     </Profile>
