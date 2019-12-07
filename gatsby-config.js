@@ -7,8 +7,8 @@ module.exports = {
         description: "Web Developer in training. Originally from Tokyo and now in Seattle. I enjoy frontend software development.",
         socialLinks: {
             twitter: "https://twitter.com/misakimichy",
-            GitHub: "https://github.com/misakimichy",
-            LinkedIn: "https://www.linkedin.com/in/misakikoonce",
+            github: "https://github.com/misakimichy",
+            linkedin: "https://www.linkedin.com/in/misakikoonce",
         },
         contact: {
             email: "email@test.com"
