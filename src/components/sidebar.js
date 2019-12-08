@@ -2,8 +2,6 @@ import React from 'react'
 import { Link, StaticQuery, graphql } from 'gatsby'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Sidenav, Profile, ProfileImage } from '../styles/styles'
-import logo from './../../static/misaki-real.png'
-import resume from './../../static/ResumeMisakiKoonce.pdf'
 
 const SocialIcon = ({ href, icon }) => (
     <a
@@ -23,7 +21,9 @@ const Sidebar = () => (
             query SiteQuery {
                 site {
                     siteMetadata {
+                        logo
                         title
+                        resume
                         description
                         socialLinks {
                             twitter
@@ -39,11 +39,11 @@ const Sidebar = () => (
                 <Sidenav>
                     <Profile>
                         <Link to="/">
-                            <ProfileImage src={logo}></ProfileImage>
+                            <ProfileImage src={data.site.siteMetadata.logo}></ProfileImage>
                         </Link>
                         <h1>{data.site.siteMetadata.title}</h1>
                         <p>{data.site.siteMetadata.description}</p>
-                        <p><a href={resume}>Resume</a></p>
+                        <p><a href={data.site.siteMetadata.resume}>Resume</a></p>
                         <Link to="/about/">About</Link>
                         <div>
                             <SocialIcon

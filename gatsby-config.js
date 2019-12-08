@@ -1,7 +1,7 @@
 module.exports = {
     siteMetadata: {
         title: "Misaki Koonce",
-        logo: 'misaki-real.png',
+        logo: '/misaki-real.png',
         author: "Misaki Koonce",
         siteUrl: "https://misakikoonce.com",
         description: "Web Developer in training. Originally from Tokyo and now in Seattle. I enjoy frontend software development.",
@@ -12,9 +12,9 @@ module.exports = {
         },
         contact: {
             email: "email@test.com"
-        }
+        },
+        resume: "/ResumeMisakiKoonce.pdf"
     },
-    pathPrefix: "/misakikoonce.com",
     plugins: [
         {
             resolve: `gatsby-source-filesystem`,
@@ -23,6 +23,14 @@ module.exports = {
                 name: `works`,
             },
         },
+        {
+            resolve: `gatsby-source-filesystem`,
+            options: {
+                path: `${__dirname}/static`,
+                name: `profile`,
+            },
+        },
+
         {
             resolve: `gatsby-transformer-remark`,
             options: {

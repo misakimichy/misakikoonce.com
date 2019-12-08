@@ -1,6 +1,7 @@
 import React from 'react'
 import PropTypes from 'prop-types'
 import { Link, graphql } from 'gatsby'
+import { kebabCase } from "lodash"
 import Layout from '../components/layout'
 
 const Tags = ({ pageContext, data }) => {
@@ -16,11 +17,10 @@ const Tags = ({ pageContext, data }) => {
         <h1>{tagHeader}</h1>
         <ul>
           {edges.map(({ node }) => {
-            const { slug } = node.fields
             const { title } = node.frontmatter
-            const path = `/works/${slug}`
+            const path = `/works/${kebabCase(title)}`
             return (
-              <li key={slug}>
+              <li key={title}>
                 <Link to={path}>{title}</Link>
               </li>
             )
