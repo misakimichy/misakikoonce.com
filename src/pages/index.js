@@ -1,6 +1,7 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 import { kebabCase } from "lodash"
+import './styles.css'
 import Layout from '../components/layout'
 import Card from '../components/card'
 
@@ -8,14 +9,12 @@ const Main = ({ data }) => {
     const { allMarkdownRemark } = data
     const cards = allMarkdownRemark.edges.map(({ node }) => {
         const { title } = node.frontmatter
-        const { date } = node.frontmatter
         const { description } = node.frontmatter
         const { tags } = node.frontmatter
         const { src } = node.frontmatter.thumbnail.childImageSharp.fluid
         return {
             name: title,
             path: `/projects/${kebabCase(title)}/`,
-            date: date,
             description: description,
             tags: tags,
             thumbnail: src
@@ -25,12 +24,12 @@ const Main = ({ data }) => {
         <Layout>
             <main>
                 <h1>Projects</h1>
-                <ul>
+                <ul className="project-container">
                     {cards.map((card, index) =>
                         <Card
                             key={index}
+                            className="project-card"
                             title={card.name}
-                            date={card.date}
                             url={card.path}
                             description={card.description}
                             tags={card.tags}
@@ -52,7 +51,6 @@ export const pageQuery = graphql`
                 node {
                     frontmatter {
                         title
-                        date
                         description
                         tags
                         thumbnail {

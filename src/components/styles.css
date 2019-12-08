@@ -18,3 +18,32 @@
 .icon-span {
     margin-left: 10px
 }
+
+/* main contents' styling */
+/* projects */
+
+.project-card {
+    border: 1px solid #efefef;
+    border-radius: 4px;
+    max-width: 48%;
+    padding: 1.2rem;
+}
+
+.card-thumbnail {
+    margin-bottom: 0;
+}
+
+.card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.card-description {
+    max-width: 90%;
+}
+
+.card-tag {
+
+}
