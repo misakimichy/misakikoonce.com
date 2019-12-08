@@ -54,9 +54,6 @@ module.exports = {
         {
             resolve: `gatsby-plugin-manifest`,
             options: {
-                name: `Misaki Koonce's Portfolio`,
-                short_name: `Misaki Koonce`,
-                start_url: `/`,
             },
         },
         `gatsby-plugin-react-helmet`,
