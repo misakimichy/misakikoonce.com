@@ -12,7 +12,6 @@ const Main = ({ data }) => {
         const { description } = node.frontmatter
         const { tags } = node.frontmatter
         const { src } = node.frontmatter.thumbnail.childImageSharp.fluid
-        console.log(src)
         return {
             name: title,
             path: `/works/${kebabCase(title)}/`,
@@ -22,8 +21,6 @@ const Main = ({ data }) => {
             thumbnail: src
         }
     })
-
-    console.log(cards)
     return (
         <Layout>
             <main>
