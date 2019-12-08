@@ -4,8 +4,8 @@ const _ = require("lodash")
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions
 
-  const workTemplate = path.resolve(`src/templates/workTemplate.js`)
-  const workList = path.resolve(`src/pages/works.js`)
+  const projectTemplate = path.resolve(`src/templates/projectTemplate.js`)
+  const projectList = path.resolve(`src/pages/projects.js`)
   const tagTemplate = path.resolve(`src/templates/tags.js`)
   const notFound = path.resolve(`src/pages/404.js`)
 
@@ -42,22 +42,22 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     return
   }
 
-  // Create each work pages
+  // Create each project pages
   result.data.allMarkdownRemark.edges.forEach(({ node }) => {
     createPage({
       path: node.frontmatter.path,
-      component: workTemplate,
+      component: projectTemplate,
       context: {}, // additional data can be passed via context
     })
   })
 
-  // Create works list page
+  // Create projects list page
   result.data.allMarkdownRemark.edges.forEach(({ node }) => {
     createPage({
-      path: `/works/`,
-      component: workList,
+      path: `/projects/`,
+      component: projectList,
       context: {
-        title: workList
+        title: projectList
       }
     })
   })

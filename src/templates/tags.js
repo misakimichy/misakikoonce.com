@@ -18,7 +18,7 @@ const Tags = ({ pageContext, data }) => {
         <ul>
           {edges.map(({ node }) => {
             const { title } = node.frontmatter
-            const path = `/works/${kebabCase(title)}`
+            const path = `/projects/${kebabCase(title)}`
             return (
               <li key={title}>
                 <Link to={path}>{title}</Link>

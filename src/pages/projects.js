@@ -1,9 +1,9 @@
 import React from 'react'
 import { graphql } from 'gatsby'
-import Works from '../components/works'
+import Projects from '../components/projects'
 import Layout from '../components/layout'
 
-const WorkPage = ({ data }) => {
+const ProjectPage = ({ data }) => {
     const { allMarkdownRemark } = data
     const titles = []
     allMarkdownRemark.edges.forEach(({ node }) => {
@@ -14,10 +14,10 @@ const WorkPage = ({ data }) => {
     return (
         <Layout>
             <div>
-                <h1>All Works</h1>
+                <h1>All projects</h1>
                 <ul>
                     {titles.map(title => (
-                        <Works key={title} name={title}/>
+                        <Projects key={title} name={title}/>
                     ))}
                 </ul>
             </div>
@@ -25,7 +25,7 @@ const WorkPage = ({ data }) => {
     )
 }
 
-export default WorkPage
+export default ProjectPage
 
 export const pageQuery = graphql`
     query {

@@ -39,7 +39,7 @@ const Template = ({ data }) => {
             <main
               dangerouslySetInnerHTML={{ __html: html }}
             />
-            <iframe width="90%" height="500" src={frontmatter.workUrl} display="block" margin="0 auto"></iframe>
+            <iframe width="90%" height="500" src={frontmatter.projectUrl} display="block" margin="0 auto"></iframe>
           </div>
         </div>
       </div>
@@ -57,7 +57,7 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         path
         title
-        workUrl
+        projectUrl
         tags
       }
     }

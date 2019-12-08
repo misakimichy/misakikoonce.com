@@ -14,7 +14,7 @@ const Main = ({ data }) => {
         const { src } = node.frontmatter.thumbnail.childImageSharp.fluid
         return {
             name: title,
-            path: `/works/${kebabCase(title)}/`,
+            path: `/projects/${kebabCase(title)}/`,
             date: date,
             description: description,
             tags: tags,
@@ -24,7 +24,7 @@ const Main = ({ data }) => {
     return (
         <Layout>
             <main>
-                <h1>Work</h1>
+                <h1>Projects</h1>
                 <ul>
                     {cards.map((card, index) =>
                         <Card

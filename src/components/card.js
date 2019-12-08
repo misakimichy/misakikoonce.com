@@ -14,7 +14,7 @@ const Card = ({
     <div>
         <div>
             <div>
-                <img src={thumbnail} alt="thumbnail of the work"/>
+                <img src={thumbnail} alt="project thumbnail"/>
                 <Link to={url}>
                     <h2>{title}</h2>
                 </Link>
