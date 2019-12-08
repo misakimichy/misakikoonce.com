@@ -3,11 +3,12 @@ import styled from 'styled-components'
 export const Container = styled.div`
     display: flex
     padding: 0px
+    margin: 0px
 `
     
 export const Sidenav = styled.aside`
-    width: 40%
     height: 100vh
+    max-width: 450px;
     border-right: 1px solid #efefef
 `
 
