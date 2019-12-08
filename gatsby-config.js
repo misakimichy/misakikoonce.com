@@ -1,7 +1,7 @@
 module.exports = {
     siteMetadata: {
         title: "Misaki Koonce",
-        logo: './static/misaki-real.jpg',
+        logo: 'misaki-real.png',
         author: "Misaki Koonce",
         siteUrl: "https://misakikoonce.com",
         description: "Web Developer in training. Originally from Tokyo and now in Seattle. I enjoy frontend software development.",

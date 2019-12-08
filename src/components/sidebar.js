@@ -2,7 +2,7 @@ import React from 'react'
 import { Link, StaticQuery, graphql } from 'gatsby'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { Sidenav, Profile, ProfileImage } from '../styles/styles'
-import logo from './../../static/misaki-real.jpg'
+import logo from './../../static/misaki-real.png'
 import resume from './../../static/ResumeMisakiKoonce.pdf'
 
 const SocialIcon = ({ href, icon }) => (
