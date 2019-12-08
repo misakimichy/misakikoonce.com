@@ -45,9 +45,6 @@ Tags.propTypes = {
             frontmatter: PropTypes.shape({
               title: PropTypes.string.isRequired,
             }),
-            fields: PropTypes.shape({
-              slug: PropTypes.string.isRequired,
-            }),
           }),
         }).isRequired
       ),
@@ -67,9 +64,6 @@ export const pageQuery = graphql`
       totalCount
       edges {
         node {
-          fields {
-            slug
-          }
           frontmatter {
             title
           }
