@@ -2,22 +2,22 @@ import styled from 'styled-components'
 
 export const Container = styled.div`
     display: flex
+    padding: 0px
 `
     
 export const Sidenav = styled.aside`
-    width: 35%
+    width: 40%
     height: 100vh
     border-right: 1px solid #efefef
 `
 
 export const Profile = styled.div`
     width: 100%;
-    padding: 1.5em;
+    padding: 2.7em;
 `
 
 export const ProfileImage = styled.img`
     margin-bottom: 0px;
-    border-radius: 50%;
 `
 
 export const Main = styled.div`

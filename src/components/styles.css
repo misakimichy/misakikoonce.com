@@ -1,0 +1,20 @@
+.no-underline {
+    background-image: none
+}
+
+.social-links {
+    display: flex;
+    flex-direction: column;
+}
+
+.social-link-item {
+    padding: 10px;
+}
+
+.icon {
+    font-size: 1.3em;
+}
+
+.icon-span {
+    margin-left: 10px
+}
