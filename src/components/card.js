@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link } from 'gatsby'
 import PropTypes from 'prop-types'
-
 import Tag from './tag'
 
 const Card = ({
@@ -9,16 +8,13 @@ const Card = ({
     date,
     url,
     description,
-    tags = []
+    tags = [],
+    thumbnail
 }) => (
     <div>
         <div>
             <div>
-                {/* {tags.map(tag => {
-                    <Tag name={tag} key={tag} />
-                })} */}
-            </div>
-            <div>
+                <img src={thumbnail} alt="thumbnail of the work"/>
                 <Link to={url}>
                     <h2>{title}</h2>
                 </Link>
