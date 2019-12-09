@@ -23,7 +23,7 @@ const Main = ({ data }) => {
     return (
         <Layout>
             <main>
-                <h1>Projects</h1>
+                <h1 className="project-title">Projects</h1>
                 <ul className="project-container">
                     {cards.map((card, index) =>
                         <Card

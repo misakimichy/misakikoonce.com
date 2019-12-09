@@ -3,4 +3,9 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-evenly;
+    margin-left: 0;
+}
+
+.project-title {
+    padding-left: 2.5rem;
 }
