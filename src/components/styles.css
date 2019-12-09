@@ -47,5 +47,15 @@
 }
 
 .card-tag {
+    display: flex;
+}
 
+.tag-item {
+    list-style: none;
+    min-width: 50px;
+    /* max-width: 100px; */
+    padding: 5px;
+    border: 1px solid black;
+    border-radius: 4px;
+    margin-right: calc(1.45rem / 2);
 }
