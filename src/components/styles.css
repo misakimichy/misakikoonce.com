@@ -1,7 +1,23 @@
-/* sidebar styling */
-
 .no-underline {
     background-image: none
+}
+
+.container {
+    display: flex;
+    padding: 0px;
+    margin: 0px;
+}
+
+/* sidebar styling */
+aside {
+    max-width: 450px;
+    height: 100vh;
+    padding: 2.5rem;
+    border-right: 1px solid #efefef;
+}
+
+.profile-image {
+    margin-bottom: 0px;
 }
 
 .social-links {
@@ -23,7 +39,6 @@
 
 /* main contents' styling */
 /* projects */
-
 .project-card {
     border: 1px solid #efefef;
     border-radius: 4px;
@@ -53,9 +68,16 @@
 .tag-item {
     list-style: none;
     min-width: 50px;
-    /* max-width: 100px; */
+    max-width: 100px;
     padding: 5px;
     border: 1px solid black;
     border-radius: 4px;
     margin-right: calc(1.45rem / 2);
 }
+
+
+/* 
+
+Media Queries comes here
+
+*/

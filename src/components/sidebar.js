@@ -1,7 +1,7 @@
 import React from 'react'
 import { Link, StaticQuery, graphql } from 'gatsby'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { Sidenav, Profile, ProfileImage } from '../styles/styles'
+import { ProfileImage } from '../styles/styles'
 import './styles.css'
 
 const SocialIcon = ({ href, icon, name }) => (
@@ -40,10 +40,10 @@ const Sidebar = () => (
         `}
         render={data => (
             <>
-                <Sidenav>
-                    <Profile>
+                <aside>
+                    <div>
                         <Link to="/" className="no-underline">
-                            <ProfileImage src={data.site.siteMetadata.logo} />
+                            <img className="profile-image" src={data.site.siteMetadata.logo} />
                         </Link>
                         <h1>{data.site.siteMetadata.title}</h1>
                         <p>{data.site.siteMetadata.description}</p>
@@ -71,8 +71,8 @@ const Sidebar = () => (
                                 name={'LinkedIn'}
                             />
                         </div>
-                    </Profile>
-                </Sidenav>
+                    </div>
+                </aside>
             </>
         )}
     />
