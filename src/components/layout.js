@@ -11,7 +11,7 @@ library.add(fab, faCoffee, faFileRegular, faFile)
 const Layout = ({ children, location }) => (
   <div className="container">
     <Sidebar location={location}/>
-    <div>{children}</div>
+    <div className="main-container">{children}</div>
   </div>
 )
 

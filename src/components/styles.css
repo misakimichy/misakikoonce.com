@@ -39,6 +39,11 @@ aside {
 
 /* main contents' styling */
 /* projects */
+.main-container {
+    width: 100vw;
+    max-width: 100%;
+}
+
 .project-card {
     border: 1px solid #efefef;
     border-radius: 4px;
