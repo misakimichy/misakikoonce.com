@@ -1,12 +1,14 @@
 import React from 'react'
 import Sidebar from './sidebar'
-import { Main } from '../styles/styles'
+import '@fortawesome/fontawesome-svg-core/styles.css'
 import { library } from '@fortawesome/fontawesome-svg-core'
 import { fab } from '@fortawesome/free-brands-svg-icons'
 import { faFile as faFileRegular } from '@fortawesome/free-regular-svg-icons'
 import { faCoffee, faFile } from '@fortawesome/free-solid-svg-icons'
+import { config } from '@fortawesome/fontawesome-svg-core'
 
 library.add(fab, faCoffee, faFileRegular, faFile)
+config.autoAddCss = false;
 
 const Layout = ({ children, location }) => (
   <div className="container">

@@ -5,7 +5,7 @@
   "main": "index.js",
   "dependencies": {
     "@emotion/core": "^10.0.22",
-    "@fortawesome/fontawesome-svg-core": "^1.2.25",
+    "@fortawesome/fontawesome-svg-core": "^1.2.26",
     "@fortawesome/free-brands-svg-icons": "^5.11.2",
     "@fortawesome/free-regular-svg-icons": "^5.11.2",
     "@fortawesome/free-solid-svg-icons": "^5.11.2",
@@ -40,7 +40,7 @@
     "typography-theme-kirkham": "^0.16.19"
   },
   "devDependencies": {
-    "gatsby-cli": "^2.7.47",
+    "gatsby-cli": "^2.8.22",
     "gh-pages": "^2.1.1"
   },
   "scripts": {

@@ -1,7 +1,6 @@
 import React from 'react'
 import { Link, StaticQuery, graphql } from 'gatsby'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { ProfileImage } from '../styles/styles'
 import './styles.css'
 
 const SocialIcon = ({ href, icon, name }) => (
