@@ -1,5 +1,5 @@
 import React from 'react'
-import { graphql } from 'gatsby'
+import { Link, graphql } from 'gatsby'
 import Projects from '../components/projects'
 import Layout from '../components/layout'
 
@@ -13,9 +13,10 @@ const ProjectPage = ({ data }) => {
     
     return (
         <Layout>
-            <div>
+            <div class="detail-container">
+                <Link to='/'>← Go back</Link>
                 <h1>All projects</h1>
-                <ul>
+                <ul class="tagged-list">
                     {titles.map(title => (
                         <Projects key={title} name={title}/>
                     ))}

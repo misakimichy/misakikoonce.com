@@ -41,7 +41,7 @@ const Sidebar = () => (
             <>
                 <div class='sidebar-container'>
                     <Link to="/" className="no-underline">
-                        <img className="profile-image" src={data.site.siteMetadata.logo} />
+                        <img className="profile-image" src={data.site.siteMetadata.logo} alt={data.site.siteMetadata.title} />
                     </Link>
                     <h1>{data.site.siteMetadata.title}</h1>
                     <p>{data.site.siteMetadata.description}</p>

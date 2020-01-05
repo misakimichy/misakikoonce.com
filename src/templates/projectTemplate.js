@@ -3,6 +3,7 @@ import { Link, graphql } from "gatsby"
 import { kebabCase } from "lodash"
 import { Li } from '../styles/styles'
 import Layout from '../components/layout'
+import './styles.css'
 
 const Template = ({ data }) => {
   const { markdownRemark } = data
@@ -18,16 +19,14 @@ const Template = ({ data }) => {
   
   return (
     <Layout>
-      <div>
-        <Link
-          to='/'
-          >← Go back</Link>
-        <div>
+      <div class="detail-container">
+        <Link to='/'>← Go back</Link>
+        <div >
           <div>
             <h1>{frontmatter.title}</h1>
             <h4>{frontmatter.date}</h4>
             <div>
-              Stack:
+              Stack Tag:
               <ul>
                 {tags.map((tag, index) =>
                   <Li key={index}>
@@ -36,10 +35,8 @@ const Template = ({ data }) => {
                 )}
               </ul>
             </div>
-            <main
-              dangerouslySetInnerHTML={{ __html: html }}
-            />
-            <iframe width="90%" height="500" src={frontmatter.projectUrl} display="block" margin="0 auto"></iframe>
+            <main dangerouslySetInnerHTML={{ __html: html }} />
+            <iframe title={frontmatter.title} src={frontmatter.projectUrl} display="block" margin="0 auto"></iframe>
           </div>
         </div>
       </div>

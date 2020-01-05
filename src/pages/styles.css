@@ -9,3 +9,7 @@
 .project-title {
     padding-left: 0.6rem;
 }
+
+.tagged-list {
+    list-style: none;
+}

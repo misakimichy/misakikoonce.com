@@ -1,36 +1,37 @@
 import React from 'react'
 import { graphql } from 'gatsby'
 
+import { Link } from 'gatsby'
 import Tag from '../components/tag'
 import Layout from '../components/layout'
 
 const TagPage = ({ data }) => {
-    const { allMarkdownRemark } = data;
-    // tags
-    const mapping = {}
-    allMarkdownRemark.edges.forEach(({ node }) => {
-        const { tags } = node.frontmatter;
-        tags.forEach(tag => {
-            if(mapping[tag]) {
-                mapping[tag] += 1
-            } else {
-                mapping[tag] = 1;
-            }
-        })
+  const { allMarkdownRemark } = data;
+  // tags
+  const mapping = {}
+  allMarkdownRemark.edges.forEach(({ node }) => {
+    const { tags } = node.frontmatter;
+    tags.forEach(tag => {
+      if(mapping[tag]) {
+        mapping[tag] += 1
+      } else {
+        mapping[tag] = 1;
+      }
     })
+  })
     const tags = Array.from(Object.keys(mapping)).sort((b, a) =>
-        mapping[a] - mapping[b]
+      mapping[a] - mapping[b]
     )
-
   return (
     <Layout>
-      <div>
-          <h1>Tag list</h1>
-          <ul>
-              {tags.map(tag => (
-                  <Tag key={tag} name={tag} count={mapping[tag]} />
-              ))}
-          </ul>
+      <div class="detail-container">
+        <Link to='/'>← Go back</Link>
+        <h1>Tag list</h1>
+        <ul>
+          {tags.map(tag => (
+            <Tag key={tag} name={tag} count={mapping[tag]} />
+          ))}
+        </ul>
       </div>
     </Layout>
   )
