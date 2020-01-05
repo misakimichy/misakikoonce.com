@@ -9,7 +9,7 @@
 }
 
 /* sidebar styling */
-aside {
+.sidebar-container {
     max-width: 450px;
     height: 100vh;
     padding: 2.5rem;
@@ -84,5 +84,31 @@ aside {
 /* 
 
 Media Queries comes here
-
 */
+@media screen and (max-width: 580px) {
+    .container {
+        flex-direction: column;
+        height: 100%;
+    }
+
+    /* Side bar */
+    .sidebar-container {
+        max-width: 100%;
+        padding: 2rem;
+        height: 50vh;
+    }
+
+    .profile-image {
+        width: 70%;
+        display: block;
+        margin: 0 auto;
+    }
+
+    /* Project */
+    .project-card {
+        border: 1px solid #efefef;
+        border-radius: 4px;
+        max-width: 100%;
+        padding: 0.5rem;
+    }
+}
