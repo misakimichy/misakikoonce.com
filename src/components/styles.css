@@ -91,6 +91,10 @@ Media Queries comes here
         height: 100%;
     }
 
+    .main-container {
+        padding: 2rem;
+    }
+
     /* Side bar */
     .sidebar-container {
         max-width: 100%;

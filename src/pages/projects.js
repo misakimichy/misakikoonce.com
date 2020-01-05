@@ -14,8 +14,10 @@ const ProjectPage = ({ data }) => {
     return (
         <Layout>
             <div class="detail-container">
-                <Link to='/'>← Go back</Link>
-                <h1>All projects</h1>
+                <div class="to-home">
+                    <Link to='/'>← Go back</Link>
+                </div>
+                <p class="title">All projects</p>
                 <ul class="tagged-list">
                     {titles.map(title => (
                         <Projects key={title} name={title}/>

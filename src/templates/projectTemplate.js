@@ -20,12 +20,15 @@ const Template = ({ data }) => {
   return (
     <Layout>
       <div class="detail-container">
-        <Link to='/'>← Go back</Link>
+        <div class="to-home">
+          <Link to='/'>← Go back</Link>
+        </div>
         <div >
           <div>
-            <h1>{frontmatter.title}</h1>
-            <h4>{frontmatter.date}</h4>
-            <div>
+            <p class="title">{frontmatter.title}
+              <span class="date">{frontmatter.date}</span>
+            </p>
+            <div class="stack-tag">
               Stack Tag:
               <ul>
                 {tags.map((tag, index) =>

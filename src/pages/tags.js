@@ -25,8 +25,10 @@ const TagPage = ({ data }) => {
   return (
     <Layout>
       <div class="detail-container">
-        <Link to='/'>← Go back</Link>
-        <h1>Tag list</h1>
+        <div class="to-home">
+          <Link to='/'>← Go back</Link>
+        </div>
+        <p className="title">Tag list</p>
         <ul>
           {tags.map(tag => (
             <Tag key={tag} name={tag} count={mapping[tag]} />
