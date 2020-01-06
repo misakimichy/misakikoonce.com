@@ -4,7 +4,7 @@ date: "2018-10-17"
 title: "Project Miguel"
 projectUrl: "https://misakimichy.github.io/project-miguel/"
 tags: ["HTML", "CSS"]
-description: "Miguel, the hedgehog, is written by HTML and pure CSS. Those little feet move once you open the page."
+description: "Miguel, the hedgehog, project is written by HTML and pure CSS. Those little feet move once you open the page."
 thumbnail: "screenshot.png"
 ---
 This is my second pure CSS project, hedgehog Miguel. I created this project to have better understanding for animation, SVG and to test how much I can create and design with pure CSS.
