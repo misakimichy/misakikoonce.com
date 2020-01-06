@@ -39,7 +39,7 @@ const Sidebar = () => (
         `}
         render={data => (
             <>
-                <div class='sidebar-container'>
+                <div className='sidebar-container'>
                     <Link to="/" className="no-underline">
                         <img className="profile-image" src={data.site.siteMetadata.logo} alt={data.site.siteMetadata.title} />
                     </Link>

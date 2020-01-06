@@ -13,12 +13,12 @@ const Tags = ({ pageContext, data }) => {
 
   return (
     <Layout>
-      <div class="detail-container">
-        <div class="to-home">
+      <div className="detail-container">
+        <div className="to-home">
           <Link to='/'>← Go back</Link>
         </div>
-        <p class="title">{tagHeader}</p>
-        <ul class="tagged-list">
+        <p className="title">{tagHeader}</p>
+        <ul className="tagged-list">
           {edges.map(({ node }) => {
             const { title } = node.frontmatter
             const path = `/projects/${kebabCase(title)}`

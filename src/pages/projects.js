@@ -13,12 +13,12 @@ const ProjectPage = ({ data }) => {
     
     return (
         <Layout>
-            <div class="detail-container">
-                <div class="to-home">
+            <div className="detail-container">
+                <div className="to-home">
                     <Link to='/'>← Go back</Link>
                 </div>
-                <p class="title">All projects</p>
-                <ul class="tagged-list">
+                <p className="title">All projects</p>
+                <ul className="tagged-list">
                     {titles.map(title => (
                         <Projects key={title} name={title}/>
                     ))}

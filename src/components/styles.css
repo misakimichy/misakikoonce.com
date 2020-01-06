@@ -75,7 +75,7 @@
     min-width: 50px;
     max-width: 100px;
     padding: 5px;
-    border: 1px solid black;
+    border: 1px solid #c9c9c9;
     border-radius: 4px;
     margin-right: calc(1.45rem / 2);
 }
@@ -85,7 +85,7 @@
 
 Media Queries comes here
 */
-@media screen and (max-width: 580px) {
+@media screen and (max-width: 800px) {
     .container {
         flex-direction: column;
         height: 100%;
@@ -99,7 +99,7 @@ Media Queries comes here
     .sidebar-container {
         max-width: 100%;
         padding: 2rem;
-        height: 55vh;
+        height: 100%;
     }
 
     .profile-image {
@@ -112,7 +112,7 @@ Media Queries comes here
     .project-card {
         border: 1px solid #efefef;
         border-radius: 4px;
-        max-width: 100%;
+        min-width: 100%;
         padding: 0.5rem;
     }
 }
