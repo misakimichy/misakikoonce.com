@@ -38,8 +38,8 @@ const Template = ({ data }) => {
                 )}
               </ul>
             </div>
-            <main dangerouslySetInnerHTML={{ __html: html }} />
             <iframe title={frontmatter.title} src={frontmatter.projectUrl} display="block" margin="0 auto"></iframe>
+            <main dangerouslySetInnerHTML={{ __html: html }} />
           </div>
         </div>
       </div>
