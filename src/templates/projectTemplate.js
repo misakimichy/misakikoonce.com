@@ -38,9 +38,11 @@ const Template = ({ data }) => {
                 )}
               </ul>
             </div>
-            <iframe title={frontmatter.title} src={frontmatter.projectUrl} display="block" margin="0 auto"></iframe>
-            <main dangerouslySetInnerHTML={{ __html: html }} />
           </div>
+          <div className="responsive-container">
+            <iframe className="responsive-iframe" title={frontmatter.title} src={frontmatter.projectUrl} allowFullScreen></iframe>
+          </div>
+          <main dangerouslySetInnerHTML={{ __html: html }} />
         </div>
       </div>
     </Layout>

@@ -40,11 +40,13 @@ const Sidebar = () => (
         render={data => (
             <>
                 <div className='sidebar-container'>
-                    <Link to="/" className="no-underline">
+                    <Link to="/" className="no-underline profile-image-link">
                         <img className="profile-image" src={data.site.siteMetadata.logo} alt={data.site.siteMetadata.title} />
                     </Link>
-                    <h1>{data.site.siteMetadata.title}</h1>
-                    <p>{data.site.siteMetadata.description}</p>
+                    <div className="name-holder">
+                        <h1>{data.site.siteMetadata.title}</h1>
+                        <p>{data.site.siteMetadata.description}</p>
+                    </div>
                     {/* <Link to="/about/">About</Link> */}
                     <div className="social-links">
                         <a className="no-underline social-link-item" href={data.site.siteMetadata.resume}>
