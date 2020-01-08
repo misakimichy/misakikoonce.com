@@ -3,21 +3,6 @@ import { Link, StaticQuery, graphql } from 'gatsby'
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import './styles.css'
 
-const SocialIcon = ({ href, icon, name }) => (
-    <a
-        className="no-underline social-link-item"
-        target="_blank"
-        rel="external nofollow noopener noreferrer"
-        href={href}
-        name={name}
-    >
-        <div>
-            <FontAwesomeIcon icon={icon} className="icon" />
-            <span className="icon-span">{name}</span>
-        </div>
-    </a>
-)
-
 const Sidebar = () => (
     <StaticQuery
         query={graphql`
@@ -49,27 +34,30 @@ const Sidebar = () => (
                     </div>
                     {/* <Link to="/about/">About</Link> */}
                     <div className="social-links">
-                        <a className="no-underline social-link-item" href={data.site.siteMetadata.resume}>
-                            <div>
-                                <FontAwesomeIcon icon={['far', 'file']} className="icon"/>
-                                <span className="icon-span">Resume</span>
-                            </div>
-                        </a>
-                        <SocialIcon
-                            href={data.site.siteMetadata.socialLinks.twitter}
-                            icon={['fab', 'twitter']}
-                            name={'Twitter'}
-                        />
-                        <SocialIcon
-                            href={data.site.siteMetadata.socialLinks.github}
-                            icon={['fab', 'github-alt']}
-                            name={'GitHub'}
-                        />
-                        <SocialIcon
-                            href={data.site.siteMetadata.socialLinks.linkedin}
-                            icon={['fab', 'linkedin-in']}
-                            name={'LinkedIn'}
-                        />
+                        <div className="social-link-item">
+                            <a className="no-underline" href={data.site.siteMetadata.resume}>
+                            <FontAwesomeIcon icon={['far', 'file']} className="icon" />
+                            <span className="icon-span">Resume</span>
+                            </a>
+                        </div>
+                        <div className="social-link-item">
+                            <a className="no-underline" href={data.site.siteMetadata.socialLinks.twitter}>
+                            <FontAwesomeIcon icon={['fab', 'twitter']} className="icon" />
+                            <span className="icon-span">Twitter</span>
+                            </a>
+                        </div>
+                        <div className="social-link-item">
+                            <a className="no-underline" href={data.site.siteMetadata.socialLinks.github}>
+                            <FontAwesomeIcon icon={['fab', 'github-alt']} className="icon" />
+                            <span className="icon-span">Github</span>
+                            </a>
+                        </div>
+                        <div className="social-link-item">
+                            <a className="no-underline" href={data.site.siteMetadata.socialLinks.linkedin}>
+                            <FontAwesomeIcon icon={['fab', 'linkedin-in']} className="icon" />
+                            <span className="icon-span">LinkedIn</span>
+                            </a>
+                        </div>
                     </div>
                 </div>
             </>

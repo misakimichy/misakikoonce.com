@@ -1,5 +1,4 @@
 .no-underline {
-    min-width: 50%;
     background-image: none;
 }
 
@@ -143,7 +142,6 @@
     }
 
     .social-links {
-        max-width: 80%;
         margin: auto 0;
         min-width: 115px;
     }
@@ -170,6 +168,29 @@
     .profile-image {
         display: block;
         margin: 0 auto;
+    }
+
+    .name-holder {
+        margin-top: 1.5rem;
+        text-align: center;
+    }
+
+    .social-links {
+        flex-direction: row;
+        justify-content: center;
+        width: 100%;
+        /* margin: 0px;
+        width: 100%;
+        max-width: 30px; */
+    }
+
+    .icon-span {
+        display: none;
+    }
+
+    .social-link-item {
+        font-size: 1.2rem;
+        width: 50px;
     }
 
     /* Project */
