@@ -50,6 +50,17 @@
     border-radius: 4px;
     max-width: 48%;
     padding: 1.2rem;
+    margin-bottom: 10px;
+}
+
+.project-card:nth-child(odd)
+{
+    margin-left: 10px;
+}
+
+.project-card:nth-child(even)
+{
+    margin-right: 10px;
 }
 
 .card-thumbnail {
@@ -107,6 +118,10 @@
 
     .social-link-item {
         padding: 6px;
+    }
+
+    .project-car {
+        margin: 0 8px 10px 8px;
     }
 }
 
