@@ -1,9 +1,9 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Misaki Koonce]]></title><description><![CDATA[Software Engineer. Originally from Tokyo and now in Seattle. I enjoy frontend software development.]]></description><link>https://misakikoonce.com</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 28 Jan 2020 05:28:18 GMT</lastBuildDate><item><title><![CDATA[Brown and Cony]]></title><description><![CDATA[Please hover over the Brown face then hover over the right area of him! (Brown is the name of the brown bear.) This is the very first…]]></description><link>https://misakikoonce.com/brown-and-cony/brown-and-cony/</link><guid isPermaLink="false">https://misakikoonce.com/brown-and-cony/brown-and-cony/</guid><pubDate>Sat, 04 May 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Please hover over the Brown face then hover over the right area of him! (Brown is the name of the brown bear.)&lt;/p&gt;
-&lt;p&gt;This is the very first project in my coding life! After I learnt HTML and CSS online, I decided to create a cute project to practice the knowledge.
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Misaki Koonce]]></title><description><![CDATA[Software Engineer. Originally from Tokyo and now in Seattle. I enjoy frontend software development.]]></description><link>https://misakikoonce.com</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 28 Jan 2020 06:59:44 GMT</lastBuildDate><item><title><![CDATA[Brown and Cony]]></title><description><![CDATA[Please hover over the Brown's face then hover over the right area of him! (Brown is the name of the brown bear.) This is the very first…]]></description><link>https://misakikoonce.com/brown-and-cony/brown-and-cony/</link><guid isPermaLink="false">https://misakikoonce.com/brown-and-cony/brown-and-cony/</guid><pubDate>Sat, 04 May 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Please hover over the Brown&apos;s face then hover over the right area of him! (Brown is the name of the brown bear.)&lt;/p&gt;
+&lt;p&gt;This is the very first project in my coding life! After I learned HTML and CSS online, I decided to create a cute project to practice the knowledge.
 Those characters are Brown and Cony from &lt;a href=&quot;https://line.me/en/&quot;&gt;LINE&lt;/a&gt;, and they are a cute couple😻&lt;/p&gt;
 &lt;h1&gt;How to create Brown&lt;/h1&gt;
 &lt;p&gt;Did you see that Brown inclines his head and also a speech bubble? Isn&apos;t this cute?&lt;/p&gt;
-&lt;p&gt;I used &lt;code&gt;&amp;#x3C;div&gt;&lt;/code&gt;s for all of the parts besides eyes then styled with CSS. His eyes are created with an unordered list with two empty list items. Use &lt;code&gt;border-radius&lt;/code&gt; to make content round, apply color with &lt;code&gt;background-color&lt;/code&gt;. For the code sustainability, save the colors in &lt;code&gt;:root&lt;/code&gt;. &lt;code&gt;:root&lt;/code&gt; comes the the very beginning of the &lt;code&gt;.css&lt;/code&gt;:&lt;/p&gt;
+&lt;p&gt;I used &lt;code&gt;&amp;#x3C;div&gt;&lt;/code&gt;s for all of the parts besides eyes then styled with CSS. His eyes are created with an unordered list with two empty list items. Use &lt;code&gt;border-radius&lt;/code&gt; to make content round, apply color with &lt;code&gt;background-color&lt;/code&gt;. For the code sustainability, save the colors in &lt;code&gt;:root&lt;/code&gt;. &lt;code&gt;:root&lt;/code&gt; comes the very beginning of the &lt;code&gt;.css&lt;/code&gt;:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;:root {
     --maincolor: #6f4343;
     --conycolor: #fffff8;
@@ -12,7 +12,7 @@ Those characters are Brown and Cony from &lt;a href=&quot;https://line.me/en/&qu
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;In this project, I have three colors saved in &lt;code&gt;:root&lt;/code&gt;. When you want to change the color, all you need to do is just updating the color in &lt;code&gt;:root&lt;/code&gt; instead of checking and changing all colors in the code 🙌&lt;/p&gt;
 &lt;p&gt;You can also set sizes in &lt;code&gt;:root&lt;/code&gt;, for example, set your &lt;code&gt;&amp;#x3C;h1&gt;&lt;/code&gt; - &lt;code&gt;&amp;#x3C;h5&gt;&lt;/code&gt; font-size or &lt;code&gt;margin&lt;/code&gt; size and use it repeatedly in the project.&lt;/p&gt;
-&lt;h2&gt;How to apply :root value in CSS&lt;/h2&gt;
+&lt;h2&gt;How to apply &lt;code&gt;:root&lt;/code&gt; value in CSS&lt;/h2&gt;
 &lt;p&gt;You can apply the value to the element using the keyword &lt;code&gt;var&lt;/code&gt;:&lt;/p&gt;
 &lt;pre&gt;&lt;code&gt;.face {
     background-color: var(--maincolor);
@@ -20,14 +20,19 @@ Those characters are Brown and Cony from &lt;a href=&quot;https://line.me/en/&qu
 &lt;/code&gt;&lt;/pre&gt;
 &lt;p&gt;Now the &lt;code&gt;.face&lt;/code&gt; background-color is &lt;code&gt;--maincolor&lt;/code&gt;, which is &lt;code&gt;#6f4343!&lt;/code&gt; You can just swap the color name (&lt;code&gt;background-color: #6f4343&lt;/code&gt;) with &lt;code&gt;background-color: var(value-name)&lt;/code&gt;🥳&lt;/p&gt;
 &lt;h2&gt;How to create a speech bubble&lt;/h2&gt;
-&lt;p&gt;I used a &lt;code&gt;&amp;#x3C;div&gt;&lt;/code&gt; and pseudo selectors, &lt;code&gt;:before&lt;/code&gt; and &lt;code&gt;:after&lt;/code&gt; to create this speech bubble. &lt;/p&gt;
+&lt;p&gt;&lt;a href=&quot;https://leaverou.github.io/bubbly/&quot;&gt;leaverou.github.io&lt;/a&gt; is my speech bubble reference. This tutorial is really simple, and it&apos;s helpful to understand how to create a speech bubble in CSS; I highly recommend playing around in this tutorial page.&lt;/p&gt;
+&lt;p&gt;I used a &lt;code&gt;&amp;#x3C;div&gt;&lt;/code&gt; and pseudo-selectors, &lt;code&gt;:before&lt;/code&gt; and &lt;code&gt;:after&lt;/code&gt; to create this speech bubble. &lt;code&gt;:before&lt;/code&gt; and &lt;code&gt;:after&lt;/code&gt; (it&apos;s also written with two colons like &lt;code&gt;::before&lt;/code&gt;/ &lt;code&gt;::after&lt;/code&gt;) creates pseudo-elements that allows you to insert contents without HTML element. &lt;/p&gt;
+&lt;p&gt;According to &lt;a href=&quot;%22https://developer.mozilla.org/%22&quot;&gt;Mozilla.org&lt;/a&gt;, &lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;It is often used to add cosmetic content to an element with the &lt;code&gt;content&lt;/code&gt; property. It is inline by default.&lt;/p&gt;
+&lt;/blockquote&gt;
 &lt;h1&gt;How to create Cony&lt;/h1&gt;
-&lt;p&gt;The techniques are really similar to Brown. I just created different shapes in different sizes.&lt;/p&gt;
+&lt;p&gt;The techniques are really similar to Brown&apos;s. I just created different shapes in different sizes.&lt;/p&gt;
 &lt;h2&gt;How to create a heart?&lt;/h2&gt;
 &lt;p&gt;To create a heart, I combined one square and two circles.&lt;/p&gt;
 &lt;ol&gt;
 &lt;li&gt;Create a square then tilt it 45 degrees.&lt;/li&gt;
-&lt;li&gt;Then use &lt;code&gt;:before&lt;/code&gt; and &lt;code&gt;:after&lt;/code&gt; pseudo selector and create two circles. Since those elements have width of the square, I set width and height 100%.&lt;/li&gt;
+&lt;li&gt;Then use &lt;code&gt;:before&lt;/code&gt; and &lt;code&gt;:after&lt;/code&gt; pseudo selector and create two circles. Since those elements have a width of the square, I set width and height 100%.&lt;/li&gt;
 &lt;li&gt;Place one circle to the top left of the square perimeter which becomes the circle&apos;s diameter, and another circle to the top right.&lt;/li&gt;
 &lt;/ol&gt;
 &lt;p&gt;Tad-dah - It&apos;s a heart now🧡&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Project Miguel]]></title><description><![CDATA[This is my second pure CSS project, hedgehog Miguel. I created this project to have better understanding for animation, SVG and to test how…]]></description><link>https://misakikoonce.com/project-miguel/project-miguel/</link><guid isPermaLink="false">https://misakikoonce.com/project-miguel/project-miguel/</guid><pubDate>Wed, 17 Oct 2018 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;This is my second pure CSS project, hedgehog Miguel. I created this project to have better understanding for animation, SVG and to test how much I can create and design with pure CSS.&lt;/p&gt;
