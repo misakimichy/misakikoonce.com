@@ -13,3 +13,11 @@
 .tagged-list {
     list-style: none;
 }
+
+pre, code {
+    background-color: beige;
+}
+pre {
+    padding: 20px;
+    border-radius: 3px;
+}
