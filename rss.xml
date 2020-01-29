@@ -1,4 +1,41 @@
-<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Misaki Koonce]]></title><description><![CDATA[Software Engineer. Originally from Tokyo and now in Seattle. I enjoy frontend software development.]]></description><link>https://misakikoonce.com</link><generator>GatsbyJS</generator><lastBuildDate>Tue, 28 Jan 2020 06:59:44 GMT</lastBuildDate><item><title><![CDATA[Brown and Cony]]></title><description><![CDATA[Please hover over the Brown's face then hover over the right area of him! (Brown is the name of the brown bear.) This is the very first…]]></description><link>https://misakikoonce.com/brown-and-cony/brown-and-cony/</link><guid isPermaLink="false">https://misakikoonce.com/brown-and-cony/brown-and-cony/</guid><pubDate>Sat, 04 May 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Please hover over the Brown&apos;s face then hover over the right area of him! (Brown is the name of the brown bear.)&lt;/p&gt;
+<?xml version="1.0" encoding="UTF-8"?><rss xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:atom="http://www.w3.org/2005/Atom" version="2.0"><channel><title><![CDATA[Misaki Koonce]]></title><description><![CDATA[Software Engineer. Originally from Tokyo and now in Seattle. I enjoy frontend software development.]]></description><link>https://misakikoonce.com</link><generator>GatsbyJS</generator><lastBuildDate>Wed, 29 Jan 2020 04:43:57 GMT</lastBuildDate><item><title><![CDATA[HTML Canvas Project]]></title><description><![CDATA[Draw whatever you want in the canvas using the mouse! This is one of the projects of Vanilla JavaScript 30 challenge by Wes Bos. Canvas…]]></description><link>https://misakikoonce.com/html-canvas-project/html-canvas-project/</link><guid isPermaLink="false">https://misakikoonce.com/html-canvas-project/html-canvas-project/</guid><pubDate>Tue, 28 Jan 2020 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Draw whatever you want in the canvas using the mouse!&lt;/p&gt;
+&lt;p&gt;This is one of the projects of &lt;a href=&quot;%22http://%22&quot;&gt;Vanilla JavaScript 30 challenge by Wes Bos&lt;/a&gt;.&lt;/p&gt;
+&lt;h1&gt;Canvas&lt;/h1&gt;
+&lt;p&gt;&lt;code&gt;&amp;#x3C;canvas&gt;&lt;/code&gt; tag let you create a canvas in HTML. You need to specify the canvas width and height, so as Context type. Context for canvas is &lt;code&gt;2D&lt;/code&gt; or &lt;code&gt;3D&lt;/code&gt;.&lt;/p&gt;
+&lt;p&gt;In this project, I set the canvas width equals to &lt;code&gt;window.innerWidth&lt;/code&gt; and height equals to &lt;code&gt;window.innerHeight&lt;/code&gt;. To grab the value of &lt;code&gt;window.innerWidth&lt;/code&gt; and &lt;code&gt;window.innerHeight&lt;/code&gt;, The entire screen size of the web browser itself become a canvas.&lt;/p&gt;
+&lt;h1&gt;Changing colors&lt;/h1&gt;
+&lt;h1&gt;How to draw on Canvas&lt;/h1&gt;
+&lt;p&gt;I set four event listeners to canvas. &lt;/p&gt;
+&lt;p&gt;First event listener tracks the cursor coordinates in the canvas. Depends where your cursor is, the color will change too:&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;const updateCords = (e, mouse, lastMouse, ctx) =&gt; {
+    lastMouse.x = mouse.x;
+    lastMouse.y = mouse.y;
+    mouse.x = e.pageX - e.currentTarget.offsetLeft;
+    mouse.y = e.pageY - e.currentTarget.offsetTop;
+
+    updateColor(lastMouse.x, lastMouse.y, ctx);
+};
+
+const updateColor = (x, y, ctx) =&gt; {
+    let color = (x + y) / 2;
+    ctx.strokeStyle = `hsl(${color}, 100%, 50%)`;
+};
+
+canvas.addEventListener(&apos;mousemove&apos;, (e) =&gt; updateCords(e, mouse, lastMouse, ctx));
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;The value of &lt;code&gt;mouse&lt;/code&gt; and &lt;code&gt;lastMouse&lt;/code&gt; coordinates are set (0, 0) for both in the beginning of IIFE.
+As you can see, every mouse move in the window invokes the &lt;code&gt;updateCords()&lt;/code&gt; function, which takes &lt;code&gt;e&lt;/code&gt;, &lt;code&gt;mouse&lt;/code&gt;, &lt;code&gt;lastMouse&lt;/code&gt; and &lt;code&gt;ctx&lt;/code&gt;. Those are the elements that &lt;code&gt;window&lt;/code&gt; has. You can see the value of &lt;code&gt;e&lt;/code&gt; to replace &lt;code&gt;updateCords(e, mouse, lastMouse, ctx)&lt;/code&gt; with  &lt;code&gt;console.log(e)&lt;/code&gt; in the developer tool.
+&lt;code&gt;updateColor()&lt;/code&gt; function is also invoked inside of &lt;code&gt;updateCords()&lt;/code&gt; function. To change color by coordinates, I applied sum of &lt;code&gt;x&lt;/code&gt; and &lt;code&gt;y&lt;/code&gt; coordinates to hsl of &lt;code&gt;crx.strokeStyle&lt;/code&gt; value.&lt;/p&gt;
+&lt;p&gt;The second event listener listens to &lt;code&gt;mousedown&lt;/code&gt; event and add invoke &lt;code&gt;draw()&lt;/code&gt; function.&lt;/p&gt;
+&lt;pre&gt;&lt;code&gt;    const draw = () =&gt; {
+        ctx.beginPath();
+        ctx.moveTo(lastMouse.x, lastMouse.y);
+        ctx.lineTo(mouse.x, mouse.y);
+        ctx.closePath();
+        ctx.stroke();
+    };
+&lt;/code&gt;&lt;/pre&gt;
+&lt;p&gt;This function will begin tells &lt;code&gt;ctx&lt;/code&gt; a starting point then the coordinates to move to, then draw a line between the starting point and the point the mouse moves to. Since every mouse move updates &lt;code&gt;mouse(x, y)&lt;/code&gt; and &lt;code&gt;lastMouse(x, y)&lt;/code&gt;, as far as you drug on the canvas, a line will be drawn.&lt;/p&gt;</content:encoded></item><item><title><![CDATA[Brown and Cony]]></title><description><![CDATA[Please hover over the Brown's face then hover over the right area of him! (Brown is the name of the brown bear.) This is the very first…]]></description><link>https://misakikoonce.com/brown-and-cony/brown-and-cony/</link><guid isPermaLink="false">https://misakikoonce.com/brown-and-cony/brown-and-cony/</guid><pubDate>Sat, 04 May 2019 00:00:00 GMT</pubDate><content:encoded>&lt;p&gt;Please hover over the Brown&apos;s face then hover over the right area of him! (Brown is the name of the brown bear.)&lt;/p&gt;
 &lt;p&gt;This is the very first project in my coding life! After I learned HTML and CSS online, I decided to create a cute project to practice the knowledge.
 Those characters are Brown and Cony from &lt;a href=&quot;https://line.me/en/&quot;&gt;LINE&lt;/a&gt;, and they are a cute couple😻&lt;/p&gt;
 &lt;h1&gt;How to create Brown&lt;/h1&gt;
