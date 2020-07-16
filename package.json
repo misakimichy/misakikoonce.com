@@ -40,6 +40,7 @@
     "typography-theme-kirkham": "^0.16.19"
   },
   "devDependencies": {
+    "eslint-config-react-app": "^5.2.1",
     "gatsby-cli": "^2.12.46",
     "gh-pages": "^2.1.1"
   },

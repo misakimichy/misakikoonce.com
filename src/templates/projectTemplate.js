@@ -1,22 +1,22 @@
-import React from "react"
-import { Link, graphql } from "gatsby"
-import { kebabCase } from "lodash"
-import { Li } from '../styles/styles'
-import Layout from '../components/layout'
-import './styles.css'
+import React from "react";
+import { Link, graphql } from "gatsby";
+import { kebabCase } from "lodash";
+import { Li } from '../styles/styles';
+import Layout from '../components/layout';
+import './styles.css';
 
 const Template = ({ data }) => {
-  const { markdownRemark } = data
-  const { frontmatter, html } = markdownRemark
+  const { markdownRemark } = data;
+  const { frontmatter, html } = markdownRemark;
 
   // build tags structure for template
   const tags = frontmatter.tags.map(tag => {
     return {
       name: tag,
       path: `/tags/${kebabCase(tag)}/`,
-    }
+    };
   });
-  
+
   return (
     <Layout>
       <div className="detail-container">
@@ -46,10 +46,10 @@ const Template = ({ data }) => {
         </div>
       </div>
     </Layout>
-  )
-}
+  );
+};
 
-export default Template
+export default Template;
 
 export const pageQuery = graphql`
   query($path: String!) {
@@ -64,4 +64,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;

@@ -1,27 +1,27 @@
-import React from 'react'
-import { graphql } from 'gatsby'
+import React from 'react';
+import { graphql } from 'gatsby';
 
-import { Link } from 'gatsby'
-import Tag from '../components/tag'
-import Layout from '../components/layout'
+import { Link } from 'gatsby';
+import Tag from './tag';
+import Layout from './layout';
 
 const TagPage = ({ data }) => {
   const { allMarkdownRemark } = data;
   // tags
-  const mapping = {}
+  const mapping = {};
   allMarkdownRemark.edges.forEach(({ node }) => {
     const { tags } = node.frontmatter;
     tags.forEach(tag => {
-      if(mapping[tag]) {
-        mapping[tag] += 1
+      if (mapping[tag]) {
+        mapping[tag] += 1;
       } else {
         mapping[tag] = 1;
       }
-    })
-  })
-    const tags = Array.from(Object.keys(mapping)).sort((b, a) =>
-      mapping[a] - mapping[b]
-    )
+    });
+  });
+  const tags = Array.from(Object.keys(mapping)).sort((b, a) =>
+    mapping[a] - mapping[b]
+  );
   return (
     <Layout>
       <div class="detail-container">
@@ -36,8 +36,8 @@ const TagPage = ({ data }) => {
         </ul>
       </div>
     </Layout>
-  )
-}
+  );
+};
 export default TagPage;
 
 export const pageQuery = graphql`
@@ -52,4 +52,4 @@ export const pageQuery = graphql`
       }
     }
   }
-`
+`;
