@@ -5,7 +5,9 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions
 
   const projectTemplate = path.resolve(`src/templates/projectTemplate.js`)
-  const projectList = path.resolve(`src/pages/projects.js`)
+  const projects = path.resolve(`src/pages/projects.js`)
+  const writings = path.resolve(`src/pages/writings.js`)
+  const tags = path.resolve(`src/pages/tags.js`)
   const tagTemplate = path.resolve(`src/templates/tags.js`)
   const notFound = path.resolve(`src/pages/404.js`)
 
@@ -55,9 +57,20 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   result.data.allMarkdownRemark.edges.forEach(({ node }) => {
     createPage({
       path: `/projects/`,
-      component: projectList,
+      component: projects,
       context: {
-        title: projectList
+        title: projects
+      }
+    })
+  })
+
+  // Create writings list page
+  result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+    createPage({
+      path: `/writings/`,
+      component: writings,
+      context: {
+        title: writings
       }
     })
   })
@@ -76,7 +89,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
 // Set the custom 404 Page
 exports.onCreatePage = ({ page }) => {
-  if(page.path.startsWith('/404')) {
-    page.layout = '404.index'
+  if (page.path.startsWith('/404')) {
+    page.layout = '404'
   }
 }

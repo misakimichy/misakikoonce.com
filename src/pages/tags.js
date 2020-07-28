@@ -2,10 +2,10 @@ import React from 'react';
 import { graphql } from 'gatsby';
 
 import { Link } from 'gatsby';
-import Tag from './tag';
-import Layout from './layout';
+import Tag from './tags';
+import Layout from '../components/layout';
 
-const TagPage = ({ data }) => {
+const Tags = ({ data }) => {
   const { allMarkdownRemark } = data;
   // tags
   const mapping = {};
@@ -19,26 +19,26 @@ const TagPage = ({ data }) => {
       }
     });
   });
-  const tags = Array.from(Object.keys(mapping)).sort((b, a) =>
-    mapping[a] - mapping[b]
-  );
+  // const tags = Array.from(Object.keys(mapping)).sort((b, a) =>
+  //   mapping[a] - mapping[b]
+  // );
   return (
     <Layout>
-      <div class="detail-container">
-        <div class="to-home">
+      <div className="detail-container">
+        <div className="to-home">
           <Link to='/'>← Go back</Link>
         </div>
         <p className="title">Tag list</p>
-        <ul>
+        {/* <ul>
           {tags.map(tag => (
             <Tag key={tag} name={tag} count={mapping[tag]} />
           ))}
-        </ul>
+        </ul> */}
       </div>
     </Layout>
   );
 };
-export default TagPage;
+export default Tags;
 
 export const pageQuery = graphql`
   query {

@@ -29,7 +29,7 @@ const Tags = ({ pageContext, data }) => {
             );
           })}
         </ul>
-        <Link to="/tags">All tags</Link>
+        <Link to={`/tags/${_.kebabCase(tag.fieldValue)}`}>All tags</Link>
       </div>
     </Layout>
   );

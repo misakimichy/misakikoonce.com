@@ -1,9 +1,9 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
-import Projects from '../components/Projects';
+import WritingSection from '../components/WritingSection';
 import Layout from '../components/layout';
 
-const ProjectPage = ({ data }) => {
+const Writings = ({ data }) => {
   const { allMarkdownRemark } = data;
   const titles = [];
   allMarkdownRemark.edges.forEach(({ node }) => {
@@ -17,18 +17,19 @@ const ProjectPage = ({ data }) => {
         <div className="to-home">
           <Link to='/'>← Go back</Link>
         </div>
-        <p className="title">All projects</p>
-        <ul className="tagged-list">
+        <p className="title">All writings</p>
+        {/* <ul className="tagged-list">
           {titles.map(title => (
-            <Projects key={title} name={title} />
+            <WritingSection key={title} name={title} />
           ))}
-        </ul>
+        </ul> */}
+        <p>Add blog posts list here.</p>
       </div>
     </Layout>
   );
 };
 
-export default ProjectPage;
+export default Writings;
 
 export const pageQuery = graphql`
   query {
