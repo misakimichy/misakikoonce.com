@@ -4,12 +4,12 @@ import { Link, graphql } from "gatsby";
 import { kebabCase } from "lodash";
 
 // component
-import Layout from '../components/layout';
+import Layout from '../components/Layout';
 
 // styles
 import '../styles/styles.css'
 
-const Template = ({ data }) => {
+const ProjectTemplate = ({ data }) => {
   const { markdownRemark } = data;
   const { frontmatter, html } = markdownRemark;
 
@@ -51,7 +51,7 @@ const Template = ({ data }) => {
   );
 };
 
-export default Template;
+export default ProjectTemplate;
 
 export const pageQuery = graphql`
   query($path: String!) {

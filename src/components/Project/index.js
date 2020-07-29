@@ -3,10 +3,10 @@ import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 
 // component
-import Tag from './tag';
+import Tag from '../Tag';
 
 // style
-import '../styles/styles.css';
+import '../../styles/styles.css';
 
 const Card = ({
   title,

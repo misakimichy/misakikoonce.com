@@ -1,5 +1,5 @@
 import React from 'react';
-import { Link, StaticQuery, graphql } from 'gatsby';
+import { StaticQuery, graphql, Link } from 'gatsby';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 
 // style

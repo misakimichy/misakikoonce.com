@@ -1,9 +1,9 @@
 import React from 'react';
-import { graphql, Link } from 'gatsby';
+import { graphql, Link } from 'gatsby'
 
 // component
 import Tag from './tags';
-import Layout from '../components/layout';
+import Layout from '../components/Layout';
 
 const Tags = ({ data }) => {
   const { allMarkdownRemark } = data;

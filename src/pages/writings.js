@@ -1,9 +1,9 @@
 import React from 'react';
-import { Link, graphql } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 
 // component
-import WritingSection from '../components/WritingSection';
-import Layout from '../components/layout';
+import WritingSection from '../components/Writing';
+import Layout from '../components/Layout';
 
 const Writings = ({ data }) => {
   const { allMarkdownRemark } = data;

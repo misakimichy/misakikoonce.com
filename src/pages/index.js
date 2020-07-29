@@ -3,13 +3,13 @@ import { graphql } from 'gatsby';
 import { kebabCase } from "lodash";
 
 // component
-import Layout from '../components/layout';
-import Card from '../components/card';
+import Layout from '../components/Layout';
+import Card from '../components/Project';
 
 // style
 import '../styles/styles.css';
 
-const Main = ({ data }) => {
+const MainView = ({ data }) => {
   const { allMarkdownRemark } = data;
   const cards = allMarkdownRemark.edges.map(({ node }) => {
     const { title } = node.frontmatter;
@@ -46,7 +46,7 @@ const Main = ({ data }) => {
   );
 };
 
-export default Main;
+export default MainView;
 
 export const pageQuery = graphql`
   query {

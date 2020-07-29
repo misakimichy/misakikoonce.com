@@ -4,11 +4,11 @@ const _ = require("lodash")
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions
 
-  const projectTemplate = path.resolve(`src/templates/projectTemplate.js`)
+  const projectTemplate = path.resolve(`src/templates/ProjectTemplate.js`)
   const projects = path.resolve(`src/pages/projects.js`)
   const writings = path.resolve(`src/pages/writings.js`)
   const tags = path.resolve(`src/pages/tags.js`)
-  const tagTemplate = path.resolve(`src/templates/tags.js`)
+  const tagTemplate = path.resolve(`src/templates/Tags.js`)
   const notFound = path.resolve(`src/pages/404.js`)
 
   const result = await graphql(`
@@ -72,6 +72,17 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
       context: {
         title: writings
       }
+    })
+  })
+
+  // Create all tags page
+  result.data.tagsGroup.group.forEach(tag => {
+    createPage({
+      path: `/tags/`,
+      component: tags,
+      context: {
+        tag: tag.fieldValue,
+      },
     })
   })
 

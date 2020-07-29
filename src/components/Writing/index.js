@@ -3,7 +3,7 @@ import { Link } from 'gatsby';
 import { kebabCase } from 'lodash';
 
 // pages
-import Writings from '../pages/writings';
+import Writings from '../../pages/writings';
 
 const WritingsSection = ({ name }) => (
   <li>

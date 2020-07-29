@@ -3,7 +3,7 @@ import { Link, graphql } from 'gatsby';
 
 // component
 import Projects from '../components/Projects';
-import Layout from '../components/layout';
+import Layout from '../components/Layout';
 
 const ProjectPage = ({ data }) => {
   const { allMarkdownRemark } = data;

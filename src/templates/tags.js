@@ -1,10 +1,10 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { Link, graphql } from 'gatsby';
+import { graphql, Link } from 'gatsby'
 import { kebabCase } from "lodash";
 
 // component
-import Layout from '../components/layout';
+import Layout from '../components/Layout';
 
 const Tags = ({ pageContext, data }) => {
   const { tag } = pageContext;
