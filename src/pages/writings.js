@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
+
+// component
 import WritingSection from '../components/WritingSection';
 import Layout from '../components/layout';
 
@@ -13,18 +15,16 @@ const Writings = ({ data }) => {
 
   return (
     <Layout>
-      <div className="detail-container">
-        <div className="to-home">
-          <Link to='/'>← Go back</Link>
-        </div>
-        <p className="title">All writings</p>
-        {/* <ul className="tagged-list">
-          {titles.map(title => (
-            <WritingSection key={title} name={title} />
-          ))}
-        </ul> */}
-        <p>Add blog posts list here.</p>
+      <div className="to-home">
+        <Link to='/'>← Go back</Link>
       </div>
+      <p className="title">All writings</p>
+      {/* <ul className="tagged-list">
+        {titles.map(title => (
+          <WritingSection key={title} name={title} />
+        ))}
+      </ul> */}
+      <p>Add blog posts list here.</p>
     </Layout>
   );
 };

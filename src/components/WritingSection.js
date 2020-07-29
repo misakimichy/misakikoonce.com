@@ -1,6 +1,8 @@
 import React from 'react';
 import { Link } from 'gatsby';
 import { kebabCase } from 'lodash';
+
+// pages
 import Writings from '../pages/writings';
 
 const WritingsSection = ({ name }) => (

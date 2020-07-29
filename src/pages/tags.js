@@ -1,7 +1,7 @@
 import React from 'react';
-import { graphql } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 
-import { Link } from 'gatsby';
+// component
 import Tag from './tags';
 import Layout from '../components/layout';
 
@@ -24,7 +24,6 @@ const Tags = ({ data }) => {
   // );
   return (
     <Layout>
-      <div className="detail-container">
         <div className="to-home">
           <Link to='/'>← Go back</Link>
         </div>
@@ -34,7 +33,6 @@ const Tags = ({ data }) => {
             <Tag key={tag} name={tag} count={mapping[tag]} />
           ))}
         </ul> */}
-      </div>
     </Layout>
   );
 };

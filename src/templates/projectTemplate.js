@@ -1,9 +1,13 @@
 import React from "react";
+import styled from 'styled-components';
 import { Link, graphql } from "gatsby";
 import { kebabCase } from "lodash";
-import { Li } from '../styles/styles';
+
+// component
 import Layout from '../components/layout';
-import './styles.css';
+
+// styles
+import '../styles/styles.css'
 
 const Template = ({ data }) => {
   const { markdownRemark } = data;
@@ -19,31 +23,29 @@ const Template = ({ data }) => {
 
   return (
     <Layout>
-      <div className="detail-container">
-        <div className="to-home">
-          <Link to='/'>← Go back</Link>
-        </div>
-        <div >
-          <div>
-            <p className="title">{frontmatter.title}
-              <span className="date">{frontmatter.date}</span>
-            </p>
-            <div className="stack-tag">
-              Stack Tag:
-              <ul>
-                {tags.map((tag, index) =>
-                  <Li key={index}>
-                    <Link to={tag.path}>{tag.name}</Link>
-                  </Li>
-                )}
-              </ul>
-            </div>
+      <div className="to-home">
+        <Link to='/'>← Go back</Link>
+      </div>
+      <div >
+        <div>
+          <p className="title">{frontmatter.title}
+            <span className="date">{frontmatter.date}</span>
+          </p>
+          <div className="stack-tag">
+            Stack Tag:
+            <ul>
+              {tags.map((tag, index) =>
+                <Li key={index}>
+                  <Link to={tag.path}>{tag.name}</Link>
+                </Li>
+              )}
+            </ul>
           </div>
-          <div className="responsive-container">
-            <iframe className="responsive-iframe" title={frontmatter.title} src={frontmatter.projectUrl} allowFullScreen></iframe>
-          </div>
-          <main dangerouslySetInnerHTML={{ __html: html }} />
         </div>
+        <div className="responsive-container">
+          <iframe className="responsive-iframe" title={frontmatter.title} src={frontmatter.projectUrl} allowFullScreen></iframe>
+        </div>
+        <main dangerouslySetInnerHTML={{ __html: html }} />
       </div>
     </Layout>
   );
@@ -65,3 +67,15 @@ export const pageQuery = graphql`
     }
   }
 `;
+
+const Li = styled.li`
+  display: inline-block;
+
+  :before {
+  content: ', ';
+  }
+
+  :first-child:before {
+  display: none;
+  }
+`

@@ -1,7 +1,7 @@
 import React from 'react';
-import { graphql } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 
-import { Link } from 'gatsby';
+// component
 import Tag from './tag';
 import Layout from './layout';
 
@@ -24,7 +24,7 @@ const TagPage = ({ data }) => {
   );
   return (
     <Layout>
-      <div className="detail-container">
+      <div>
         <div className="to-home">
           <Link to='/'>← Go back</Link>
         </div>

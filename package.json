@@ -41,7 +41,7 @@
   },
   "devDependencies": {
     "eslint-config-react-app": "^5.2.1",
-    "gatsby-cli": "^2.12.64",
+    "gatsby-cli": "^2.12.67",
     "gh-pages": "^2.1.1"
   },
   "scripts": {

@@ -3,14 +3,14 @@ import { Link } from 'gatsby';
 import { kebabCase } from 'lodash';
 
 const Tag = ({ name, count }) => (
-  <li className="tag-item">
     <Link
-      className="no-underline"
+      className="no-underline tags"
       to={`/tags/${kebabCase(name)}`}
     >
-      {name} {count !== null ? (count) : ''}
+      <button className="tag-button">
+        {name} {count !== null ? (count) : ''}
+      </button>
     </Link>
-  </li>
 );
 
 export default Tag;

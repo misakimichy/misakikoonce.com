@@ -1,8 +1,12 @@
 import React from 'react';
 import { Link } from 'gatsby';
-import './styles.css';
 import PropTypes from 'prop-types';
+
+// component
 import Tag from './tag';
+
+// style
+import '../styles/styles.css';
 
 const Card = ({
   title,
@@ -13,7 +17,7 @@ const Card = ({
 }) => (
     <div className="project-card">
       <img className="card-thumbnail" src={thumbnail} alt="project thumbnail" />
-      <div className="card-content">
+      <div style={{width: '330px'}}>
         <Link to={url} className="no-underline">
           <h2>{title}</h2>
         </Link>
@@ -22,11 +26,10 @@ const Card = ({
             ...read more
 				</Link>
         </p>
-        <div className="card-tag">
-          {tags.map((tag, index) =>
-            <Tag key={index} name={tag} />
-          )}
-        </div>
+
+        {tags.map((tag, index) =>
+          <Tag key={index} name={tag} />
+        )}
       </div>
     </div>
   );

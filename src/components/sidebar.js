@@ -1,7 +1,9 @@
 import React from 'react';
 import { Link, StaticQuery, graphql } from 'gatsby';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import './styles.css';
+
+// style
+import '../styles/styles.css';
 
 const Sidebar = () => (
   <StaticQuery
@@ -26,7 +28,7 @@ const Sidebar = () => (
       <>
         <div className='sidebar-container'>
           <Link to="/" className="no-underline profile-image-link">
-            <img className="profile-image" src={data.site.siteMetadata.logo} alt={data.site.siteMetadata.title} />
+            <img className="profile-image" src={data.site.siteMetadata.logo} alt={data.site.siteMetadata.title} style={{marginBottom: '0'}} />
           </Link>
           <div className="name-holder">
             <h1>{data.site.siteMetadata.title}</h1>

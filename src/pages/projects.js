@@ -1,5 +1,7 @@
 import React from 'react';
 import { Link, graphql } from 'gatsby';
+
+// component
 import Projects from '../components/Projects';
 import Layout from '../components/layout';
 
@@ -13,7 +15,6 @@ const ProjectPage = ({ data }) => {
 
   return (
     <Layout>
-      <div className="detail-container">
         <div className="to-home">
           <Link to='/'>← Go back</Link>
         </div>
@@ -23,7 +24,6 @@ const ProjectPage = ({ data }) => {
             <Projects key={title} name={title} />
           ))}
         </ul>
-      </div>
     </Layout>
   );
 };

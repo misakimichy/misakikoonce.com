@@ -1,4 +1,6 @@
 import React from 'react';
+
+// component
 import Layout from '../components/layout';
 
 export default () => (

@@ -2,6 +2,8 @@ import React from 'react';
 import PropTypes from 'prop-types';
 import { Link, graphql } from 'gatsby';
 import { kebabCase } from "lodash";
+
+// component
 import Layout from '../components/layout';
 
 const Tags = ({ pageContext, data }) => {
@@ -13,24 +15,22 @@ const Tags = ({ pageContext, data }) => {
 
   return (
     <Layout>
-      <div className="detail-container">
-        <div className="to-home">
-          <Link to='/'>← Go back</Link>
-        </div>
-        <p className="title">{tagHeader}</p>
-        <ul className="tagged-list">
-          {edges.map(({ node }) => {
-            const { title } = node.frontmatter;
-            const path = `/projects/${kebabCase(title)}`;
-            return (
-              <li key={title}>
-                <Link to={path}>{title}</Link>
-              </li>
-            );
-          })}
-        </ul>
-        <Link to={`/tags/${_.kebabCase(tag.fieldValue)}`}>All tags</Link>
+      <div className="to-home">
+        <Link to='/'>← Go back</Link>
       </div>
+      <p className="title">{tagHeader}</p>
+      <ul className="tagged-list">
+        {edges.map(({ node }) => {
+          const { title } = node.frontmatter;
+          const path = `/projects/${kebabCase(title)}`;
+          return (
+            <li key={title}>
+              <Link to={path}>{title}</Link>
+            </li>
+          );
+        })}
+      </ul>
+      <Link to={`/tags/${_.kebabCase(tag.fieldValue)}`}>All tags</Link>
     </Layout>
   );
 };

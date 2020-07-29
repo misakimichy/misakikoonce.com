@@ -1,9 +1,13 @@
 import React from 'react';
 import { graphql } from 'gatsby';
 import { kebabCase } from "lodash";
-import './styles.css';
+
+// component
 import Layout from '../components/layout';
 import Card from '../components/card';
+
+// style
+import '../styles/styles.css';
 
 const Main = ({ data }) => {
   const { allMarkdownRemark } = data;
