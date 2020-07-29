@@ -9,7 +9,7 @@ thumbnail: "screenshot.png"
 ---
 Draw whatever you want in the canvas using the mouse!
 
-This is one of the projects of [Vanilla JavaScript 30 challenge by Wes Bos]("http://").
+This is one of the projects of [Vanilla JavaScript 30 challenge by Wes Bos](https://javascript30.com).
 
 # Canvas
 `<canvas>` tag lets you create a canvas in HTML. You need to specify the canvas width and height, so as Context type. The context for canvas is `2D` or `3D`.

@@ -42,11 +42,11 @@ Now the `.face` background-color is `--maincolor`, which is `#6f4343!` You can j
 
 
 ## How to create a speech bubble
-[leaverou.github.io](https://leaverou.github.io/bubbly/) is my speech bubble reference. This tutorial is really simple, and it's helpful to understand how to create a speech bubble in CSS; I highly recommend playing around in this tutorial page.
+[leaverou.github.io](https://leaverou.github.io/bubbly) is my speech bubble reference. This tutorial is really simple, and it's helpful to understand how to create a speech bubble in CSS; I highly recommend playing around in this tutorial page.
 
 I used a `<div>` and pseudo-selectors, `:before` and `:after` to create this speech bubble. `:before` and `:after` (it's also written with two colons like `::before`/ `::after`) creates pseudo-elements that allows you to insert contents without HTML element. 
 
-According to [Mozilla.org]("https://developer.mozilla.org/"), 
+According to [Mozilla.org](https://developer.mozilla.org), 
 > It is often used to add cosmetic content to an element with the `content` property. It is inline by default.
 
 
