@@ -17,7 +17,7 @@ const Card = ({
 }) => (
     <div className="project-card">
       <img className="card-thumbnail" src={thumbnail} alt="project thumbnail" />
-      <div style={{width: '330px'}}>
+      <div style={{width: '98%'}}>
         <Link to={url} className="no-underline">
           <h2>{title}</h2>
         </Link>

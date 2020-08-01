@@ -52,7 +52,7 @@ ul {
 .project-container {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(380px, 340px));
+  grid-template-columns: repeat(auto-fill, minmax(320px, auto));
   -webkit-box-pack: center;
   justify-content: center;
   margin-top: 16px;
@@ -80,8 +80,8 @@ ul {
 }
 
 .card-thumbnail {
-  width: 364px;
-  height: 208px;
+  width: 98%;
+  max-height: 208px;
   margin-bottom: 0;
   border: 1px solid #efefef;
 }
