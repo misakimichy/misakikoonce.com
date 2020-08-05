@@ -20,12 +20,10 @@ const Card = ({
       <div style={{width: '98%'}}>
         <Link to={url} className="no-underline">
           <h2>{title}</h2>
-        </Link>
-        <p className="card-description">{description}
-          <Link to={url}>
-            ...read more
+          <p style={{color: 'hsla(0,0%,0%,0.8)'}}>{description}
+            <span style={{color: '#1ca086', marginLeft: '5px'}}>...read more</span>
+          </p>
 				</Link>
-        </p>
 
         {tags.map((tag, index) =>
           <Tag key={index} name={tag} />

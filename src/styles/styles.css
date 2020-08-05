@@ -52,7 +52,7 @@ ul {
 .project-container {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, auto));
+  grid-template-columns: repeat(auto-fill, minmax(320px, 320px));
   -webkit-box-pack: center;
   justify-content: center;
   margin-top: 16px;
@@ -68,7 +68,7 @@ ul {
 .project-card {
   display: flex;
   flex-direction: column;
-  justify-content: center;
+  justify-content: flex-start;
   align-items: center;
 
   border: 1px solid #efefef;
@@ -81,9 +81,10 @@ ul {
 
 .card-thumbnail {
   width: 98%;
-  max-height: 208px;
+  height: 155px;
   margin-bottom: 0;
   border: 1px solid #efefef;
+  border-radius: 4px;
 }
 
 .tag-button {
@@ -285,9 +286,6 @@ Media Queries comes here
     flex-direction: row;
     justify-content: center;
     width: 100%;
-    /* margin: 0px;
-        width: 100%;
-        max-width: 30px; */
   }
 
   .icon-span {
@@ -297,13 +295,5 @@ Media Queries comes here
   .social-link-item {
     font-size: 1.2rem;
     width: 50px;
-  }
-
-  /* Project */
-  .project-card {
-    border: 1px solid #efefef;
-    border-radius: 4px;
-    min-width: 100%;
-    padding: 0.5rem;
   }
 }
