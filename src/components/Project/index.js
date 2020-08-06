@@ -16,19 +16,20 @@ const ProjectSection = ({
   tags = [],
   thumbnail
 }) => (
-    <Styles className="project-card">
+    <Styles>
       <img className="card-thumbnail" src={thumbnail} alt="project thumbnail" />
-      <div style={{width: '98%'}}>
+      <div className="card-content-wrapper" style={{width: '98%'}}>
         <Link to={url} className="no-underline">
-          <h2>{title}</h2>
-          <p style={{color: 'hsla(0,0%,0%,0.8)'}}>{description}
+          <h4 style={{marginBottom: '16px'}}>{title}</h4>
+          <p style={{color: `${colors.darkGrey}`, marginBottom: '32px'}}>{description}
             <span style={{color: `${colors.fontGreen}`, marginLeft: '5px'}}>...read more</span>
           </p>
 				</Link>
-
-        {tags.map((tag, index) =>
-          <Tag key={index} name={tag} />
-        )}
+        <div className="tag-wrapper">
+          {tags.map((tag, index) =>
+            <Tag key={index} name={tag} />
+          )}
+        </div>
       </div>
     </Styles>
   );
@@ -46,4 +47,37 @@ ProjectSection.defaultProps = {
   tags: []
 };
 
-const Styles = styled.div``;
+const Styles = styled.div`
+  display: flex;
+  flex-direction: column;
+  justify-content: flex-start;
+  align-items: center;
+
+  border: 1px solid ${colors.paleGrey};
+  border-radius: 4px;
+  padding: 1.2rem;
+  
+  :hover {
+    box-shadow: 2px 2px 4px 0 rgba(216, 216, 216, 0.5);
+  }
+
+  .card-thumbnail {
+    width: 290px;
+    height: 180px;
+    border: 1px solid ${colors.paleGrey};
+    border-radius: 4px;
+    margin-bottom: 16px;
+  }
+
+  .card-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    height: 100%;
+  
+    .tag-wrapper {
+      display: flex;
+    }
+  }
+`;

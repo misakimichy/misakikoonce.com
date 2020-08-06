@@ -26,7 +26,6 @@ export default css`
   h3 {
     font-size: 1.6rem;
     padding-bottom: 10px;
-    line-height: 3rem;
 
     @media (max-width: 800px) {
       font-size: 1.4rem;
@@ -36,6 +35,7 @@ export default css`
   /* h4 used for footer */
   h4 {
     font-size: 1.4rem;
+    line-height: 32px;
     padding-bottom: 5px;
   }
 
@@ -81,7 +81,7 @@ export default css`
   .project-container {
     width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(320px, 320px));
+    grid-template-columns: repeat(auto-fill, minmax(344px, 344px));
     -webkit-box-pack: center;
     justify-content: center;
     margin-top: 16px;
@@ -93,46 +93,6 @@ export default css`
   .project-title {
     padding-left: 0.6rem;
   }
-
-  .project-card {
-    display: flex;
-    flex-direction: column;
-    justify-content: flex-start;
-    align-items: center;
-
-    border: 1px solid ${colors.paleGrey};
-    border-radius: 4px;
-    padding: 1.2rem;
-  }
-  .project-card:hover {
-    box-shadow: 2px 2px 4px 0 rgba(216, 216, 216, 0.5);
-  }
-
-  .card-thumbnail {
-    width: 98%;
-    height: 155px;
-    margin-bottom: 0;
-    border: 1px solid ${colors.paleGrey};
-    border-radius: 4px;
-  }
-
-  .tag-button {
-    background: transparent;
-    color: ${colors.fontGreen};
-    border: 1px solid ${colors.lightGrey};
-    border-radius: 4px;
-
-    margin-right: 10px;
-
-    cursor: pointer;
-  }
-  .tag-button:hover {
-    box-shadow: 3px 4px 4px 0 rgba(216, 216, 216, 0.5);
-  }
-  .tag-button:focus {
-    outline: 0;
-  }
-
 
   .tag-item {
     list-style: none;
