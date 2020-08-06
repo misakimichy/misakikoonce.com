@@ -69,5 +69,6 @@ module.exports = {
       },
     },
     `gatsby-plugin-slug`,
+    `gatsby-plugin-styled-components`
   ],
 }

@@ -1,9 +1,7 @@
 import React from 'react';
+import styled from 'styled-components';
 import { StaticQuery, graphql, Link } from 'gatsby';
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-
-// style
-import '../styles/styles.css';
 
 const Sidebar = () => (
   <StaticQuery
@@ -25,7 +23,7 @@ const Sidebar = () => (
       }
     `}
     render={data => (
-      <>
+      <Styles>
         <div className='sidebar-container'>
           <Link to="/" className="no-underline profile-image-link">
             <img className="profile-image" src={data.site.siteMetadata.logo} alt={data.site.siteMetadata.title} style={{marginBottom: '0'}} />
@@ -62,9 +60,11 @@ const Sidebar = () => (
             </div>
           </div>
         </div>
-      </>
+      </Styles>
     )}
   />
 );
 
 export default Sidebar;
+
+const Styles = styled.div``;

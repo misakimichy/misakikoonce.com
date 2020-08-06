@@ -1,4 +1,5 @@
 import React from 'react';
+import styled from 'styled-components';
 import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 
@@ -6,22 +7,22 @@ import PropTypes from 'prop-types';
 import Tag from '../Tag';
 
 // style
-import '../../styles/styles.css';
+import { colors } from '../../styles/theme';
 
-const Card = ({
+const ProjectSection = ({
   title,
   url,
   description,
   tags = [],
   thumbnail
 }) => (
-    <div className="project-card">
+    <Styles className="project-card">
       <img className="card-thumbnail" src={thumbnail} alt="project thumbnail" />
       <div style={{width: '98%'}}>
         <Link to={url} className="no-underline">
           <h2>{title}</h2>
           <p style={{color: 'hsla(0,0%,0%,0.8)'}}>{description}
-            <span style={{color: '#1ca086', marginLeft: '5px'}}>...read more</span>
+            <span style={{color: `${colors.fontGreen}`, marginLeft: '5px'}}>...read more</span>
           </p>
 				</Link>
 
@@ -29,18 +30,20 @@ const Card = ({
           <Tag key={index} name={tag} />
         )}
       </div>
-    </div>
+    </Styles>
   );
 
-export default Card;
+export default ProjectSection;
 
-Card.propTypes = {
+ProjectSection.propTypes = {
   title: PropTypes.string.isRequired,
   url: PropTypes.string.isRequired,
   description: PropTypes.string,
   tags: PropTypes.arrayOf(PropTypes.string)
 };
 
-Card.defaultProps = {
+ProjectSection.defaultProps = {
   tags: []
 };
+
+const Styles = styled.div``;

@@ -1,5 +1,6 @@
 import React from 'react';
-import { graphql, Link } from 'gatsby'
+import styled from 'styled-components';
+import { graphql, Link } from 'gatsby';
 
 // component
 import Tag from './tags';
@@ -23,17 +24,19 @@ const Tags = ({ data }) => {
   //   mapping[a] - mapping[b]
   // );
   return (
-    <Layout>
-        <div className="to-home">
-          <Link to='/'>← Go back</Link>
-        </div>
-        <p className="title">Tag list</p>
-        {/* <ul>
-          {tags.map(tag => (
-            <Tag key={tag} name={tag} count={mapping[tag]} />
-          ))}
-        </ul> */}
-    </Layout>
+    <Styles>
+      <Layout>
+          <div className="to-home">
+            <Link to='/'>← Go back</Link>
+          </div>
+          <p className="title">Tag list</p>
+          {/* <ul>
+            {tags.map(tag => (
+              <Tag key={tag} name={tag} count={mapping[tag]} />
+            ))}
+          </ul> */}
+      </Layout>
+    </Styles>
   );
 };
 export default Tags;
@@ -51,3 +54,5 @@ export const pageQuery = graphql`
     }
   }
 `;
+
+const Styles = styled.div``;

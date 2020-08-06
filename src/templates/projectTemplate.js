@@ -6,8 +6,6 @@ import { kebabCase } from "lodash";
 // component
 import Layout from '../components/Layout';
 
-// styles
-import '../styles/styles.css'
 
 const ProjectTemplate = ({ data }) => {
   const { markdownRemark } = data;
@@ -22,32 +20,34 @@ const ProjectTemplate = ({ data }) => {
   });
 
   return (
-    <Layout>
-      <div className="to-home">
-        <Link to='/'>← Go back</Link>
-      </div>
-      <div >
-        <div>
-          <p className="title">{frontmatter.title}
-            <span className="date">{frontmatter.date}</span>
-          </p>
-          <div className="stack-tag">
-            Stack Tag:
-            <ul>
-              {tags.map((tag, index) =>
-                <Li key={index}>
-                  <Link to={tag.path}>{tag.name}</Link>
-                </Li>
-              )}
-            </ul>
+    <Styles>
+      <Layout>
+        <div className="to-home">
+          <Link to='/'>← Go back</Link>
+        </div>
+        <div >
+          <div>
+            <p className="title">{frontmatter.title}
+              <span className="date">{frontmatter.date}</span>
+            </p>
+            <div className="stack-tag">
+              Stack Tag:
+              <ul>
+                {tags.map((tag, index) =>
+                  <li key={index}>
+                    <Link to={tag.path}>{tag.name}</Link>
+                  </li>
+                )}
+              </ul>
+            </div>
           </div>
+          <div className="responsive-container">
+            <iframe className="responsive-iframe" title={frontmatter.title} src={frontmatter.projectUrl} allowFullScreen></iframe>
+          </div>
+          <main dangerouslySetInnerHTML={{ __html: html }} />
         </div>
-        <div className="responsive-container">
-          <iframe className="responsive-iframe" title={frontmatter.title} src={frontmatter.projectUrl} allowFullScreen></iframe>
-        </div>
-        <main dangerouslySetInnerHTML={{ __html: html }} />
-      </div>
-    </Layout>
+      </Layout>
+    </Styles>
   );
 };
 
@@ -68,14 +68,16 @@ export const pageQuery = graphql`
   }
 `;
 
-const Li = styled.li`
+const Styles = styled.div`
   display: inline-block;
 
   :before {
-  content: ', ';
+    content: ', ';
   }
 
   :first-child:before {
-  display: none;
+    display: none;
   }
-`
+`;
+
+

@@ -1,7 +1,9 @@
 import React from 'react';
+import styled from 'styled-components'
+import { createGlobalStyle} from 'styled-components';
 
 // component
-import Sidebar from './sidebar';
+import Sidebar from './Sidebar';
 
 // font awesome
 import '@fortawesome/fontawesome-svg-core/styles.css';
@@ -12,13 +14,16 @@ import { faCoffee, faFile } from '@fortawesome/free-solid-svg-icons';
 import { config } from '@fortawesome/fontawesome-svg-core';
 
 // style
-import '../styles/styles.css';
+import GlobalStyles from '../styles'
+
 
 library.add(fab, faCoffee, faFileRegular, faFile);
 config.autoAddCss = false;
 
+
 const Layout = ({ children, location }) => (
   <div className="container">
+    <GlobalStyles />
     <Sidebar location={location} />
     <div className="main-container">{children}</div>
   </div>

@@ -1,11 +1,14 @@
 import React from 'react';
+import styled from 'styled-components';
 import { Link } from 'gatsby';
 import { kebabCase } from 'lodash';
 
 const Projects = ({ name }) => (
-  <li>
+  <Styles>
     <Link to={`/projects/${kebabCase(name)}`}>{name}</Link>
-  </li>
+  </Styles>
 );
 
 export default Projects;
+
+const Styles = styled.li``;

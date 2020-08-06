@@ -1,3 +1,9 @@
+import { css } from 'styled-components';
+
+// theme
+import { colors, breakpoints } from './theme';
+
+export default css`
 ul {
   margin: 0;
 }
@@ -16,9 +22,8 @@ ul {
 .sidebar-container {
   max-width: 400px;
   width: 30vw;
-  height: 100vh;
   padding: 2.5rem;
-  border-right: 1px solid #efefef;
+  border-right: 1px solid ${colors.paleGrey};
 }
 
 .profile-image {
@@ -71,7 +76,7 @@ ul {
   justify-content: flex-start;
   align-items: center;
 
-  border: 1px solid #efefef;
+  border: 1px solid ${colors.paleGrey};
   border-radius: 4px;
   padding: 1.2rem;
 }
@@ -83,14 +88,14 @@ ul {
   width: 98%;
   height: 155px;
   margin-bottom: 0;
-  border: 1px solid #efefef;
+  border: 1px solid ${colors.paleGrey};
   border-radius: 4px;
 }
 
 .tag-button {
   background: transparent;
-  color: #1ca086;
-  border: 1px solid #c9c9c9;
+  color: ${colors.fontGreen};
+  border: 1px solid ${colors.lightGrey};
   border-radius: 4px;
 
   margin-right: 10px;
@@ -111,7 +116,7 @@ ul {
   max-width: 100px;
   height: 30px;
   padding: 5px;
-  border: 1px solid #c9c9c9;
+  border: 1px solid ${colors.lightGrey};
   border-radius: 4px;
   margin-right: calc(1.45rem / 2);
 }
@@ -134,7 +139,7 @@ ul {
 .responsive-container {
   position: relative;
   overflow: hidden;
-  border:1px solid #efefef;
+  border:1px solid ${colors.paleGrey};
   border-radius: 4px;
   box-shadow: 3px 4px 4px 0 rgba(216, 216, 216, 0.5);
   padding-top: 56.25%;
@@ -157,7 +162,7 @@ ul {
 }
 
 pre, code {
-  background-color: beige;
+  background-color: ${colors.backgroundGreen};
 }
 
 pre {
@@ -227,7 +232,7 @@ Media Queries comes here
     max-width: 100%;
     width: 100%;
     height: 30%;
-    border-bottom: 1px solid #efefef;
+    border-bottom: 1px solid ${colors.paleGrey};
   }
 
   .profile-image-link {
@@ -297,3 +302,4 @@ Media Queries comes here
     width: 50px;
   }
 }
+`;

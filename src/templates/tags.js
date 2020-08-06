@@ -1,4 +1,5 @@
 import React from 'react';
+import styled from 'styled-components';
 import PropTypes from 'prop-types';
 import { graphql, Link } from 'gatsby'
 import { kebabCase } from "lodash";
@@ -14,24 +15,26 @@ const Tags = ({ pageContext, data }) => {
     } tagged with "${tag}"`;
 
   return (
-    <Layout>
-      <div className="to-home">
-        <Link to='/'>← Go back</Link>
-      </div>
-      <p className="title">{tagHeader}</p>
-      <ul className="tagged-list">
-        {edges.map(({ node }) => {
-          const { title } = node.frontmatter;
-          const path = `/projects/${kebabCase(title)}`;
-          return (
-            <li key={title}>
-              <Link to={path}>{title}</Link>
-            </li>
-          );
-        })}
-      </ul>
-      <Link to={`/tags/${_.kebabCase(tag.fieldValue)}`}>All tags</Link>
-    </Layout>
+    <Styles>
+      <Layout>
+        <div className="to-home">
+          <Link to='/'>← Go back</Link>
+        </div>
+        <p className="title">{tagHeader}</p>
+        <ul className="tagged-list">
+          {edges.map(({ node }) => {
+            const { title } = node.frontmatter;
+            const path = `/projects/${kebabCase(title)}`;
+            return (
+              <li key={title}>
+                <Link to={path}>{title}</Link>
+              </li>
+            );
+          })}
+        </ul>
+        <Link to={`/tags/${_.kebabCase(tag.fieldValue)}`}>All tags</Link>
+      </Layout>
+    </Styles>
   );
 };
 
@@ -75,3 +78,5 @@ export const pageQuery = graphql`
     }
   }
 `;
+
+const Styles = styled.div``;

@@ -1,4 +1,5 @@
 import React from 'react';
+import styled from 'styled-components';
 import { Link } from 'gatsby';
 import { kebabCase } from 'lodash';
 
@@ -6,9 +7,11 @@ import { kebabCase } from 'lodash';
 import Writings from '../../pages/writings';
 
 const WritingsSection = ({ name }) => (
-  <li>
+  <Styles>
     <Link to={`/writings/${kebabCase(name)}`}>{name}</Link>
-  </li>
+  </Styles>
 );
 
 export default WritingsSection;
+
+const Styles = styled.li``;
