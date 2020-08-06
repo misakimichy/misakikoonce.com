@@ -72,7 +72,7 @@ const Styles = styled.div`
 /* sidebar styling */
   max-width: 400px;
   width: 30vw;
-  padding: 4%;
+  padding: 56px;
   border-right: 1px solid ${colors.paleGrey};
 
   .profile-image {
@@ -90,7 +90,7 @@ const Styles = styled.div`
   }
   
   .social-link-item {
-    padding: 10px;
+    padding: 8px;
 
     .icon {
       font-size: 1.1em;
@@ -99,38 +99,33 @@ const Styles = styled.div`
 
 
   @media screen and (max-width: 1024px) {
-    .sidebar-container {
-      max-width: 267px;
-      padding: 2rem;
-    }
+    max-width: 267px;
+    padding: 40px;
 
-    .name-holder > h1 {
-      font-size: 1.7rem;
-      margin-top: 1.5rem;
-    }
-
-    .name-holder > p {
-      font-size: 0.9rem;
-      margin-bottom: 1rem;
-    }
-
-    .social-link-item {
-      padding: 6px;
+    .name-holder {
+      h1 {
+        font-size: 1.7rem;
+        margin-top: 1.5rem;
+      }
+      p {
+        font-size: 0.9rem;
+        margin-bottom: 1rem;
+      }
     }
   }
 
   @media screen and (max-width: 800px) {
     display: flex;
+    align-items: center;
     border-bottom: 1px solid ${colors.paleGrey};
     max-width: 100%;
     width: 100%;
     height: 30%;
-    padding: 5%;
+    padding: 8px 48px;
 
     .profile-image-link {
       display: block;
-      margin: auto 0;
-      min-width: 150px;
+      margin: auto 0; 
     }
 
     .profile-image {
@@ -138,8 +133,8 @@ const Styles = styled.div`
     }
 
     .name-holder {
-      padding: 0 5%;
-      margin-top: 20px;
+      width: 350px;
+      margin: 40px 16px;
     }
 
     .name-holder > h1 {
@@ -153,10 +148,8 @@ const Styles = styled.div`
   }
 
   @media screen and (max-width: 640px) {
-    display: block;
-    max-width: 100%;
-    padding: 2rem;
-    height: 100%;
+    flex-direction: column;
+    padding: 24px 0;
 
     .profile-image {
       display: block;
@@ -164,7 +157,8 @@ const Styles = styled.div`
     }
 
     .name-holder {
-      margin-top: 1.5rem;
+      max-width: 380px;
+      margin: 24px 0 0 0;
       text-align: center;
     }
 
@@ -180,7 +174,7 @@ const Styles = styled.div`
 
     .social-link-item {
       font-size: 1.2rem;
-      width: 50px;
+      width: 48px;
     }
   }
 `;

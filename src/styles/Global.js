@@ -75,7 +75,6 @@ export default css`
   /* projects */
   .main-container {
     width: 100vw;
-    max-width: 100%;
   }
 
   .project-container {
@@ -99,7 +98,7 @@ export default css`
     min-width: 50px;
     max-width: 100px;
     height: 30px;
-    padding: 5px;
+    padding: 8px;
     border: 1px solid ${colors.lightGrey};
     border-radius: 4px;
     margin-right: calc(1.45rem / 2);
@@ -150,8 +149,8 @@ export default css`
   }
 
   pre {
-    padding: 20px;
-    border-radius: 3px;
+    padding: 24px;
+    border-radius: 4px;
   }
 
   /* 
@@ -171,7 +170,6 @@ export default css`
     .stack-tag {
       display: flex;
     }
-
   }
 
   /* 
