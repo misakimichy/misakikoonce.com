@@ -1,5 +1,4 @@
 import React from 'react';
-import styled from 'styled-components';
 import { graphql } from 'gatsby';
 import { kebabCase } from "lodash";
 
@@ -23,26 +22,24 @@ const MainView = ({ data }) => {
     };
   });
   return (
-    <Styles>
-      <Layout>
-        <main>
-          <h1 className="project-title">Projects</h1>
-          <ul className="project-container">
-            {cards.map((card, index) =>
-              <Card
-                key={index}
-                className="project-card"
-                title={card.name}
-                url={card.path}
-                description={card.description}
-                tags={card.tags}
-                thumbnail={card.thumbnail}
-              />
-            )}
-          </ul>
-        </main>
-      </Layout>
-    </Styles>
+    <Layout>
+      <main>
+        <h1 className="project-title">Projects</h1>
+        <ul className="project-container">
+          {cards.map((card, index) =>
+            <Card
+              key={index}
+              className="project-card"
+              title={card.name}
+              url={card.path}
+              description={card.description}
+              tags={card.tags}
+              thumbnail={card.thumbnail}
+            />
+          )}
+        </ul>
+      </main>
+    </Layout>
   );
 };
 
@@ -70,5 +67,3 @@ export const pageQuery = graphql`
     }
   }
 `;
-
-const Styles = styled.div``;

@@ -1,5 +1,4 @@
 import React from 'react';
-import styled from 'styled-components';
 import { Link, graphql } from 'gatsby';
 
 // component
@@ -15,19 +14,17 @@ const ProjectPage = ({ data }) => {
   });
 
   return (
-    <Styles>
-      <Layout>
-          <div className="to-home">
-            <Link to='/'>← Go back</Link>
-          </div>
-          <p className="title">All projects</p>
-          <ul className="tagged-list">
-            {titles.map(title => (
-              <Projects key={title} name={title} />
-            ))}
-          </ul>
-      </Layout>
-    </Styles>
+    <Layout>
+        <div className="to-home">
+          <Link to='/'>← Go back</Link>
+        </div>
+        <p className="title">All projects</p>
+        <ul className="tagged-list">
+          {titles.map(title => (
+            <Projects key={title} name={title} />
+          ))}
+        </ul>
+    </Layout>
   );
 };
 
@@ -46,5 +43,3 @@ export const pageQuery = graphql`
     }
   }
 `;
-
-const Styles = styled.div``;

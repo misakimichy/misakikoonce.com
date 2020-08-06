@@ -4,302 +4,243 @@ import { css } from 'styled-components';
 import { colors, breakpoints } from './theme';
 
 export default css`
-ul {
-  margin: 0;
-}
+  h1 {
+    font-size: 2rem;
+    margin-bottom: 15px;
 
-.no-underline {
-  background-image: none;
-}
+    @media (max-width: 800px) {
+      font-size: 1.8rem;
+    }
+  }
 
-.container {
-  display: flex;
-  padding: 0px;
-  margin: 0px;
-}
+  h2 {
+    font-size: 1.8rem;
+    word-spacing: 3px;
+    margin-bottom: 15px;
 
-/* sidebar styling */
-.sidebar-container {
-  max-width: 400px;
-  width: 30vw;
-  padding: 2.5rem;
-  border-right: 1px solid ${colors.paleGrey};
-}
+    @media (max-width: 800px) {
+      font-size: 1.6rem;
+    }
+  }
 
-.profile-image {
-  border-radius: 50%;
-}
+  h3 {
+    font-size: 1.6rem;
+    padding-bottom: 10px;
+    line-height: 3rem;
 
-.social-links {
-  display: flex;
-  flex-direction: column;
-}
+    @media (max-width: 800px) {
+      font-size: 1.4rem;
+    }
+  }
 
-.social-link-item {
-  padding: 10px;
-}
+  /* h4 used for footer */
+  h4 {
+    font-size: 1.4rem;
+    padding-bottom: 5px;
+  }
 
-.icon {
-  font-size: 1.3em;
-}
+  /* h5 user in nav bar */
+  h5 {
+    font-size: 1.1rem;
+  }
 
-.icon-span {
-  margin-left: 10px
-}
+  h6 {
+    font-size: 1.1rem;
+  }
 
-/* main contents' styling */
-/* projects */
-.main-container {
-  width: 100vw;
-  max-width: 100%;
-}
+  p {
+    line-height: 29px;
+  }
 
-.project-container {
-  width: 100%;
-  display: grid;
-  grid-template-columns: repeat(auto-fill, minmax(320px, 320px));
-  -webkit-box-pack: center;
-  justify-content: center;
-  margin-top: 16px;
-  gap: 32px;
+  ul {
+    margin: 0;
+  }
 
-  padding: 0 32px;
-}
+  .no-underline {
+    background-image: none;
+  }
 
-.project-title {
-  padding-left: 0.6rem;
-}
-
-.project-card {
-  display: flex;
-  flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
-
-  border: 1px solid ${colors.paleGrey};
-  border-radius: 4px;
-  padding: 1.2rem;
-}
-.project-card:hover {
-  box-shadow: 2px 2px 4px 0 rgba(216, 216, 216, 0.5);
-}
-
-.card-thumbnail {
-  width: 98%;
-  height: 155px;
-  margin-bottom: 0;
-  border: 1px solid ${colors.paleGrey};
-  border-radius: 4px;
-}
-
-.tag-button {
-  background: transparent;
-  color: ${colors.fontGreen};
-  border: 1px solid ${colors.lightGrey};
-  border-radius: 4px;
-
-  margin-right: 10px;
-
-  cursor: pointer;
-}
-.tag-button:hover {
-  box-shadow: 3px 4px 4px 0 rgba(216, 216, 216, 0.5);
-}
-.tag-button:focus {
-  outline: 0;
-}
+  .container {
+    display: flex;
+    padding: 0px;
+    margin: 0px;
+  }
 
 
-.tag-item {
-  list-style: none;
-  min-width: 50px;
-  max-width: 100px;
-  height: 30px;
-  padding: 5px;
-  border: 1px solid ${colors.lightGrey};
-  border-radius: 4px;
-  margin-right: calc(1.45rem / 2);
-}
+  .icon-span {
+    margin-left: 10px
+  }
 
-.title {
-  font-size: 40px;
-  font-weight: bold;
-  margin-bottom: 0.5rem;
-}
+  /* main contents' styling */
+  /* projects */
+  .main-container {
+    width: 100vw;
+    max-width: 100%;
+  }
 
-.date {
-  font-size: 22px;
-  margin-left: 1rem;
-}
+  .project-container {
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(320px, 320px));
+    -webkit-box-pack: center;
+    justify-content: center;
+    margin-top: 16px;
+    gap: 32px;
 
-.to-home {
-  margin: 1rem 0;
-}
+    padding: 0 32px;
+  }
 
-.responsive-container {
-  position: relative;
-  overflow: hidden;
-  border:1px solid ${colors.paleGrey};
-  border-radius: 4px;
-  box-shadow: 3px 4px 4px 0 rgba(216, 216, 216, 0.5);
-  padding-top: 56.25%;
-  margin-bottom: 1.45rem;
-}
+  .project-title {
+    padding-left: 0.6rem;
+  }
 
-.responsive-iframe {
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  height: 100%;
-  display: block;
-  margin: 0 auto;
-  border: none;
-}
+  .project-card {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
 
-.tagged-list {
-  list-style: none;
-}
+    border: 1px solid ${colors.paleGrey};
+    border-radius: 4px;
+    padding: 1.2rem;
+  }
+  .project-card:hover {
+    box-shadow: 2px 2px 4px 0 rgba(216, 216, 216, 0.5);
+  }
 
-pre, code {
-  background-color: ${colors.backgroundGreen};
-}
+  .card-thumbnail {
+    width: 98%;
+    height: 155px;
+    margin-bottom: 0;
+    border: 1px solid ${colors.paleGrey};
+    border-radius: 4px;
+  }
 
-pre {
-  padding: 20px;
-  border-radius: 3px;
-}
+  .tag-button {
+    background: transparent;
+    color: ${colors.fontGreen};
+    border: 1px solid ${colors.lightGrey};
+    border-radius: 4px;
 
-/* 
+    margin-right: 10px;
 
-Media Queries comes here
+    cursor: pointer;
+  }
+  .tag-button:hover {
+    box-shadow: 3px 4px 4px 0 rgba(216, 216, 216, 0.5);
+  }
+  .tag-button:focus {
+    outline: 0;
+  }
 
-*/
-@media screen and (max-width: 480px) {
+
+  .tag-item {
+    list-style: none;
+    min-width: 50px;
+    max-width: 100px;
+    height: 30px;
+    padding: 5px;
+    border: 1px solid ${colors.lightGrey};
+    border-radius: 4px;
+    margin-right: calc(1.45rem / 2);
+  }
+
   .title {
-    font-size: 30px;
+    font-size: 40px;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
   }
 
   .date {
-    font-size: 20px;
+    font-size: 22px;
+    margin-left: 1rem;
   }
 
-  .stack-tag {
-    display: flex;
+  .to-home {
+    margin: 1rem 0;
   }
 
-}
-
-/* 
-    Media Queries
-    Default is more than 1024
-    800-1024    - tablet landscape
-    800-640     - tablet (Sidebar becomes header)
-    640-less    - phone landscape & smaller - one column
-*/
-@media screen and (max-width: 1024px) {
-  .sidebar-container {
-    max-width: 267px;
-    padding: 2rem;
+  .responsive-container {
+    position: relative;
+    overflow: hidden;
+    border:1px solid ${colors.paleGrey};
+    border-radius: 4px;
+    box-shadow: 3px 4px 4px 0 rgba(216, 216, 216, 0.5);
+    padding-top: 56.25%;
+    margin-bottom: 1.45rem;
   }
 
-  .name-holder>h1 {
-    font-size: 1.7rem;
-    margin-top: 1.5rem;
-  }
-
-  .name-holder>p {
-    font-size: 0.9rem;
-    margin-bottom: 1rem;
-  }
-
-  .social-link-item {
-    padding: 6px;
-  }
-
-  .project-car {
-    margin: 0 8px 10px 8px;
-  }
-}
-
-@media screen and (max-width: 800px) {
-  .container {
-    flex-direction: column;
-  }
-
-  .sidebar-container {
-    display: flex;
-    max-width: 100%;
+  .responsive-iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
     width: 100%;
-    height: 30%;
-    border-bottom: 1px solid ${colors.paleGrey};
-  }
-
-  .profile-image-link {
-    display: block;
-    margin: auto 0;
-    min-width: 150px;
-  }
-
-  .profile-image {
-    max-width: 150px;
-  }
-
-  .name-holder {
-    padding: 0rem 1rem;
-  }
-
-  .name-holder>h1 {
-    margin-top: 0;
-  }
-
-  .social-links {
-    margin: auto 0;
-    min-width: 115px;
-  }
-}
-
-@media screen and (max-width: 640px) {
-  .container {
-    flex-direction: column;
     height: 100%;
-  }
-
-  .main-container {
-    padding: 2rem;
-  }
-
-  /* Side bar */
-  .sidebar-container {
-    display: block;
-    max-width: 100%;
-    padding: 2rem;
-    height: 100%;
-  }
-
-  .profile-image {
     display: block;
     margin: 0 auto;
+    border: none;
   }
 
-  .name-holder {
-    margin-top: 1.5rem;
-    text-align: center;
+  .tagged-list {
+    list-style: none;
   }
 
-  .social-links {
-    flex-direction: row;
-    justify-content: center;
-    width: 100%;
+  pre, code {
+    background-color: ${colors.backgroundGreen};
   }
 
-  .icon-span {
-    display: none;
+  pre {
+    padding: 20px;
+    border-radius: 3px;
   }
 
-  .social-link-item {
-    font-size: 1.2rem;
-    width: 50px;
+  /* 
+
+  Media Queries comes here
+
+  */
+  @media screen and (max-width: 480px) {
+    .title {
+      font-size: 30px;
+    }
+
+    .date {
+      font-size: 20px;
+    }
+
+    .stack-tag {
+      display: flex;
+    }
+
   }
-}
+
+  /* 
+      Media Queries
+      Default is more than 1024
+      800-1024    - tablet landscape
+      800-640     - tablet (Sidebar becomes header)
+      640-less    - phone landscape & smaller - one column
+  */
+  @media screen and (max-width: 1024px) {
+    .project-card {
+      margin: 0 8px 10px 8px;
+    }
+  }
+
+  @media screen and (max-width: 800px) {
+    .container {
+      flex-direction: column;
+    }
+  }
+
+  @media screen and (max-width: 640px) {
+    .container {
+      flex-direction: column;
+      height: 100%;
+    }
+
+    .main-container {
+      padding: 2rem;
+    }
+  }
 `;
