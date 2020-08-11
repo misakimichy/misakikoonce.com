@@ -19,12 +19,14 @@ const ProjectCard = ({
     <Styles>
       <img className="card-thumbnail" src={thumbnail} alt="project thumbnail" />
       <div className="card-content-wrapper" style={{width: '98%'}}>
-        <Link to={url} className="no-underline">
-          <h4 style={{marginBottom: '16px'}}>{title}</h4>
-          <p style={{color: `${colors.darkGrey}`, marginBottom: '32px'}}>{description}
-            <span style={{color: `${colors.fontGreen}`, marginLeft: '5px'}}>...read more</span>
-          </p>
-				</Link>
+        {typeof window !== 'undefined' && 
+          <Link to={url} className="no-underline">
+            <h4 style={{marginBottom: '16px'}}>{title}</h4>
+            <p style={{color: `${colors.darkGrey}`, marginBottom: '32px'}}>{description}
+              <span style={{color: `${colors.fontGreen}`, marginLeft: '5px'}}>...read more</span>
+            </p>
+          </Link>
+        }
         <div className="tag-wrapper">
           {tags.map((tag, index) =>
             <Tag key={index} name={tag} />

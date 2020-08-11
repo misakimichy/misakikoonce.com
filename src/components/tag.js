@@ -8,14 +8,16 @@ import { colors } from '../styles/theme';
 
 const Tag = ({ name, count }) => (
   <Styles>
-    <Link
-      className="no-underline tags"
-      to={`/tags/${kebabCase(name)}`}
-    >
-      <button className="tag-button">
-        {name} {count !== null ? (count) : ''}
-      </button>
-    </Link>
+    {typeof window !== 'undefined' && 
+      <Link
+        className="no-underline tags"
+        to={`/tags/${kebabCase(name)}`}
+      >
+        <button className="tag-button">
+          {name} {count !== null ? (count) : ''}
+        </button>
+      </Link>
+    }
   </Styles>
 );
 

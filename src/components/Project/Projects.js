@@ -5,7 +5,7 @@ import { kebabCase } from 'lodash';
 
 const Projects = ({ name }) => (
   <Styles>
-    <Link to={`/projects/${kebabCase(name)}`}>{name}</Link>
+    {typeof window !== 'undefined' && <Link to={`/projects/${kebabCase(name)}`}>{name}</Link>}
   </Styles>
 );
 

@@ -27,9 +27,11 @@ const Sidebar = () => (
     `}
     render={data => (
       <Styles>
-        <Link to="/" className="no-underline profile-image-link">
-          <img className="profile-image" src={data.site.siteMetadata.logo} alt={data.site.siteMetadata.title} />
-        </Link>
+        {typeof window !== 'undefined' &&
+          <Link to="/" className="no-underline profile-image-link">
+            <img className="profile-image" src={data.site.siteMetadata.logo} alt={data.site.siteMetadata.title} />
+          </Link>
+        }
         <div className="name-holder">
           <h1 style={{marginBottom: '15px'}}>{data.site.siteMetadata.title}</h1>
           <p>{data.site.siteMetadata.description}</p>

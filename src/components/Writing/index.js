@@ -8,7 +8,7 @@ import Writings from '../../pages/writings';
 
 const WritingsSection = ({ name }) => (
   <Styles>
-    <Link to={`/writings/${kebabCase(name)}`}>{name}</Link>
+    {typeof window !== 'undefined' && <Link to={`/writings/${kebabCase(name)}`}>{name}</Link>}
   </Styles>
 );
 
