@@ -27,19 +27,17 @@ const ProjectTemplate = ({ data }) => {
         </div>
         <div >
           <div>
-            <p className="title">{frontmatter.title}
+            <h1 className="title">{frontmatter.title}
               <span className="date">{frontmatter.date}</span>
-            </p>
-            <div className="stack-tag">
+            </h1>
+            <span className="stack-tag">
               Stack Tag:
-              <ul>
                 {tags.map((tag, index) =>
-                  <li key={index}>
-                    <Link to={tag.path}>{tag.name}</Link>
-                  </li>
+                  <Link to={tag.path} key={index} className="no-underline tags">
+                    <button type="button" className="tag-button">{tag.name}</button>
+                  </Link>
                 )}
-              </ul>
-            </div>
+            </span>
           </div>
           <div className="responsive-container">
             <iframe className="responsive-iframe" title={frontmatter.title} src={frontmatter.projectUrl} allowFullScreen></iframe>
@@ -77,6 +75,14 @@ const Styles = styled.div`
 
   :first-child:before {
     display: none;
+  }
+
+  .stack-tag {
+    a {
+      :first-child {
+        margin-left: 8px;
+      }
+    }
   }
 `;
 

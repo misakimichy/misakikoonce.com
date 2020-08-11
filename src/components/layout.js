@@ -14,7 +14,8 @@ import { faCoffee, faFile } from '@fortawesome/free-solid-svg-icons';
 import { config } from '@fortawesome/fontawesome-svg-core';
 
 // style
-import GlobalStyles from '../styles'
+import GlobalStyles from '../styles';
+import { colors} from '../styles/theme';
 
 
 library.add(fab, faCoffee, faFileRegular, faFile);
@@ -22,11 +23,32 @@ config.autoAddCss = false;
 
 
 const Layout = ({ children, location }) => (
-  <div className="container">
+  <Styles className="container">
     <GlobalStyles />
     <Sidebar location={location} />
     <div className="main-container">{children}</div>
-  </div>
+  </Styles>
 );
 
 export default Layout;
+
+const Styles = styled.div`
+  .tag-button {
+    background: transparent;
+    color: ${colors.fontGreen};
+    border: 1px solid ${colors.lightGrey};
+    border-radius: 4px;
+
+    height: 30px;
+
+    margin-right: 10px;
+
+    cursor: pointer;
+  
+    :hover {
+      box-shadow: 3px 4px 4px 0 rgba(216, 216, 216, 0.5);
+    }
+    :focus {
+      outline: 0;
+    }
+  }`

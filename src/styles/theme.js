@@ -1,7 +1,7 @@
 export const colors = {
   // brand colors
   fontGreen: '#1ca086',
-  backgroundGreen: '#b8fff1',
+  backgroundGreen: '#2cffd536',
 
   // greys
   black: '#000000',

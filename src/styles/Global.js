@@ -6,7 +6,7 @@ import { colors, breakpoints } from './theme';
 export default css`
   h1 {
     font-size: 2rem;
-    margin-bottom: 15px;
+    margin-bottom: 16px;
 
     @media (max-width: 800px) {
       font-size: 1.8rem;
@@ -16,7 +16,7 @@ export default css`
   h2 {
     font-size: 1.8rem;
     word-spacing: 3px;
-    margin-bottom: 15px;
+    margin-bottom: 16px;
 
     @media (max-width: 800px) {
       font-size: 1.6rem;
@@ -25,7 +25,7 @@ export default css`
 
   h3 {
     font-size: 1.6rem;
-    padding-bottom: 10px;
+    padding-bottom: 8px;
 
     @media (max-width: 800px) {
       font-size: 1.4rem;
@@ -36,7 +36,7 @@ export default css`
   h4 {
     font-size: 1.4rem;
     line-height: 32px;
-    padding-bottom: 5px;
+    padding-bottom: 4px;
   }
 
   /* h5 user in nav bar */
@@ -74,7 +74,8 @@ export default css`
   /* main contents' styling */
   /* projects */
   .main-container {
-    width: 100vw;
+    width: 100%;
+    padding: 32px;
   }
 
   .project-container {
@@ -90,7 +91,7 @@ export default css`
   }
 
   .project-title {
-    padding-left: 0.6rem;
+    margin-left: 16px;
   }
 
   .tag-item {
@@ -120,24 +121,21 @@ export default css`
   }
 
   .responsive-container {
-    position: relative;
     overflow: hidden;
+
     border:1px solid ${colors.paleGrey};
     border-radius: 4px;
     box-shadow: 3px 4px 4px 0 rgba(216, 216, 216, 0.5);
-    padding-top: 56.25%;
-    margin-bottom: 1.45rem;
+
+    width: 850px;
+    height: 550px;
+
+    margin: 40px auto 40px auto;
   }
 
   .responsive-iframe {
-    position: absolute;
-    top: 0;
-    left: 0;
     width: 100%;
     height: 100%;
-    display: block;
-    margin: 0 auto;
-    border: none;
   }
 
   .tagged-list {
@@ -198,7 +196,7 @@ export default css`
     }
 
     .main-container {
-      padding: 2rem;
+      padding: 40px;
     }
   }
 `;
