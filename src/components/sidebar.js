@@ -133,12 +133,8 @@ const Styles = styled.div`
     }
 
     .name-holder {
-      width: 350px;
+      width: 340px;
       margin: 40px 16px;
-    }
-
-    .name-holder > h1 {
-      margin-top: 0;
     }
 
     .social-links {

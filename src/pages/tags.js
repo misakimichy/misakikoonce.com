@@ -24,10 +24,7 @@ const Tags = ({ data }) => {
   // );
   return (
     <Layout>
-        <div className="to-home">
-          <Link to='/'>← Go back</Link>
-        </div>
-        <p className="title">Tag list</p>
+        <h1>Tag list</h1>
         {/* <ul>
           {tags.map(tag => (
             <Tag key={tag} name={tag} count={mapping[tag]} />

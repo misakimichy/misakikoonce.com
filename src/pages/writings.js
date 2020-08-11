@@ -15,16 +15,13 @@ const Writings = ({ data }) => {
 
   return (
     <Layout>
-      <div className="to-home">
-        <Link to='/'>← Go back</Link>
-      </div>
-      <p className="title">All writings</p>
+      <h1 className="section-title">All writings</h1>
       {/* <ul className="tagged-list">
         {titles.map(title => (
           <WritingSection key={title} name={title} />
         ))}
       </ul> */}
-      <p>Add blog posts list here.</p>
+      <p>Posts coming soon!</p>
     </Layout>
   );
 };

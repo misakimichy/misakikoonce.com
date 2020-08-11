@@ -17,10 +17,7 @@ const Tags = ({ pageContext, data }) => {
   return (
     <Styles>
       <Layout>
-        <div className="to-home">
-          <Link to='/'>← Go back</Link>
-        </div>
-        <p className="title">{tagHeader}</p>
+        <h1 className="section-title">{tagHeader}</h1>
         <ul className="tagged-list">
           {edges.map(({ node }) => {
             const { title } = node.frontmatter;

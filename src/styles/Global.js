@@ -74,24 +74,22 @@ export default css`
   /* main contents' styling */
   /* projects */
   .main-container {
-    width: 100%;
-    padding: 32px;
+    width: calc(100vw - 25%);
+    padding: 48px;
   }
 
   .project-container {
-    width: 100%;
     display: grid;
-    grid-template-columns: repeat(auto-fill, minmax(344px, 344px));
+    grid-template-columns: repeat(auto-fill, minmax(336px, 336px));
+    gap: 32px;
     -webkit-box-pack: center;
     justify-content: center;
-    margin-top: 16px;
-    gap: 32px;
-
-    padding: 0 32px;
+  
+    width: 100%;
   }
 
-  .project-title {
-    margin-left: 16px;
+  .section-title {
+    margin-bottom: 40px;
   }
 
   .tag-item {

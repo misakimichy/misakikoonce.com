@@ -1,5 +1,6 @@
 import React from 'react';
-import styled from 'styled-components'
+import styled from 'styled-components';
+import { Link } from 'gatsby';
 import { createGlobalStyle} from 'styled-components';
 
 // component
@@ -26,13 +27,19 @@ const Layout = ({ children, location }) => (
   <Styles className="container">
     <GlobalStyles />
     <Sidebar location={location} />
-    <div className="main-container">{children}</div>
+    <div className="main-container">
+       {window.location.pathname !== '/' && <div className="to-home">
+          <Link to='/'>← Go back</Link>
+        </div>}
+      {children}
+    </div>
   </Styles>
 );
 
 export default Layout;
 
 const Styles = styled.div`
+  width: 100vw;
   .tag-button {
     background: transparent;
     color: ${colors.fontGreen};
