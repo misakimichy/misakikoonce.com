@@ -6,7 +6,7 @@ import { colors, breakpoints } from './theme';
 export default css`
   h1 {
     font-size: 2rem;
-    margin-bottom: 16px;
+    margin-bottom: 40px;
 
     @media (max-width: 800px) {
       font-size: 1.8rem;
@@ -109,31 +109,8 @@ export default css`
     margin-bottom: 0.5rem;
   }
 
-  .date {
-    font-size: 22px;
-    margin-left: 1rem;
-  }
-
   .to-home {
-    margin: 1rem 0;
-  }
-
-  .responsive-container {
-    overflow: hidden;
-
-    border:1px solid ${colors.paleGrey};
-    border-radius: 4px;
-    box-shadow: 3px 4px 4px 0 rgba(216, 216, 216, 0.5);
-
-    width: 850px;
-    height: 550px;
-
-    margin: 40px auto 40px auto;
-  }
-
-  .responsive-iframe {
-    width: 100%;
-    height: 100%;
+    margin-bottom: 40px;
   }
 
   .tagged-list {
@@ -147,25 +124,7 @@ export default css`
   pre {
     padding: 24px;
     border-radius: 4px;
-  }
-
-  /* 
-
-  Media Queries comes here
-
-  */
-  @media screen and (max-width: 480px) {
-    .title {
-      font-size: 30px;
-    }
-
-    .date {
-      font-size: 20px;
-    }
-
-    .stack-tag {
-      display: flex;
-    }
+    overflow: auto;
   }
 
   /* 
@@ -176,6 +135,10 @@ export default css`
       640-less    - phone landscape & smaller - one column
   */
   @media screen and (max-width: 1024px) {
+    .main-container {
+      width: calc(100vw - 28%);
+      padding: 40px;
+    }
     .project-card {
       margin: 0 8px 10px 8px;
     }
@@ -188,13 +151,18 @@ export default css`
   }
 
   @media screen and (max-width: 640px) {
-    .container {
-      flex-direction: column;
-      height: 100%;
-    }
-
     .main-container {
-      padding: 40px;
+      width: 100%;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    .title {
+      font-size: 30px;
+    }
+  
+    .stack-tag {
+      display: flex;
     }
   }
 `;

@@ -6,6 +6,8 @@ import { kebabCase } from "lodash";
 // component
 import Layout from '../components/Layout';
 
+// theme
+import { colors } from '../styles/theme';
 
 const ProjectTemplate = ({ data }) => {
   const { markdownRemark } = data;
@@ -20,32 +22,26 @@ const ProjectTemplate = ({ data }) => {
   });
 
   return (
-    <Styles>
-      <Layout>
-        <div className="to-home">
-          <Link to='/'>← Go back</Link>
+    <Layout>
+      <Styles>
+        <h1>{frontmatter.title}</h1>
+        <p className="date">{frontmatter.date}</p>
+  
+        <div className="stack-tag">
+          Stack Tag:
+            {tags.map((tag, index) =>
+              <Link to={tag.path} key={index} className="no-underline tags">
+                <button type="button" className="tag-button">{tag.name}</button>
+              </Link>
+            )}
         </div>
-        <div >
-          <div>
-            <h1 className="title">{frontmatter.title}
-              <span className="date">{frontmatter.date}</span>
-            </h1>
-            <span className="stack-tag">
-              Stack Tag:
-                {tags.map((tag, index) =>
-                  <Link to={tag.path} key={index} className="no-underline tags">
-                    <button type="button" className="tag-button">{tag.name}</button>
-                  </Link>
-                )}
-            </span>
-          </div>
-          <div className="responsive-container">
-            <iframe className="responsive-iframe" title={frontmatter.title} src={frontmatter.projectUrl} allowFullScreen></iframe>
-          </div>
-          <main dangerouslySetInnerHTML={{ __html: html }} />
+
+        <div className="iframe-container">
+          <iframe title={frontmatter.title} src={frontmatter.projectUrl} allowFullScreen></iframe>
         </div>
-      </Layout>
-    </Styles>
+        <main dangerouslySetInnerHTML={{ __html: html }} />
+      </Styles>
+    </Layout>
   );
 };
 
@@ -67,14 +63,9 @@ export const pageQuery = graphql`
 `;
 
 const Styles = styled.div`
-  display: inline-block;
-
-  :before {
-    content: ', ';
-  }
-
-  :first-child:before {
-    display: none;
+  .date {
+    font-size: 18px;
+    text-align: end;
   }
 
   .stack-tag {
@@ -84,6 +75,33 @@ const Styles = styled.div`
       }
     }
   }
+
+  .iframe-container {
+    border:1px solid ${colors.paleGrey};
+    border-radius: 4px;
+    box-shadow: 3px 4px 4px 0 rgba(216, 216, 216, 0.5);
+
+    height: 500px;
+
+    margin: 40px auto 40px auto;
+    overflow: hidden;
+
+    iframe {
+      width: 100%;
+      height: 100%;
+
+      html {
+        width: 100%;
+        height: 100%;
+      }
+    }
+  }
+
+  @media screen and (max-width: 1024px) {
+    .project-title-wrapper {
+      display: flex;
+      align-items: center;
+      justify-content: space-between;
+    }
+  }
 `;
-
-

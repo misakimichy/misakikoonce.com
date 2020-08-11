@@ -28,7 +28,7 @@ const Sidebar = () => (
     render={data => (
       <Styles>
         <Link to="/" className="no-underline profile-image-link">
-          <img className="profile-image" src={data.site.siteMetadata.logo} alt={data.site.siteMetadata.title} style={{marginBottom: '0'}} />
+          <img className="profile-image" src={data.site.siteMetadata.logo} alt={data.site.siteMetadata.title} />
         </Link>
         <div className="name-holder">
           <h1 style={{marginBottom: '15px'}}>{data.site.siteMetadata.title}</h1>
@@ -69,10 +69,8 @@ const Sidebar = () => (
 export default Sidebar;
 
 const Styles = styled.div`
-/* sidebar styling */
-  max-width: 400px;
-  width: 30vw;
-  padding: 56px;
+  width: calc(100vw - 75%);
+  padding: 48px;
   border-right: 1px solid ${colors.paleGrey};
 
   .profile-image {
@@ -80,7 +78,7 @@ const Styles = styled.div`
   }
 
   .name-holder {
-    margin-top: 70px;
+    margin-top: 48px;
     margin-bottom: 30px;
   }
 
@@ -97,31 +95,21 @@ const Styles = styled.div`
     }
   }
 
-
   @media screen and (max-width: 1024px) {
-    max-width: 267px;
-    padding: 40px;
-
-    .name-holder {
-      h1 {
-        font-size: 1.7rem;
-        margin-top: 1.5rem;
-      }
-      p {
-        font-size: 0.9rem;
-        margin-bottom: 1rem;
-      }
-    }
+      width: calc(100vw - 72%);
+      padding: 40px;
   }
 
   @media screen and (max-width: 800px) {
     display: flex;
     align-items: center;
+    justify-content: center;
     border-bottom: 1px solid ${colors.paleGrey};
-    max-width: 100%;
+
     width: 100%;
     height: 30%;
-    padding: 8px 48px;
+
+    padding: 0;
 
     .profile-image-link {
       display: block;
