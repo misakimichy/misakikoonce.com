@@ -2,74 +2,38 @@ import React from 'react';
 import Helmet from 'react-helmet';
 import PropTypes from 'prop-types';
 import { StaticQuery, graphql } from 'gatsby';
-// import {
-//     title,
-//     logo,
-//     author,
-//     url,
-//     description,
-//     socialLinks,
-//     contact,
-//     logo
-// } from 'data'
 
-const SEO = ({ title, description, logo }) => (
+const SEO = () => (
   <StaticQuery
-    query={query}
-    render={({
-      site: {
-        siteMetadata: {
-          title,
-          defaultDescription,
-          siteUrl,
-          defaultImage
+    query={graphql`
+      query seo {
+        site {
+          siteMetadata {
+            title,
+            description,
+            siteUrl,
+            logo,
+            author
+          }
         }
       }
-    }) => {
-      const seo = {
-        title: title || title,
-        description: description || defaultDescription,
-        logo: `${siteUrl}${logo || defaultImage}`,
-        siteUrl: siteUrl,
-      };
+    `}
+    render={data => {
+      const { title, description, logo, siteUrl, author } = data.site.siteMetadata;
+      
       return (
-        <>
-          <Helmet title={seo.title}>
-            <meta name="description" content={seo.description} />
-            <meta name="logo" content={seo.logo} />
-            {seo.siteUrl && <meta property="og:siteUrl" content={seo.siteUrl} />}
-            {seo.title && <meta property="og:title" content={seo.title} />}
-            {seo.description && <meta property="og:description" content={seo.description} />}
-            {seo.logo && <meta property="og:logo" content={seo.logo} />}
-          </Helmet>
-        </>
+        <Helmet title={title}>
+          <meta name="description" content={description} />
+          <meta name="logo" content={logo} />
+          {siteUrl && <meta property="og:siteUrl" content={siteUrl} />}
+          {title && <meta property="og:title" content={title} />}
+          {description && <meta property="og:description" content={description} />}
+          {logo && <meta property="og:logo" content={logo} />}
+          {author && <meta property="og:author" content={author} />}
+        </Helmet>
       );
     }}
   />
 );
+
 export default SEO;
-
-SEO.propTypes = {
-  title: PropTypes.string.isRequired,
-  description: PropTypes.string.isRequired,
-  logo: PropTypes.string.isRequired,
-};
-
-SEO.defaultProps = {
-  title: null,
-  description: null,
-  logo: null
-};
-
-const query = graphql`
-  query SEO {
-    site {
-      siteMetadata {
-        title: title
-        defaultDescription: description
-        siteUrl: siteUrl
-        logo: logo
-      }
-    }
-  }
-`;

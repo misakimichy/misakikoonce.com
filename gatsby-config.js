@@ -1,6 +1,6 @@
 module.exports = {
   siteMetadata: {
-    title: "Misaki Koonce",
+    title: "Misaki Koonce | Software Engineer",
     logo: '/misaki-real.jpeg',
     author: "Misaki Koonce",
     siteUrl: "https://misakikoonce.com",
@@ -11,7 +11,7 @@ module.exports = {
       linkedin: "https://www.linkedin.com/in/misakikoonce",
     },
     contact: {
-      email: "email@test.com"
+      email: "misaki.koonce@gmail.com"
     },
     resume: "/ResumeMisakiKoonce.pdf"
   },
@@ -20,6 +20,13 @@ module.exports = {
       options: {
         path: `${__dirname}/src/markdown-projects`,
         name: `projects`,
+      },
+    },
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        path: `${__dirname}/src/markdown-writings`,
+        name: `writings`,
       },
     },
     {

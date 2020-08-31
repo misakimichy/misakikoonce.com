@@ -12,6 +12,7 @@ const Sidebar = () => (
       query SiteQuery {
         site {
           siteMetadata {
+            author
             logo
             title
             resume
@@ -25,46 +26,51 @@ const Sidebar = () => (
         }
       }
     `}
-    render={data => (
+    render={data => {
+      const { author, logo, title, resume, description, socialLinks } = data.site.siteMetadata;
+      const { twitter, github, linkedin } = socialLinks;
+
+      return (
       <Styles>
         {typeof window !== 'undefined' &&
           <Link to="/" className="no-underline profile-image-link">
-            <img className="profile-image" src={data.site.siteMetadata.logo} alt={data.site.siteMetadata.title} />
+            <img className="profile-image" src={logo} alt={author} />
           </Link>
         }
         <div className="name-holder">
-          <h1 style={{marginBottom: '15px'}}>{data.site.siteMetadata.title}</h1>
-          <p>{data.site.siteMetadata.description}</p>
+          <h1 style={{marginBottom: '15px'}}>{author}</h1>
+          <p>{description}</p>
         </div>
         {/* <Link to="/about/">About</Link> */}
         <div className="social-links">
           <div className="social-link-item">
-            <a className="no-underline" href={data.site.siteMetadata.resume}>
+            <a className="no-underline" href={resume}>
               <FontAwesomeIcon icon={['far', 'file']} className="icon" />
               <span className="icon-span">Resume</span>
             </a>
           </div>
           <div className="social-link-item">
-            <a className="no-underline" href={data.site.siteMetadata.socialLinks.twitter}>
+            <a className="no-underline" href={twitter}>
               <FontAwesomeIcon icon={['fab', 'twitter']} className="icon" />
               <span className="icon-span">Twitter</span>
             </a>
           </div>
           <div className="social-link-item">
-            <a className="no-underline" href={data.site.siteMetadata.socialLinks.github}>
+            <a className="no-underline" href={github}>
               <FontAwesomeIcon icon={['fab', 'github-alt']} className="icon" />
               <span className="icon-span">Github</span>
             </a>
           </div>
           <div className="social-link-item">
-            <a className="no-underline" href={data.site.siteMetadata.socialLinks.linkedin}>
+            <a className="no-underline" href={linkedin}>
               <FontAwesomeIcon icon={['fab', 'linkedin-in']} className="icon" />
               <span className="icon-span">LinkedIn</span>
             </a>
           </div>
         </div>
       </Styles>
-    )}
+      );
+    }}
   />
 );
 

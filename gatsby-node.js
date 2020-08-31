@@ -1,31 +1,56 @@
 const path = require(`path`)
 const _ = require("lodash")
+const { kebabCase } = require('lodash');
 
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions
 
-  const projectTemplate = path.resolve(`src/templates/ProjectTemplate.js`)
+  const projectTemplate = path.resolve(`src/templates/projectTemplate.js`)
   const projects = path.resolve(`src/pages/projects.js`)
+  const writingTemplate = path.resolve(`src/templates/writingTemplate.js`)
   const writings = path.resolve(`src/pages/writings.js`)
   const tags = path.resolve(`src/pages/tags.js`)
-  const tagTemplate = path.resolve(`src/templates/Tags.js`)
+  const tagTemplate = path.resolve(`src/templates/tags.js`)
   const notFound = path.resolve(`src/pages/404.js`)
 
   const result = await graphql(`
     {
-      allMarkdownRemark(
+      projects: allMarkdownRemark(
         sort: { order: DESC, fields: [frontmatter___date] }
         limit: 1000
       ) {
         edges {
           node {
-            fields {
-              slug
-            }
             frontmatter {
-              path
-              tags
               title
+              path
+              date
+              projectUrl
+              description
+              tags
+              thumbnail {
+                childImageSharp {
+                  fluid {
+                    src
+                  }
+                }
+              }
+            }
+          }
+        }
+      }
+      writings: allMarkdownRemark(
+        filter: {fileAbsolutePath: {regex: "/(markdown-writings)/.*\.md$/"}},
+        sort: {fields: frontmatter___date, order: DESC}
+      ) {
+        edges {
+          node {
+            frontmatter {
+              title
+              path
+              date
+              description
+              tags
             }
           }
         }
@@ -44,34 +69,27 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
     return
   }
 
-  // Create each project pages
-  result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+  // Create projects page with template
+  result.data.projects.edges.forEach(({ node }) => {
+    const { title } = node.frontmatter;
     createPage({
-      path: node.frontmatter.path,
+      path: `/projects/${kebabCase(title)}`,
       component: projectTemplate,
-      context: {}, // additional data can be passed via context
-    })
-  })
-
-  // Create projects list page
-  result.data.allMarkdownRemark.edges.forEach(({ node }) => {
-    createPage({
-      path: `/projects/`,
-      component: projects,
       context: {
         title: projects
-      }
+      },
     })
   })
 
-  // Create writings list page
-  result.data.allMarkdownRemark.edges.forEach(({ node }) => {
+  // Create writings page with template
+  result.data.writings.edges.forEach(({ node }) => {
+    const { title } = node.frontmatter;
     createPage({
-      path: `/writings/`,
-      component: writings,
+      path: `/writings/${kebabCase(title)}`,
+      component: writingTemplate,
       context: {
         title: writings
-      }
+      },
     })
   })
 

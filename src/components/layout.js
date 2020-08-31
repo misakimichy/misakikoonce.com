@@ -5,6 +5,7 @@ import { createGlobalStyle} from 'styled-components';
 
 // component
 import Sidebar from './Sidebar';
+import SEO from './SEO';
 
 // font awesome
 import '@fortawesome/fontawesome-svg-core/styles.css';
@@ -22,20 +23,20 @@ import { colors} from '../styles/theme';
 library.add(fab, faCoffee, faFileRegular, faFile);
 config.autoAddCss = false;
 
-const Layout = ({ children, location }) => {
-  return (
-    <Styles className="container">
-      <GlobalStyles />
-      <Sidebar location={location} />
-      <div className="main-container">
-        {typeof window !== 'undefined' && window.location.pathname !== '/' && <div className="to-home">
-            <Link to='/'>← Go back</Link>
-          </div>}
-        {children}
-      </div>
-    </Styles>
-  );
-}
+
+const Layout = ({ children, location }) => (
+  <Styles className="container">
+    <GlobalStyles />
+    <SEO />
+    <Sidebar location={location} />
+    <div className="main-container">
+       {window.location.pathname !== '/' && <div className="to-home">
+          <Link to='/'>← Go back</Link>
+        </div>}
+      {children}
+    </div>
+  </Styles>
+);
 
 export default Layout;
 
