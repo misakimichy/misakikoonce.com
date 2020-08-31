@@ -17,18 +17,16 @@ const WritingCard = ({
   thumbnail
 }) => (
     <Styles>
-      <div className="card-content-wrapper" style={{width: '98%'}}>
-        <Link to={url} className="no-underline">
-          <h4 style={{marginBottom: '16px'}}>{title}</h4>
-          <p style={{color: `${colors.darkGrey}`, marginBottom: '32px'}}>{description}
-            <span style={{color: `${colors.fontGreen}`, marginLeft: '5px'}}>...read more</span>
-          </p>
-				</Link>
-        <div className="tag-wrapper">
-          {tags.map((tag, index) =>
-            <Tag key={index} name={tag} />
-          )}
-        </div>
+      <Link to={url} className="no-underline">
+        <h4 style={{marginBottom: '16px'}}>{title}</h4>
+        <p style={{color: `${colors.darkGrey}`, marginBottom: '32px'}}>{description}
+          <span style={{color: `${colors.fontGreen}`, marginLeft: '5px'}}>...read more</span>
+        </p>
+      </Link>
+      <div className="tag-wrapper">
+        {tags.map((tag, index) =>
+          <Tag key={index} name={tag} />
+        )}
       </div>
     </Styles>
   );
@@ -49,34 +47,15 @@ WritingCard.defaultProps = {
 const Styles = styled.div`
   display: flex;
   flex-direction: column;
-  justify-content: flex-start;
-  align-items: center;
 
   border: 1px solid ${colors.paleGrey};
   border-radius: 4px;
-  padding: 16px;
+  width: 98%;
+
+  padding: 24px;
+  margin-bottom: 16px;
   
   :hover {
-    box-shadow: 2px 2px 4px 0 rgba(216, 216, 216, 0.5);
-  }
-
-  .card-thumbnail {
-    width: 290px;
-    height: 180px;
-    border: 1px solid ${colors.paleGrey};
-    border-radius: 4px;
-    margin-bottom: 16px;
-  }
-
-  .card-content-wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
-    height: 100%;
-  
-    .tag-wrapper {
-      display: flex;
-    }
+    box-shadow: ${colors.boxShadow};
   }
 `;

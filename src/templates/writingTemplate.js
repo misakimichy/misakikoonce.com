@@ -52,7 +52,7 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         path
         title
-        tags
+        tags,
       }
     }
   }
@@ -65,30 +65,10 @@ const Styles = styled.div`
   }
 
   .stack-tag {
+    margin-bottom: 24px;
     a {
       :first-child {
         margin-left: 8px;
-      }
-    }
-  }
-
-  .iframe-container {
-    border:1px solid ${colors.paleGrey};
-    border-radius: 4px;
-    box-shadow: 3px 4px 4px 0 rgba(216, 216, 216, 0.5);
-
-    height: 500px;
-
-    margin: 40px auto 40px auto;
-    overflow: hidden;
-
-    iframe {
-      width: 100%;
-      height: 100%;
-
-      html {
-        width: 100%;
-        height: 100%;
       }
     }
   }

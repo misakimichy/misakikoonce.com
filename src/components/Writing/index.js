@@ -13,7 +13,6 @@ import { colors } from '../../styles/theme';
 const WritingsSection = ({ cards }) => (
   <Styles>
     <h1 className="section-title">Writings</h1>
-    <ul className="project-container">
       {cards.map((card, index) =>
         <WritingCard
           key={index}
@@ -25,7 +24,6 @@ const WritingsSection = ({ cards }) => (
           thumbnail={card.thumbnail}
         />
       )}
-    </ul>
 </Styles>
 );
 

@@ -2,6 +2,7 @@ export const colors = {
   // brand colors
   fontGreen: '#1ca086',
   backgroundGreen: '#2cffd536',
+  neonGreen: '#1ee4bd',
 
   // greys
   black: '#000000',
@@ -10,6 +11,9 @@ export const colors = {
   lightGrey: '#B2B2B2',
   paleGrey: '#EBEBEB',
   white: '#ffffff',
+
+  // box-shadow
+  boxShadow: '7px 7px 10px 2px rgba(216,216,216,0.5)'
 };
 
 export const breakpoints = {

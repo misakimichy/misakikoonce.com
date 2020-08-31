@@ -60,26 +60,6 @@ const Styles = styled.div`
   padding: 16px;
   
   :hover {
-    box-shadow: 2px 2px 4px 0 rgba(216, 216, 216, 0.5);
-  }
-
-  .card-thumbnail {
-    width: 290px;
-    height: 180px;
-    border: 1px solid ${colors.paleGrey};
-    border-radius: 4px;
-    margin-bottom: 16px;
-  }
-
-  .card-content-wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
-    height: 100%;
-  
-    .tag-wrapper {
-      display: flex;
-    }
+    box-shadow: ${colors.boxShadow};
   }
 `;

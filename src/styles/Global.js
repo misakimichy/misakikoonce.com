@@ -118,13 +118,39 @@ export default css`
   }
 
   pre, code {
-    background-color: ${colors.backgroundGreen};
+    background-color: ${colors.darkGrey};
+    color: ${colors.neonGreen};
+  }
+
+  code {
+    padding: 3px 5px;
   }
 
   pre {
-    padding: 24px;
+    padding: 16px;
     border-radius: 4px;
     overflow: auto;
+  }
+
+  /* Card styling */
+  .card-thumbnail {
+    width: 290px;
+    height: 180px;
+    border: 1px solid ${colors.paleGrey};
+    border-radius: 4px;
+    margin-bottom: 16px;
+  }
+
+  .card-content-wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+
+    height: 100%;
+  }
+
+  .tag-wrapper {
+    display: flex;
   }
 
   /* 
