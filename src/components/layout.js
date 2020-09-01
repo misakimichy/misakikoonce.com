@@ -18,10 +18,12 @@ import { config } from '@fortawesome/fontawesome-svg-core';
 // style
 import GlobalStyles from '../styles';
 import { colors } from '../styles/theme';
+import { defineCustomElements as deckDeckGoHighlightElement } from '@deckdeckgo/highlight-code/dist/loader';
 
 library.add(fab, faCoffee, faFileRegular, faFile);
 config.autoAddCss = false;
 
+deckDeckGoHighlightElement();
 
 const Layout = ({ children, location }) => (
   <Styles className="container">
