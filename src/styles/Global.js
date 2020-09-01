@@ -120,10 +120,11 @@ export default css`
   pre, code {
     background-color: ${colors.darkGrey};
     color: ${colors.neonGreen};
+    border-radius: 2px
   }
 
   code {
-    padding: 3px 5px;
+    padding: 2px 5px;
   }
 
   pre {
