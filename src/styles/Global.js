@@ -62,9 +62,10 @@ export default css`
   ul {
     margin: 0;
   }
+  
 
   .no-underline {
-    background-image: none;
+    text-decoration: none;
   }
 
   .container {
@@ -155,6 +156,12 @@ export default css`
     justify-content: space-between;
 
     height: 100%;
+
+    a {
+      h4 {
+        color: ${colors.darkGrey};
+      }
+    }
   }
 
   .tag-wrapper {

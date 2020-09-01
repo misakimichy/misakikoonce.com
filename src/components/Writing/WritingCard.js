@@ -16,7 +16,7 @@ const WritingCard = ({
   tags = [],
   thumbnail
 }) => (
-    <Styles>
+    <Styles className="card-content-wrapper">
       <Link to={url} className="no-underline">
         <h4 style={{marginBottom: '16px'}}>{title}</h4>
         <p style={{color: `${colors.darkGrey}`, marginBottom: '32px'}}>{description}
