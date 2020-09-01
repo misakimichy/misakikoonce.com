@@ -17,8 +17,7 @@ import { config } from '@fortawesome/fontawesome-svg-core';
 
 // style
 import GlobalStyles from '../styles';
-import { colors} from '../styles/theme';
-
+import { colors } from '../styles/theme';
 
 library.add(fab, faCoffee, faFileRegular, faFile);
 config.autoAddCss = false;

@@ -4,6 +4,11 @@ import { css } from 'styled-components';
 import { colors, breakpoints } from './theme';
 
 export default css`
+  html,
+  body {
+    font-family: 'Benne Regular', serif;
+  }
+
   h1 {
     font-size: 2rem;
     margin-bottom: 40px;

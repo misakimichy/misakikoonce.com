@@ -37,9 +37,10 @@ module.exports = {
       },
     },
     {
-      resolve: `gatsby-plugin-typography`,
+      resolve: `gatsby-source-filesystem`,
       options: {
-        pathToConfigModule: `src/utils/typography`,
+        path: `${__dirname}/static/fonts`,
+        name: `fonts`,
       },
     },
     {
