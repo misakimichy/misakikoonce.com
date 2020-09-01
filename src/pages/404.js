@@ -6,7 +6,7 @@ import Layout from '../components/Layout';
 
 const NotFound = () => (
   <Layout>
-    <h1>404 Page Not Found</h1>
+    <h2>404 Page Not Found</h2>
     <p>Sorry, I couldn't find the page.</p>
     {typeof window !== 'undefined' &&
       <ul style={{listStyle: 'none'}}>

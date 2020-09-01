@@ -24,7 +24,7 @@ const ProjectTemplate = ({ data }) => {
   return (
     <Layout>
       <Styles>
-        <h1>{frontmatter.title}</h1>
+        <h2>{frontmatter.title}</h2>
         <p className="date">{frontmatter.date}</p>
   
         <div className="stack-tag">

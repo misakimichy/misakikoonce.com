@@ -4,13 +4,14 @@ import { css } from 'styled-components';
 import { colors, breakpoints } from './theme';
 
 export default css`
-  html,
-  body {
+  @import url('https://fonts.googleapis.com/css2?family=Quattrocento+Sans&display=swap');
+
+  h1, h2, h3, h4, h5 {
     font-family: 'Benne Regular', serif;
   }
 
   h1 {
-    font-size: 2rem;
+    font-size: 67.34px;
     margin-bottom: 40px;
 
     @media (max-width: 800px) {
@@ -19,7 +20,7 @@ export default css`
   }
 
   h2 {
-    font-size: 1.8rem;
+    font-size: 50.52px;
     word-spacing: 3px;
     margin-bottom: 16px;
 
@@ -29,7 +30,7 @@ export default css`
   }
 
   h3 {
-    font-size: 1.6rem;
+    font-size: 37.90px;
     padding-bottom: 8px;
 
     @media (max-width: 800px) {
@@ -39,22 +40,23 @@ export default css`
 
   /* h4 used for footer */
   h4 {
-    font-size: 1.4rem;
+    font-size: 28.43px;
     line-height: 32px;
     padding-bottom: 4px;
   }
 
   /* h5 user in nav bar */
   h5 {
-    font-size: 1.1rem;
+    font-size: 21.33px;
   }
 
-  h6 {
-    font-size: 1.1rem;
+  div, p, a, li {
+    font-family: 'Quattrocento Sans', Helvetica, sans-serif;
   }
 
   p {
     line-height: 29px;
+    word-spacing: 0.5px;
   }
 
   ul {

@@ -77,12 +77,13 @@ const Sidebar = () => (
 export default Sidebar;
 
 const Styles = styled.div`
-  width: calc(100vw - 75%);
+  width: calc(100vw - 83%);
   padding: 48px;
   border-right: 1px solid ${colors.paleGrey};
 
   .profile-image {
     border-radius: 50%;
+    width: 230px;
   }
 
   .name-holder {

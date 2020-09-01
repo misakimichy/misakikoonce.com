@@ -12,7 +12,7 @@ import { colors } from '../../styles/theme';
 
 const WritingsSection = ({ cards }) => (
   <Styles>
-    <h1 className="section-title">Writings</h1>
+    <h2 className="section-title">Writings</h2>
       {cards.map((card, index) =>
         <WritingCard
           key={index}

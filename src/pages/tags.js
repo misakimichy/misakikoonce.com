@@ -24,7 +24,7 @@ const Tags = ({ data }) => {
   // );
   return (
     <Layout>
-        <h1>Tag list</h1>
+        <h2>Tag list</h2>
         {/* <ul>
           {tags.map(tag => (
             <Tag key={tag} name={tag} count={mapping[tag]} />
