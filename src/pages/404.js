@@ -17,7 +17,7 @@ const NotFound = () => (
           <Link to='/projects'>Check projects</Link>
         </li>
         <li>
-          <Link to='/writing'>Check writings</Link>
+          <Link to='/writings'>Check writings</Link>
         </li>
         <li>
           <Link to='/tags'>Check tags</Link>

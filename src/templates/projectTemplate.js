@@ -10,33 +10,30 @@ import Layout from '../components/Layout';
 import { colors } from '../styles/theme';
 
 const ProjectTemplate = ({ data }) => {
-  const { frontmatter, html } = data.markdownRemark;
-
-  // build tags structure for template
-  const tags = frontmatter.tags.map(tag => {
-    return {
-      name: tag,
-      path: `/tags/${kebabCase(tag)}/`,
-    };
-  });
+  const { markdownRemark } = data;
+  const { frontmatter, html } = markdownRemark;
+  const { title, date, tags, projectUrl} = frontmatter;
 
   return (
     <Layout>
       <Styles>
-        <h2>{frontmatter.title}</h2>
-        <p className="date">{frontmatter.date}</p>
-  
+        <h2>{title}</h2>
+        <p className="date">{date}</p>
+
         <div className="stack-tag">
           Stack Tag:
-            {tags.map((tag, index) =>
-              <Link to={tag.path} key={index} className="no-underline tags">
-                <button type="button" className="tag-button">{tag.name}</button>
+            {tags.map(tag => {
+            const link = `/tags/${kebabCase(tag)}`;
+              return (
+              <Link to={link} key={tag} className="no-underline tags">
+                <button type="button" className="tag-button">{tag}</button>
               </Link>
-            )}
+              )
+            })}
         </div>
 
         <div className="iframe-container">
-          <iframe title={frontmatter.title} src={frontmatter.projectUrl} allowFullScreen></iframe>
+          <iframe title={title} src={projectUrl} allowFullScreen></iframe>
         </div>
         <main dangerouslySetInnerHTML={{ __html: html }} />
       </Styles>
