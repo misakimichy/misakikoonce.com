@@ -20,8 +20,7 @@ const Tags = ({ pageContext, data }) => {
         <h2 className="section-title">{tagHeader}</h2>
         <ul className="tagged-list">
           {edges.map(({ node }) => {
-            const { title } = node.frontmatter;
-            const path = `/projects/${kebabCase(title)}`;
+            const { title, path } = node.frontmatter;
             return (
               <li key={title}>
                 <Link to={path}>{title}</Link>
@@ -60,9 +59,8 @@ Tags.propTypes = {
 export default Tags;
 
 export const pageQuery = graphql`
-  query($tag: String) {
+  query ($tag: String) {
     allMarkdownRemark(
-      limit: 2000
       sort: { fields: [frontmatter___date], order: DESC }
       filter: { frontmatter: { tags: { in: [$tag] } } }
     ) {
@@ -71,6 +69,7 @@ export const pageQuery = graphql`
         node {
           frontmatter {
             title
+            path
           }
         }
       }
