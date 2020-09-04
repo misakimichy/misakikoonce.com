@@ -10,8 +10,7 @@ import Layout from '../components/Layout';
 import { colors } from '../styles/theme';
 
 const ProjectTemplate = ({ data }) => {
-  const { markdownRemark } = data;
-  const { frontmatter, html } = markdownRemark;
+  const { frontmatter, html } = data.markdownRemark;
 
   // build tags structure for template
   const tags = frontmatter.tags.map(tag => {

@@ -6,20 +6,16 @@ import Projects from '../components/Project/Projects';
 import Layout from '../components/Layout';
 
 const ProjectPage = ({ data }) => {
-  const { allMarkdownRemark } = data;
-  const titles = [];
-  allMarkdownRemark.edges.forEach(({ node }) => {
-    const { title } = node.frontmatter;
-    titles.push(title);
-  });
+  const { edges } = data.allMarkdownRemark;
 
   return (
     <Layout>
         <h1 className="section-title">All projects</h1>
         <ul className="tagged-list">
-          {titles.map(title => (
-            <Projects key={title} name={title} />
-          ))}
+          {edges.map(edge => {
+            const { title } = edge.node.frontmatter;
+            return <Projects key={title} name={title} />
+          })}
         </ul>
     </Layout>
   );
@@ -28,15 +24,17 @@ const ProjectPage = ({ data }) => {
 export default ProjectPage;
 
 export const pageQuery = graphql`
-  query {
-    allMarkdownRemark {
-      edges {
-        node {
-          frontmatter {
-            title
-          }
+{
+  allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/(markdown-projects)/.*\\\\.md$/"}}) {
+    totalCount
+    edges {
+      node {
+        id
+        frontmatter {
+          title
         }
       }
     }
   }
+}
 `;
