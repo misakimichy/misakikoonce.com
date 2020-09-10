@@ -5,6 +5,7 @@ import { kebabCase } from "lodash";
 
 // component
 import Layout from '../components/Layout';
+import GoHome from '../components/GoHome';
 
 // theme
 import { colors } from '../styles/theme';
@@ -23,6 +24,7 @@ const WritingTemplate = ({ data }) => {
 
   return (
     <Layout>
+      <GoHome />
       <Styles>
         <h2>{frontmatter.title}</h2>
         <p className="date">{frontmatter.date}</p>

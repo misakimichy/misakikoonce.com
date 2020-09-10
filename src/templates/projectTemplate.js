@@ -5,6 +5,7 @@ import { kebabCase } from "lodash";
 
 // component
 import Layout from '../components/Layout';
+import GoHome from '../components/GoHome';
 
 // theme
 import { colors } from '../styles/theme';
@@ -16,6 +17,7 @@ const ProjectTemplate = ({ data }) => {
 
   return (
     <Layout>
+      <GoHome />
       <Styles>
         <h2>{title}</h2>
         <p className="date">{date}</p>

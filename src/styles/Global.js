@@ -54,6 +54,10 @@ export default css`
     font-family: 'Quattrocento Sans', Helvetica, sans-serif;
   }
 
+  a, span {
+    color: ${colors.fontGreen};
+  }
+
   p {
     line-height: 29px;
     word-spacing: 0.5px;

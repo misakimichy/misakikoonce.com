@@ -1,15 +1,19 @@
 import React from 'react';
 import { graphql } from 'gatsby';
+import styled from 'styled-components'
 
 // component
 import Projects from '../components/Project/Projects';
 import Layout from '../components/Layout';
+import GoHome from '../components/GoHome';
 
 const ProjectPage = ({ data }) => {
   const { edges } = data.projects;
 
   return (
     <Layout>
+      <GoHome />
+      <Styles>
         <h2 className="section-title">All projects</h2>
         <ul className="tagged-list">
           {edges.map(edge => {
@@ -17,6 +21,7 @@ const ProjectPage = ({ data }) => {
             return <Projects key={title} name={title} />
           })}
         </ul>
+      </Styles>
     </Layout>
   );
 };
@@ -40,3 +45,5 @@ export const pageQuery = graphql`
   }
 }
 `;
+
+const Styles = styled.div``;

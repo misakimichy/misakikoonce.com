@@ -1,9 +1,11 @@
 import React from 'react';
 import { graphql } from 'gatsby';
+import styled from 'styled-components';
 
 // component
 import WritingSection from '../components/Writing';
 import Layout from '../components/Layout';
+import GoHome from '../components/GoHome';
 
 const Writings = ({ data }) => {
   const { allMarkdownRemark } = data;
@@ -15,13 +17,16 @@ const Writings = ({ data }) => {
 
   return (
     <Layout>
-      <h2 className="section-title">All writings</h2>
-      {/* <ul className="tagged-list">
-        {titles.map(title => (
-          <WritingSection key={title} name={title} />
-        ))}
-      </ul> */}
+      <GoHome />
+      <Styles>
+        <h2 className="section-title">All writings</h2>
+        {/* <ul className="tagged-list">
+          {titles.map(title => (
+            <WritingSection key={title} name={title} />
+          ))}
+        </ul> */}
       <p>Posts coming soon!</p>
+      </Styles>
     </Layout>
   );
 };
@@ -41,3 +46,5 @@ export const pageQuery = graphql`
     }
   }
 `;
+
+const Styles = styled.div``;

@@ -1,7 +1,7 @@
 import React from 'react';
 import styled from 'styled-components';
 import { Link } from 'gatsby';
-import { createGlobalStyle} from 'styled-components';
+import { createGlobalStyle } from 'styled-components';
 
 // component
 import Sidebar from './Sidebar';
@@ -31,9 +31,6 @@ const Layout = ({ children, location }) => (
     <SEO />
     <Sidebar location={location} />
     <div className="main-container">
-       {window.location.pathname !== '/' && <div className="to-home">
-          <Link to='/'>← Go back</Link>
-        </div>}
       {children}
     </div>
   </Styles>

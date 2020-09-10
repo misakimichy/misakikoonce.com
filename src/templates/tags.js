@@ -6,6 +6,7 @@ import { kebabCase } from "lodash";
 
 // component
 import Layout from '../components/Layout';
+import GoHome from '../components/GoHome';
 
 const Tags = ({ pageContext, data }) => {
   const { tag } = pageContext;
@@ -15,8 +16,9 @@ const Tags = ({ pageContext, data }) => {
     } tagged with "${tag}"`;
 
   return (
-    <Styles>
-      <Layout>
+    <Layout>
+      <GoHome />
+      <Styles>
         <h2 className="section-title">{tagHeader}</h2>
         <ul className="tagged-list">
           {edges.map(({ node }) => {
@@ -31,8 +33,8 @@ const Tags = ({ pageContext, data }) => {
         {typeof window !== 'undefined' &&
           <Link to={`/tags/${_.kebabCase(tag.fieldValue)}`}>All tags</Link>
         }
-      </Layout>
-    </Styles>
+      </Styles>
+    </Layout>
   );
 };
 
