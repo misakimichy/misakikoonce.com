@@ -5,7 +5,7 @@ import styled from 'styled-components';
 // component
 import Tag from './tags';
 import Layout from '../components/Layout';
-import GoHome from '../components/GoHome';
+import Redirect from '../components/redirect';
 
 const Tags = ({ data }) => {
   const { allMarkdownRemark } = data;
@@ -26,7 +26,7 @@ const Tags = ({ data }) => {
   // );
   return (
     <Layout>
-      <GoHome />
+      <Redirect redirect='/' text="← Go Home" />
       <Styles>
         <h2>Tag list</h2>
         <p>Tag list is coming soon!</p>

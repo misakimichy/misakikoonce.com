@@ -6,7 +6,7 @@ import { kebabCase } from "lodash";
 
 // component
 import Layout from '../components/Layout';
-import GoHome from '../components/GoHome';
+import Redirect from '../components/redirect';
 
 const Tags = ({ pageContext, data }) => {
   const { tag } = pageContext;
@@ -17,22 +17,19 @@ const Tags = ({ pageContext, data }) => {
 
   return (
     <Layout>
-      <GoHome />
+      <Redirect redirect='/' text="← Go Home" />
       <Styles>
         <h2 className="section-title">{tagHeader}</h2>
         <ul className="tagged-list">
           {edges.map(({ node }) => {
             const { title, path } = node.frontmatter;
             return (
-              <li key={title}>
-                <Link to={path}>{title}</Link>
-              </li>
+              <Link to={path} className="list-names">{title}</Link>
             );
           })}
         </ul>
-        {typeof window !== 'undefined' &&
-          <Link to={`/tags/${_.kebabCase(tag.fieldValue)}`}>All tags</Link>
-        }
+
+        <Redirect redirect='/tags' text="See all tags" />
       </Styles>
     </Layout>
   );

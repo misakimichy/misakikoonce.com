@@ -5,7 +5,7 @@ import styled from 'styled-components';
 // component
 import WritingSection from '../components/Writing';
 import Layout from '../components/Layout';
-import GoHome from '../components/GoHome';
+import Redirect from '../components/redirect';
 
 const Writings = ({ data }) => {
   const { allMarkdownRemark } = data;
@@ -17,7 +17,7 @@ const Writings = ({ data }) => {
 
   return (
     <Layout>
-      <GoHome />
+      <Redirect redirect='/' text="← Go Home" />
       <Styles>
         <h2 className="section-title">All writings</h2>
         {/* <ul className="tagged-list">
