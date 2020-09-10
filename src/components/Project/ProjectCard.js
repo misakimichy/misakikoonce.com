@@ -23,7 +23,7 @@ const ProjectCard = ({
           <Link to={url} className="no-underline">
             <h4 style={{marginBottom: '16px'}}>{title}</h4>
             <p style={{color: `${colors.darkGrey}`, marginBottom: '32px'}}>{description}
-              <span style={{color: `${colors.fontGreen}`, marginLeft: '5px'}}>...read more</span>
+              <span style={{marginLeft: '5px'}}>...read more</span>
             </p>
           </Link>
         }
