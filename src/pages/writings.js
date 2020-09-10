@@ -15,7 +15,7 @@ const Writings = ({ data }) => {
 
   return (
     <Layout>
-      <h1 className="section-title">All writings</h1>
+      <h2 className="section-title">All writings</h2>
       {/* <ul className="tagged-list">
         {titles.map(title => (
           <WritingSection key={title} name={title} />

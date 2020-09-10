@@ -16,7 +16,8 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   const result = await graphql(`
     {
       projects: allMarkdownRemark(
-        sort: { order: DESC, fields: [frontmatter___date] }
+        filter: { fileAbsolutePath: {regex: "/(markdown-projects)/.*\.md$/"} },
+        sort: { fields: frontmatter___date, order: DESC },
         limit: 1000
       ) {
         edges {
@@ -40,8 +41,8 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
         }
       }
       writings: allMarkdownRemark(
-        filter: {fileAbsolutePath: {regex: "/(markdown-writings)/.*\.md$/"}},
-        sort: {fields: frontmatter___date, order: DESC}
+        filter: { fileAbsolutePath: {regex: "/(markdown-writings)/.*\.md$/"} },
+        sort: { fields: frontmatter___date, order: DESC }
       ) {
         edges {
           node {

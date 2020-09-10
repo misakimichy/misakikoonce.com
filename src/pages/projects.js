@@ -6,11 +6,11 @@ import Projects from '../components/Project/Projects';
 import Layout from '../components/Layout';
 
 const ProjectPage = ({ data }) => {
-  const { edges } = data.allMarkdownRemark;
+  const { edges } = data.projects;
 
   return (
     <Layout>
-        <h1 className="section-title">All projects</h1>
+        <h2 className="section-title">All projects</h2>
         <ul className="tagged-list">
           {edges.map(edge => {
             const { title } = edge.node.frontmatter;
@@ -24,9 +24,11 @@ const ProjectPage = ({ data }) => {
 export default ProjectPage;
 
 export const pageQuery = graphql`
-{
-  allMarkdownRemark(filter: {fileAbsolutePath: {regex: "/(markdown-projects)/.*\\\\.md$/"}}) {
-    totalCount
+  {
+  projects: allMarkdownRemark(
+    filter: { fileAbsolutePath: {regex: "/(markdown-projects)/.*\\.md$/"} },
+    sort: { fields: frontmatter___date, order: DESC }
+  ) {
     edges {
       node {
         id

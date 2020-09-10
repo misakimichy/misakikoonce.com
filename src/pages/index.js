@@ -27,7 +27,7 @@ const MainView = ({ data }) => {
   const writingsData = writings.edges.map(({node}) => {
     const { title } = node.frontmatter;
     const { description } = node.frontmatter;
-    const {tags} = node.frontmatter;
+    const { tags } = node.frontmatter;
     return {
       name: title,
       path: `/writings/${kebabCase(title)}`,
@@ -50,8 +50,8 @@ export default MainView;
 export const pageQuery = graphql`
   query {
     projects: allMarkdownRemark(
-      filter: {fileAbsolutePath: {regex: "/(markdown-projects)/.*\\.md$/"}},
-      sort: {fields: frontmatter___date, order: DESC}
+      filter: { fileAbsolutePath: {regex: "/(markdown-projects)/.*\\.md$/"} },
+      sort: { fields: frontmatter___date, order: DESC }
     ) {
       edges {
         node {
