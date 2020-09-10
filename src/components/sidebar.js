@@ -38,7 +38,7 @@ const Sidebar = () => (
           </Link>
         }
         <div className="name-holder">
-          <h1 style={{marginBottom: '15px'}}>{author}</h1>
+          <h1 style={{marginBottom: '8px'}}>{author}</h1>
           <p>{description}</p>
         </div>
         {/* <Link to="/about/">About</Link> */}

@@ -76,4 +76,9 @@ export const pageQuery = graphql`
   }
 `;
 
-const Styles = styled.div``;
+const Styles = styled.div`
+  .list-names {
+    display: block;
+    margin-bottom: 8px;
+  }
+`;

@@ -15,12 +15,6 @@ export default css`
   applet,
   object,
   iframe,
-  h1,
-  h2,
-  h3,
-  h4,
-  h5,
-  h6,
   p,
   blockquote,
   pre,
@@ -111,7 +105,7 @@ export default css`
   body {
     line-height: 1;
   }
-  ol,
+
   ul {
     list-style: none;
   }

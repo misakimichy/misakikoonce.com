@@ -8,6 +8,7 @@ export default css`
 
   h1, h2, h3, h4, h5 {
     font-family: 'Benne Regular', serif;
+    margin-bottom: 1rem;
   }
 
   h1 {
@@ -31,7 +32,6 @@ export default css`
 
   h3 {
     font-size: 37.90px;
-    padding-bottom: 8px;
 
     @media (max-width: 800px) {
       font-size: 1.4rem;
@@ -145,6 +145,10 @@ export default css`
     overflow: auto;
   }
 
+  .read-more {
+    margin-left: 8px;
+  }
+
   /* Card styling */
   .card-thumbnail {
     width: 290px;
@@ -164,6 +168,13 @@ export default css`
     a {
       h4 {
         color: ${colors.darkGrey};
+        margin-top: 8px;
+        margin-bottom: 8px;
+      }
+
+      p {
+        color: ${colors.darkGrey};
+        margin-bottom: 32px;
       }
     }
   }
