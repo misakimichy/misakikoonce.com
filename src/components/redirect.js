@@ -11,5 +11,5 @@ const Redirect = ({ redirect, text }) => (
 export default Redirect;
 
 const Styles = styled.div`
-  margin-bottom: 32px;
+  margin-top: 32px;
 `;

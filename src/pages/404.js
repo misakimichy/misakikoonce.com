@@ -10,14 +10,14 @@ const NotFound = () => (
     <h5>Sorry, I couldn't find the page.</h5>
     {typeof window !== 'undefined' &&
       <ul style={{listStyle: 'none'}}>
-        <li>
+        <li style={{marginBottom: '16px'}}>
           <Link to='/'>Back Home</Link>
         </li>
         <li>
-          <Link to='/projects'>Check projects</Link>
+          <Link to='/projects'>Projects</Link>
         </li>
         <li>
-          <Link to='/writings'>Check writings</Link>
+          <Link to='/writings'>Writings</Link>
         </li>
         {/* <li>
           <Link to='/tags'>Check tags</Link>

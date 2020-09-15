@@ -25,12 +25,12 @@ const ProjectTemplate = ({ data }) => {
         <div className="stack-tag">
           Stack Tag:
             {tags.map(tag => {
-            const link = `/tags/${kebabCase(tag)}`;
+              const link = `/tags/${kebabCase(tag)}`;
               return (
-              <Link to={link} key={tag} className="no-underline tags">
-                <button type="button" className="tag-button">{tag}</button>
-              </Link>
-              )
+                <Link to={link} key={tag} className="no-underline tags">
+                  <button type="button" className="tag-button">{tag}</button>
+                </Link>
+                )
             })}
         </div>
 
