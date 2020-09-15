@@ -50,7 +50,6 @@ const Styles = styled.div`
 
   border: 1px solid ${colors.paleGrey};
   border-radius: 4px;
-  width: 98%;
 
   padding: 24px;
   margin-bottom: 16px;

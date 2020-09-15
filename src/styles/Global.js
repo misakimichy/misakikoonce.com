@@ -87,7 +87,7 @@ export default css`
   /* projects */
   .main-container {
     width: calc(100vw - 25%);
-    padding: 48px;
+    padding: 8px 48px;
   }
 
   .project-container {

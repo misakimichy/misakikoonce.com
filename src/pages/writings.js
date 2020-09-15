@@ -3,39 +3,38 @@ import { graphql } from 'gatsby';
 import styled from 'styled-components';
 
 // component
-import WritingSection from '../components/Writing';
+import Writings from '../components/Writing/Writings';
 import Layout from '../components/Layout';
 import Redirect from '../components/redirect';
 
-const Writings = ({ data }) => {
-  const { allMarkdownRemark } = data;
-  const titles = [];
-  allMarkdownRemark.edges.forEach(({ node }) => {
-    const { title } = node.frontmatter;
-    titles.push(title);
-  });
+const WritingPage = ({ data }) => {
+  console.log(data)
+  const { edges } = data.writings;
 
   return (
     <Layout>
       <Redirect redirect='/' text="← Go Home" />
       <Styles>
         <h2 className="section-title">All writings</h2>
-        {/* <ul className="tagged-list">
-          {titles.map(title => (
-            <WritingSection key={title} name={title} />
-          ))}
-        </ul> */}
-      <p>Posts coming soon!</p>
+        <ul className="tagged-list">
+          {edges.map(edge => {
+            const { title } = edge.node.frontmatter;
+            return <Writings key={title} name={title} />
+          })}
+        </ul>
       </Styles>
     </Layout>
   );
 };
 
-export default Writings;
+export default WritingPage;
 
 export const pageQuery = graphql`
-  query {
-    allMarkdownRemark {
+  {
+    writings: allMarkdownRemark(
+      filter: { fileAbsolutePath: {regex: "/(markdown-writings)/.*\\.md$/"} },
+      sort: { fields: frontmatter___date, order: DESC }
+    ) {
       edges {
         node {
           frontmatter {

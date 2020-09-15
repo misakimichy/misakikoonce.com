@@ -13,14 +13,7 @@ import { colors } from '../styles/theme';
 const WritingTemplate = ({ data }) => {
   const { markdownRemark } = data;
   const { frontmatter, html } = markdownRemark;
-
-  // build tags structure for template
-  const tags = frontmatter.tags.map(tag => {
-    return {
-      name: tag,
-      path: `/tags/${kebabCase(tag)}/`,
-    };
-  });
+  const { tags } = frontmatter;
 
   return (
     <Layout>
@@ -31,11 +24,14 @@ const WritingTemplate = ({ data }) => {
   
         <div className="stack-tag">
           Stack Tag:
-            {tags.map((tag, index) =>
-              <Link to={tag.path} key={index} className="no-underline tags">
-                <button type="button" className="tag-button">{tag.name}</button>
-              </Link>
-            )}
+            {tags.map(tag =>{
+              const link = `/tags/${kebabCase(tag)}/`;
+              return (
+                <Link to={link} key={tag} className="no-underline tags">
+                  <button type="button" className="tag-button">{tag}</button>
+                </Link>
+              )
+            })}
         </div>
 
         <main dangerouslySetInnerHTML={{ __html: html }} />

@@ -4,7 +4,6 @@ import { Link } from 'gatsby';
 import { kebabCase } from 'lodash';
 
 // component
-import Writings from '../../pages/writings';
 import WritingCard from './WritingCard';
 
 // theme
