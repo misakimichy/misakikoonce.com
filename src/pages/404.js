@@ -14,13 +14,13 @@ const NotFound = () => (
           <Link to='/'>← Go Home</Link>
         </li>
         <li>
-          <Link to='/projects'>Check project list 👉</Link>
+          <Link to='/projects'>👉 Check project list</Link>
         </li>
         <li>
-          <Link to='/writings'>Check writing list 👉</Link>
+          <Link to='/writings'>👉 Check writing list</Link>
         </li>
         <li>
-          <Link to='/tags'>Check tag list 👉</Link>
+          <Link to='/tags'>👉 Check tag list</Link>
         </li>
       </ul>
     }

@@ -9,7 +9,6 @@ import Redirect from '../components/redirect';
 
 const Tags = ({ data }) => {
   const { group } = data.allMarkdownRemark;
-  console.log(group)
 
   return (
     <Layout>
