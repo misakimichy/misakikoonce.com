@@ -4,7 +4,7 @@ import { Link } from 'gatsby';
 import PropTypes from 'prop-types';
 
 // component
-import Tag from '../Tag';
+import Tag from '../Tag/tag';
 
 // style
 import { colors } from '../../styles/theme';

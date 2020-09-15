@@ -4,7 +4,7 @@ import { Link } from 'gatsby';
 import { kebabCase } from 'lodash';
 
 // theme
-import { colors } from '../styles/theme';
+import { colors } from '../../styles/theme';
 
 const Tag = ({ name, count }) => (
   <Styles>

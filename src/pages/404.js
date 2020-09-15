@@ -11,17 +11,17 @@ const NotFound = () => (
     {typeof window !== 'undefined' &&
       <ul style={{listStyle: 'none'}}>
         <li style={{marginBottom: '16px'}}>
-          <Link to='/'>Back Home</Link>
+          <Link to='/'>← Go Home</Link>
         </li>
         <li>
-          <Link to='/projects'>Projects</Link>
+          <Link to='/projects'>Check project list 👉</Link>
         </li>
         <li>
-          <Link to='/writings'>Writings</Link>
+          <Link to='/writings'>Check writing list 👉</Link>
         </li>
-        {/* <li>
-          <Link to='/tags'>Check tags</Link>
-        </li> */}
+        <li>
+          <Link to='/tags'>Check tag list 👉</Link>
+        </li>
       </ul>
     }
   </Layout>

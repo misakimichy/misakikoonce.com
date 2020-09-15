@@ -3,38 +3,25 @@ import { graphql } from 'gatsby';
 import styled from 'styled-components';
 
 // component
-import Tag from './tags';
+import TagLink from '../components/Tag/tagLink';
 import Layout from '../components/Layout';
 import Redirect from '../components/redirect';
 
 const Tags = ({ data }) => {
-  const { allMarkdownRemark } = data;
-  // tags
-  const mapping = {};
-  allMarkdownRemark.edges.forEach(({ node }) => {
-    const { tags } = node.frontmatter;
-    tags.forEach(tag => {
-      if (mapping[tag]) {
-        mapping[tag] += 1;
-      } else {
-        mapping[tag] = 1;
-      }
-    });
-  });
-  // const tags = Array.from(Object.keys(mapping)).sort((b, a) =>
-  //   mapping[a] - mapping[b]
-  // );
+  const { group } = data.allMarkdownRemark;
+  console.log(group)
+
   return (
     <Layout>
       <Redirect redirect='/' text="← Go Home" />
       <Styles>
-        <h2>Tag list</h2>
-        <p>Tag list is coming soon!</p>
-        {/* <ul>
-          {tags.map(tag => (
-            <Tag key={tag} name={tag} count={mapping[tag]} />
-          ))}
-        </ul> */}
+        <h2>All tags</h2>
+        <ul className="tagged-list">
+          {group.map(tag => {
+            const { fieldValue } = tag;
+            return <TagLink key={fieldValue} name={fieldValue} />
+          })}
+        </ul>
       </Styles>
     </Layout>
   );
@@ -42,14 +29,10 @@ const Tags = ({ data }) => {
 export default Tags;
 
 export const pageQuery = graphql`
-  query {
+  {
     allMarkdownRemark {
-      edges {
-        node {
-          frontmatter {
-            tags
-          }
-        }
+      group(field: frontmatter___tags) {
+        fieldValue
       }
     }
   }
