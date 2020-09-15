@@ -6,72 +6,72 @@ import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
 // theme
 import { colors } from '../styles/theme';
 
-const Sidebar = () => (
-  <StaticQuery
-    query={graphql`
-      query SiteQuery {
-        site {
-          siteMetadata {
-            author
-            logo
-            title
-            resume
-            description
-            socialLinks {
-              twitter
-              github
-              linkedin
-            }
-          }
-        }
-      }
-    `}
-    render={data => {
-      const { author, logo, title, resume, description, socialLinks } = data.site.siteMetadata;
-      const { twitter, github, linkedin } = socialLinks;
+// asset
+import profileImage from '../../static/misaki-real.jpeg';
 
-      return (
-      <Styles>
-        {typeof window !== 'undefined' &&
-          <Link to="/" className="no-underline profile-image-link">
-            <img className="profile-image" src={logo} alt={author} />
-          </Link>
-        }
-        <div className="name-holder">
-          <h1 style={{marginBottom: '8px'}}>{author}</h1>
-          <p>{description}</p>
-        </div>
-        {/* <Link to="/about/">About</Link> */}
-        <div className="social-links">
-          <div className="social-link-item">
-            <a className="no-underline" href={resume}>
-              <FontAwesomeIcon icon={['far', 'file']} className="icon" />
-              <span className="icon-span">Resume</span>
-            </a>
-          </div>
-          <div className="social-link-item">
-            <a className="no-underline" href={twitter}>
-              <FontAwesomeIcon icon={['fab', 'twitter']} className="icon" />
-              <span className="icon-span">Twitter</span>
-            </a>
-          </div>
-          <div className="social-link-item">
-            <a className="no-underline" href={github}>
-              <FontAwesomeIcon icon={['fab', 'github-alt']} className="icon" />
-              <span className="icon-span">Github</span>
-            </a>
-          </div>
-          <div className="social-link-item">
-            <a className="no-underline" href={linkedin}>
-              <FontAwesomeIcon icon={['fab', 'linkedin-in']} className="icon" />
-              <span className="icon-span">LinkedIn</span>
-            </a>
-          </div>
-        </div>
-      </Styles>
-      );
-    }}
-  />
+const Sidebar = () => (
+  // <StaticQuery
+  //   query={graphql`
+  //     query SiteQuery {
+  //       site {
+  //         siteMetadata {
+  //           author
+  //           logo
+  //           title
+  //           resume
+  //           description
+  //           socialLinks {
+  //             twitter
+  //             github
+  //             linkedin
+  //           }
+  //         }
+  //       }
+  //     }
+  //   `}
+  //   render={data => {
+  //     const { author, logo, title, resume, description, socialLinks } = data.site.siteMetadata;
+  //     const { twitter, github, linkedin } = socialLinks;
+
+  //     return (
+  <Styles>
+    {typeof window !== 'undefined' &&
+      <Link to="/" className="no-underline profile-image-link">
+        <img className="profile-image" src={profileImage} alt="Misaki Koonce" />
+      </Link>
+    }
+    <div className="name-holder">
+      <h1 style={{marginBottom: '8px'}}>Misaki Koonce</h1>
+      <p>Software Engineer. From Tokyo Now in Seattle. I like developing applications with React.</p>
+    </div>
+    {/* <Link to="/about/">About</Link> */}
+    <div className="social-links">
+      <div className="social-link-item">
+        <a className="no-underline" href="/ResumeMisakiKoonce.pdf">
+          <FontAwesomeIcon icon={['far', 'file']} className="icon" />
+          <span className="icon-span">Resume</span>
+        </a>
+      </div>
+      <div className="social-link-item">
+        <a className="no-underline" href="https://twitter.com/misakimichy">
+          <FontAwesomeIcon icon={['fab', 'twitter']} className="icon" />
+          <span className="icon-span">Twitter</span>
+        </a>
+      </div>
+      <div className="social-link-item">
+        <a className="no-underline" href="https://github.com/misakimichy">
+          <FontAwesomeIcon icon={['fab', 'github-alt']} className="icon" />
+          <span className="icon-span">Github</span>
+        </a>
+      </div>
+      <div className="social-link-item">
+        <a className="no-underline" href="https://www.linkedin.com/in/misakikoonce">
+          <FontAwesomeIcon icon={['fab', 'linkedin-in']} className="icon" />
+          <span className="icon-span">LinkedIn</span>
+        </a>
+      </div>
+    </div>
+  </Styles>
 );
 
 export default Sidebar;

@@ -7,7 +7,7 @@ import Layout from '../components/Layout';
 const NotFound = () => (
   <Layout>
     <h2>404 Page Not Found</h2>
-    <p>Sorry, I couldn't find the page.</p>
+    <h5>Sorry, I couldn't find the page.</h5>
     {typeof window !== 'undefined' &&
       <ul style={{listStyle: 'none'}}>
         <li>
@@ -19,9 +19,9 @@ const NotFound = () => (
         <li>
           <Link to='/writings'>Check writings</Link>
         </li>
-        <li>
+        {/* <li>
           <Link to='/tags'>Check tags</Link>
-        </li>
+        </li> */}
       </ul>
     }
   </Layout>
