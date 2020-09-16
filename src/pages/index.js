@@ -9,7 +9,6 @@ import WritingSection from '../components/Writing';
 
 const MainView = ({ data }) => {
   const { projects, writings } = data;
-  console.log(projects, writings)
 
   const projectsData = projects.edges.map(({ node }) => {
     const { title, description, tags, path, thumbnail } = node.frontmatter;

@@ -24,7 +24,6 @@ export default css`
   address,
   big,
   cite,
-  code,
   del,
   dfn,
   em,

@@ -3,6 +3,8 @@ export const colors = {
   fontGreen: '#1ca086',
   backgroundGreen: '#2cffd536',
   neonGreen: '#1ee4bd',
+  codeBackground: "#2B213A",
+  codePink: "#F92AAD",
 
   // greys
   black: '#000000',

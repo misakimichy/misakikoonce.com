@@ -75,8 +75,6 @@ export default css`
 
   .container {
     display: flex;
-    padding: 0px;
-    margin: 0px;
   }
 
 
@@ -130,20 +128,13 @@ export default css`
     list-style: none;
   }
 
-  pre, code {
-    background-color: ${colors.darkGrey};
-    color: ${colors.neonGreen};
-    border-radius: 2px
-  }
-
   code {
-    padding: 2px 5px;
-  }
+    background-color: ${colors.codeBackground};
+    color: ${colors.codePink};
+    font-weight: bold;
+    border-radius: 3px;
 
-  pre {
-    padding: 16px;
-    border-radius: 4px;
-    overflow: auto;
+    padding: 2px 5px;
   }
 
   .read-more {
