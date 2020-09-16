@@ -32,7 +32,6 @@ const MainView = ({ data }) => {
     }
   })
 
-  // get writing cards data from graphql
   return (
     <Layout>
       <WritingSection cards={writingsData} />

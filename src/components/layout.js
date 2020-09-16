@@ -25,11 +25,11 @@ config.autoAddCss = false;
 
 deckDeckGoHighlightElement();
 
-const Layout = ({ children, location }) => (
+const Layout = ({ children }) => (
   <Styles className="container">
     <GlobalStyles />
     <SEO />
-    <Sidebar location={location} />
+    <Sidebar />
     <div className="main-container">
       {children}
     </div>
