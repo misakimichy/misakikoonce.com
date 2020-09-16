@@ -11,13 +11,11 @@ const MainView = ({ data }) => {
  const { projects, writings } = data;
 
   const projectsData = projects.edges.map(({ node }) => {
-    const { title } = node.frontmatter;
-    const { description } = node.frontmatter;
-    const { tags } = node.frontmatter;
-    const { src } = node.frontmatter.thumbnail.childImageSharp.fluid;
+    const { title, description, tags, path, thumbnail } = node.frontmatter;
+    const { src } = thumbnail.childImageSharp.fluid;
     return {
       name: title,
-      path: `/projects/${kebabCase(title)}/`,
+      path: path,
       description: description,
       tags: tags,
       thumbnail: src
@@ -25,12 +23,10 @@ const MainView = ({ data }) => {
   });
 
   const writingsData = writings.edges.map(({node}) => {
-    const { title } = node.frontmatter;
-    const { description } = node.frontmatter;
-    const { tags } = node.frontmatter;
+    const { title, description, tags, path } = node.frontmatter;
     return {
       name: title,
-      path: `/writings/${kebabCase(title)}`,
+      path: path,
       description: description,
       tags: tags,
     }

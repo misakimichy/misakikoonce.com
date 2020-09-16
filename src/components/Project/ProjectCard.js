@@ -18,7 +18,7 @@ const ProjectCard = ({
 }) => (
     <Styles>
       <img className="card-thumbnail" src={thumbnail} alt="project thumbnail" />
-      <div className="card-content-wrapper" style={{width: '98%'}}>
+      <div className="card-content-wrapper">
         {typeof window !== 'undefined' && 
           <Link to={url} className="no-underline">
             <h4>{title}</h4>
@@ -28,8 +28,8 @@ const ProjectCard = ({
           </Link>
         }
         <div className="tag-wrapper">
-          {tags.map((tag, index) =>
-            <Tag key={index} name={tag} />
+          {tags.map(tag =>
+            <Tag key={tag} name={tag} />
           )}
         </div>
       </div>

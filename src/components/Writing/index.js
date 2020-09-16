@@ -12,17 +12,18 @@ import { colors } from '../../styles/theme';
 const WritingsSection = ({ cards }) => (
   <Styles>
     <h2 className="section-title">Writings</h2>
-      {cards.map((card, index) =>
-        <WritingCard
-          key={index}
+      {cards.map(card => {
+        const { name, path, description, tags, thumbnail } = card;
+        return <WritingCard
+          key={name}
           className="project-card"
-          title={card.name}
-          url={card.path}
-          description={card.description}
-          tags={card.tags}
-          thumbnail={card.thumbnail}
+          title={name}
+          url={path}
+          description={description}
+          tags={tags}
+          thumbnail={thumbnail}
         />
-      )}
+      })}
 </Styles>
 );
 

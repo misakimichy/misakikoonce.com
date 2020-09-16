@@ -11,8 +11,7 @@ import Redirect from '../components/redirect';
 import { colors } from '../styles/theme';
 
 const ProjectTemplate = ({ data }) => {
-  const { markdownRemark } = data;
-  const { frontmatter, html } = markdownRemark;
+  const { frontmatter, html } = data.markdownRemark;
   const { title, date, tags, projectUrl} = frontmatter;
 
   return (

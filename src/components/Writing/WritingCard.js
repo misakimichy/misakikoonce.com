@@ -24,8 +24,8 @@ const WritingCard = ({
         </p>
       </Link>
       <div className="tag-wrapper">
-        {tags.map((tag, index) =>
-          <Tag key={index} name={tag} />
+        {tags.map(tag =>
+          <Tag key={tag} name={tag} />
         )}
       </div>
     </Styles>

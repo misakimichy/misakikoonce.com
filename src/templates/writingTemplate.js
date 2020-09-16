@@ -11,16 +11,15 @@ import Redirect from '../components/redirect';
 import { colors } from '../styles/theme';
 
 const WritingTemplate = ({ data }) => {
-  const { markdownRemark } = data;
-  const { frontmatter, html } = markdownRemark;
-  const { tags } = frontmatter;
+  const { frontmatter, html } = data.markdownRemark;
+  const { title, date, tags } = frontmatter;
 
   return (
     <Layout>
       <Redirect redirect='/' text="← Go Home" />
       <Styles>
-        <h2>{frontmatter.title}</h2>
-        <p className="date">{frontmatter.date}</p>
+        <h2>{title}</h2>
+        <p className="date">{date}</p>
   
         <div className="stack-tag">
           Stack Tag:
