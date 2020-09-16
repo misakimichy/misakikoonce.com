@@ -12,6 +12,7 @@ import { colors } from '../styles/theme';
 
 const WritingTemplate = ({ data }) => {
   const { frontmatter, html } = data.markdownRemark;
+  console.log(data)
   const { title, date, tags } = frontmatter;
 
   return (
