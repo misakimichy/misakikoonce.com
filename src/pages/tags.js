@@ -17,8 +17,8 @@ const Tags = ({ data }) => {
         <h2>All tags</h2>
         <ul className="tagged-list">
           {group.map(tag => {
-            const { fieldValue } = tag;
-            return <TagLink key={fieldValue} name={fieldValue} />
+            const { fieldValue, totalCount } = tag;
+            return <TagLink key={fieldValue} name={fieldValue} totalCount={totalCount} />
           })}
         </ul>
       </Styles>
@@ -32,6 +32,7 @@ export const pageQuery = graphql`
     allMarkdownRemark {
       group(field: frontmatter___tags) {
         fieldValue
+        totalCount
       }
     }
   }
