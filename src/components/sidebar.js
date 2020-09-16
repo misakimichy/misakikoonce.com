@@ -42,7 +42,9 @@ const Sidebar = () => (
     }
     <div className="name-holder">
       <h1 style={{marginBottom: '8px'}}>Misaki Koonce</h1>
-      <p>Software Engineer. From Tokyo Now in Seattle. I like developing applications with React.</p>
+      <h5 style={{marginTop: '0'}}>Software Engineer</h5>
+      <p>From Tokyo Now in Seattle.</p>
+      <p>I like hard problems and challenging myself!</p>
     </div>
     {/* <Link to="/about/">About</Link> */}
     <div className="social-links">

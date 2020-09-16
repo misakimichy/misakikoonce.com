@@ -4,7 +4,7 @@ import { Link } from 'gatsby';
 import { kebabCase } from 'lodash';
 
 // component
-import WritingCard from './WritingCard';
+import WritingCard from './writingCard';
 
 // theme
 import { colors } from '../../styles/theme';

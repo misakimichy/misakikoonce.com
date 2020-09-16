@@ -1,7 +1,7 @@
 ---
 path: "/writings/second-post"
 date: "2020-09-15"
-title: "second post"
+title: "Second post"
 tags: ["JavaScript"]
 description: "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua."
 

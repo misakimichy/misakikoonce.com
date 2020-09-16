@@ -13,7 +13,6 @@ export default css`
 
   h1 {
     font-size: 67.34px;
-    margin-bottom: 40px;
 
     @media (max-width: 800px) {
       font-size: 1.8rem;
@@ -23,7 +22,6 @@ export default css`
   h2 {
     font-size: 50.52px;
     word-spacing: 3px;
-    margin-bottom: 16px;
 
     @media (max-width: 800px) {
       font-size: 1.6rem;
@@ -42,7 +40,6 @@ export default css`
   h4 {
     font-size: 28.43px;
     line-height: 32px;
-    padding-bottom: 4px;
   }
 
   /* h5 user in nav bar */
@@ -65,6 +62,10 @@ export default css`
 
   ul {
     margin: 0;
+  }
+
+  li {
+    margin-bottom: 8px;
   }
   
 

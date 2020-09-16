@@ -50,7 +50,6 @@ export default css`
   dd,
   ol,
   ul,
-  li,
   fieldset,
   form,
   label,
