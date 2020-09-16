@@ -1,5 +1,5 @@
 ---
-path: "/writings/test-post"
+path: "/writings/first-post"
 date: "2020-08-12"
 title: "First post"
 tags: ["HTML", "CSS", "JavaScript"]
