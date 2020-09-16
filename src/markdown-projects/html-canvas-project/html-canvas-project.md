@@ -11,12 +11,12 @@ Draw whatever you want in the canvas using the mouse!
 
 This is one of the projects of [Vanilla JavaScript 30 challenge by Wes Bos](https://javascript30.com).
 
-# Canvas
+### What is canvas?
 `<canvas>` tag lets you create a canvas in HTML. You need to specify the canvas width and height, so as Context type. The context for canvas is `2D` or `3D`.
 
 In this project, I set the canvas width equals to `window.innerWidth` and height equals to `window.innerHeight`. To grab the value of `window.innerWidth` and `window.innerHeight`, The entire screen size of the web browser itself becomes a canvas.
 
-# How to draw on Canvas
+### How to draw on Canvas
 I set four event listeners to the canvas. 
 
 The first event listener tracks the cursor coordinates in the canvas. Depends where your cursor is, the color will change too:
