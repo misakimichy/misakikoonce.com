@@ -116,6 +116,7 @@ const Styles = styled.div`
     align-items: center;
     justify-content: center;
     border-bottom: 1px solid ${colors.paleGrey};
+    border-right: none;
 
     width: 100%;
     height: 30%;

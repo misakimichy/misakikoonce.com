@@ -16,7 +16,6 @@ const WritingTemplate = ({ data }) => {
 
   return (
     <Layout>
-      <Redirect redirect='/' text="← Go Home" />
       <Styles>
         <h2>{title}</h2>
         <p className="date">{date}</p>

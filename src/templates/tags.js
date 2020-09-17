@@ -6,7 +6,6 @@ import { kebabCase } from "lodash";
 
 // component
 import Layout from '../components/Layout';
-import Redirect from '../components/redirect';
 
 const Tags = ({ pageContext, data }) => {
   const { tag } = pageContext;
@@ -17,7 +16,6 @@ const Tags = ({ pageContext, data }) => {
 
   return (
     <Layout>
-      <Redirect redirect='/' text="← Go Home" />
       <Styles>
         <h2 className="section-title">{tagHeader}</h2>
         <ul className="tagged-list">

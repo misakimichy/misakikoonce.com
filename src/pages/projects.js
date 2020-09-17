@@ -5,14 +5,12 @@ import styled from 'styled-components'
 // component
 import Projects from '../components/Project/Projects';
 import Layout from '../components/Layout';
-import Redirect from '../components/redirect';
 
 const ProjectPage = ({ data }) => {
   const { edges } = data.projects;
 
   return (
     <Layout>
-      <Redirect redirect='/' text="← Go Home" />
       <Styles>
         <h2 className="section-title">All projects</h2>
         <ul className="tagged-list">

@@ -6,6 +6,7 @@ import { createGlobalStyle } from 'styled-components';
 // component
 import Sidebar from './Sidebar';
 import SEO from './SEO';
+import Redirect from './redirect';
 
 // font awesome
 import '@fortawesome/fontawesome-svg-core/styles.css';
@@ -31,6 +32,13 @@ const Layout = ({ children }) => (
     <SEO />
     <Sidebar />
     <div className="main-container">
+      <div className="menu-wrapper">
+          <Redirect redirect='/' text='Home' />
+          <Redirect redirect='/writings' text='Writings' />
+          <Redirect redirect='/projects' text='Projects' />
+          <Redirect redirect='/tags' text='Tags' />
+          <Redirect redirect='/about' text='About me' />
+        </div>
       {children}
     </div>
   </Styles>
@@ -39,7 +47,21 @@ const Layout = ({ children }) => (
 export default Layout;
 
 const Styles = styled.div`
-  width: 100vw;
+  .menu-wrapper {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    
+    margin-bottom: 40px;
+
+    * {
+      text-decoration: none;
+
+      :hover, :focus {
+        text-decoration: underline;
+      }
+    }
+  }
   .tag-button {
     background: transparent;
     color: ${colors.fontGreen};
@@ -58,4 +80,5 @@ const Styles = styled.div`
     :focus {
       outline: 0;
     }
-  }`
+  }
+`;

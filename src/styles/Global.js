@@ -184,8 +184,7 @@ export default css`
   */
   @media screen and (max-width: 1024px) {
     .main-container {
-      width: calc(100vw - 28%);
-      padding: 40px;
+      width: 90%;
     }
     .project-card {
       margin: 0 8px 10px 8px;
@@ -193,8 +192,15 @@ export default css`
   }
 
   @media screen and (max-width: 800px) {
+    .main-container {
+      width: unset;
+    }
     .container {
       flex-direction: column;
+      align-items: center;
+    }
+    .project-container {
+      width: unset;
     }
   }
 
