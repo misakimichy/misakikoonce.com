@@ -75,6 +75,7 @@ export default css`
 
   .container {
     display: flex;
+    height: 100vh;
   }
 
 
@@ -87,6 +88,8 @@ export default css`
   .main-container {
     width: calc(100vw - 25%);
     padding: 8px 48px;
+
+    overflow: auto;
   }
 
   .project-container {

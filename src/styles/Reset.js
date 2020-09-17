@@ -66,7 +66,6 @@ export default css`
   embed,
   figure,
   figcaption,
-  footer,
   header,
   hgroup,
   menu,

@@ -78,7 +78,7 @@ const Sidebar = () => (
 
 export default Sidebar;
 
-const Styles = styled.div`
+const Styles = styled.aside`
   width: calc(100vw - 83%);
   padding: 48px;
   border-right: 1px solid ${colors.paleGrey};

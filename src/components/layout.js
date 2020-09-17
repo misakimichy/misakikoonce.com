@@ -6,7 +6,8 @@ import { createGlobalStyle } from 'styled-components';
 // component
 import Sidebar from './Sidebar';
 import SEO from './SEO';
-import Redirect from './redirect';
+import Navigation from './navigation';
+import Footer from './footer';
 
 // font awesome
 import '@fortawesome/fontawesome-svg-core/styles.css';
@@ -27,41 +28,23 @@ config.autoAddCss = false;
 deckDeckGoHighlightElement();
 
 const Layout = ({ children }) => (
-  <Styles className="container">
+  <Styles>
     <GlobalStyles />
     <SEO />
-    <Sidebar />
-    <div className="main-container">
-      <div className="menu-wrapper">
-          <Redirect redirect='/' text='Home' />
-          <Redirect redirect='/writings' text='Writings' />
-          <Redirect redirect='/projects' text='Projects' />
-          <Redirect redirect='/tags' text='Tags' />
-          <Redirect redirect='/about' text='About me' />
-        </div>
-      {children}
+    <div className="container">
+      <Sidebar />
+      <div className="main-container">
+        <Navigation />
+        {children}
+      </div>
     </div>
+    <Footer />
   </Styles>
 );
 
 export default Layout;
 
 const Styles = styled.div`
-  .menu-wrapper {
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-
-    margin-bottom: 40px;
-
-    * {
-      text-decoration: none;
-
-      :hover, :focus {
-        text-decoration: underline;
-      }
-    }
-  }
   .tag-button {
     background: transparent;
     color: ${colors.fontGreen};
