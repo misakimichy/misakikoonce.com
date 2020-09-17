@@ -1,11 +1,27 @@
 import React from 'react';
+import styled from 'styled-components';
 
 // component
 import Layout from '../components/Layout';
 
 export default () => (
   <Layout>
-    <h2>About this portfolio</h2>
-    <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+    <Styles>
+      <h2>About Me</h2>
+      <div className="skill-table">
+        {/* skills come here */}
+      </div>
+      <p>I decided to change career about two years ago to find career that I can enjoy. I self-taught HTML, CSS, vanilla JavaScript and React. After I spent a year self-teaching programming, I joined a full-time coding bootcamp to gain experience working with a team. I pair-programmed a few applications a day, worked on a solo project every Friday and created two applications with 4 peers with vanilla JavaScript, React and C#. While I was on the cootcamp, I found a cool tech startup called <a href="https://www.brainsquall.co/">BrainSquall</a>, and I joined their engineering team as a Software Engineer intern.</p>
+
+      <h5>What am I currently learning?</h5>
+      <p>UI design, GarphQL, sustainable and clean code!</p>
+
+      <h5>This is me! - Besides tech</h5>
+      <p>😽I like spending time with my kittens, twin boys names <a href="https://www.instagram.com/pnwbubbies/">Coop and Tot</a>.</p>
+      <p>👩🏻‍🍳I'm a foodie. I'm into Korean food lately, and learning baking.</p>
+      <p>🧗🏻‍♀️I love bouldering! I'm afraid of height, so my legs get shaky every time I climb!</p>
+    </Styles>
   </Layout>
 );
+
+const Styles = styled.div``;
