@@ -47,8 +47,6 @@ export default css`
   dl,
   dt,
   dd,
-  ol,
-  ul,
   fieldset,
   form,
   label,
@@ -104,9 +102,6 @@ export default css`
     line-height: 1;
   }
 
-  ul {
-    list-style: none;
-  }
   blockquote,
   q {
     quotes: none;
