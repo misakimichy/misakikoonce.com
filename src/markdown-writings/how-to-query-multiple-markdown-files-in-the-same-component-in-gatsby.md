@@ -7,7 +7,7 @@ description: "I explain how to query multiple markdown files in the same compone
 ---
 
 ### Intro
-When I was making my portfolio, it took a while to figure out how to query two markdown files in the same component. What I wanted to do was passing queried markdown data of writings and projects to the WritingsSection and ProjectSection components in `/pages/index.js` instead of using staticQuery in each of the components. 
+When I was making my portfolio, it took a while to figure out how to query two markdown files in the same component. I wanted to pass queried markdown data of writings and projects to the WritingsSection and ProjectSection components in `/pages/index.js` instead of using staticQuery in each of the components. 
 
 ### Why was it hard?
 I thought I could get an object with two allMarkdownRemark data objects to add filter of fileAbsolutePath like this:
@@ -55,7 +55,7 @@ Expected data object was:
   { allMarkdownRemark: {...}, allMarkdownRemark: {...} }
 ```
 
-But, of course, the data object became `undefined` because the same key name cannot exist in an object.
+Of course, the data object became `undefined` because the same key name cannot exist in an object.
 
 
 ### How to solve this
