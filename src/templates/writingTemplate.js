@@ -5,7 +5,6 @@ import { kebabCase } from "lodash";
 
 // component
 import Layout from '../components/Layout';
-import Redirect from '../components/redirect';
 
 // theme
 import { colors } from '../styles/theme';

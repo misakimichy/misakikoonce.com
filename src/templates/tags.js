@@ -26,8 +26,6 @@ const Tags = ({ pageContext, data }) => {
             );
           })}
         </ul>
-
-        <Redirect redirect='/tags' text="See all tags" />
       </Styles>
     </Layout>
   );
