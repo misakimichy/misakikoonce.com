@@ -1,9 +1,8 @@
 import React from 'react';
-import { graphql } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 import styled from 'styled-components';
 
 // component
-import Writings from '../components/Writing/Writings';
 import Layout from '../components/Layout';
 
 const WritingPage = ({ data }) => {
@@ -12,11 +11,11 @@ const WritingPage = ({ data }) => {
   return (
     <Layout>
       <Styles>
-        <h2>All writings</h2>
+        <h2 >All writings</h2>
         <ul className="tagged-list">
           {edges.map(edge => {
-            const { title } = edge.node.frontmatter;
-            return <Writings key={title} name={title} />
+            const { title, path } = edge.node.frontmatter;
+            return <Link key={title} to={path} className="list-names">{title}</Link>
           })}
         </ul>
       </Styles>
@@ -36,6 +35,7 @@ export const pageQuery = graphql`
         node {
           frontmatter {
             title
+            path
           }
         }
       }

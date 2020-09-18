@@ -1,9 +1,8 @@
 import React from 'react';
-import { graphql } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 import styled from 'styled-components'
 
 // component
-import Projects from '../components/Project/Projects';
 import Layout from '../components/Layout';
 
 const ProjectPage = ({ data }) => {
@@ -15,8 +14,8 @@ const ProjectPage = ({ data }) => {
         <h2>All projects</h2>
         <ul className="tagged-list">
           {edges.map(edge => {
-            const { title } = edge.node.frontmatter;
-            return <Projects key={title} name={title} />
+            const { title, path } = edge.node.frontmatter;
+            return <Link key={title} to={path} className="list-names">{title}</Link>
           })}
         </ul>
       </Styles>
@@ -36,6 +35,7 @@ export const pageQuery = graphql`
       node {
         frontmatter {
           title
+          path
         }
       }
     }

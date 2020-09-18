@@ -1,9 +1,9 @@
 import React from 'react';
-import { graphql } from 'gatsby';
+import { graphql, Link } from 'gatsby';
 import styled from 'styled-components';
+import { kebabCase } from 'lodash';
 
 // component
-import TagLink from '../components/Tag/tagLink';
 import Layout from '../components/Layout';
 
 const Tags = ({ data }) => {
@@ -16,7 +16,7 @@ const Tags = ({ data }) => {
         <ul className="tagged-list">
           {group.map(tag => {
             const { fieldValue, totalCount } = tag;
-            return <TagLink key={fieldValue} name={fieldValue} totalCount={totalCount} />
+            return <Link to={`/tags/${kebabCase(fieldValue)}`} key={fieldValue} className="list-names">{fieldValue} ({totalCount})</Link>
           })}
         </ul>
       </Styles>
