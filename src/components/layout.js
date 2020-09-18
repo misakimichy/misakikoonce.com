@@ -48,6 +48,7 @@ const Styles = styled.div`
   .tag-button {
     background: transparent;
     color: ${colors.fontGreen};
+    font-size: 16px;
     border: 1px solid ${colors.lightGrey};
     border-radius: 4px;
 

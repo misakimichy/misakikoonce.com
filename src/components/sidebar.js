@@ -43,8 +43,7 @@ const Sidebar = () => (
     <div className="name-holder">
       <h1>Misaki Koonce</h1>
       <h5>Software Engineer</h5>
-      <p>From Tokyo Now in Seattle.</p>
-      <p>I like hard problems and challenging myself!</p>
+      <p>From Tokyo Now in Seattle.I like hard problems and challenging myself!</p>
     </div>
     {/* <Link to="/about/">About</Link> */}
     <div className="social-links">
@@ -117,26 +116,33 @@ const Styles = styled.aside`
           margin-left: 8px;
         }
       }
-      :hover, :focus {
-        color: ${colors.neonGreen};
-        span {
+      :focus {
+        button {
           color: ${colors.neonGreen};
+          span {
+            color: ${colors.neonGreen};
+          }
         }
       }
     }
   }
 
   @media screen and (max-width: 1024px) {
-    width: calc(100vw - 77%);
+    width: calc(100vw - 75%);
     padding: 40px;
+
+    .profile-image {
+      width: 100%;
+    }
 
     .name-holder {
       h1 {
-        font-size: 3.052em;
+        font-size: 3em;
+        margin-bottom: 0;
       }
 
       h5 {
-        font-size: 1.28em;
+        font-size: 1.15em;
       }
     }
   }
@@ -144,12 +150,11 @@ const Styles = styled.aside`
   @media screen and (max-width: 800px) {
     display: flex;
     align-items: center;
-    justify-content: center;
+    justify-content: space-evenly;
     border-bottom: 1px solid ${colors.paleGrey};
     border-right: none;
 
     width: 100%;
-    height: 30%;
 
     padding: 0;
 
@@ -159,12 +164,21 @@ const Styles = styled.aside`
     }
 
     .profile-image {
-      width: 110%;
+      width: 140px;
     }
 
     .name-holder {
-      width: 340px;
-      margin: 40px 16px;
+      width: 305px;
+      margin: 48px 16px;
+
+      h1 {
+        font-size: 2.5em;
+        margin-top: 0;
+      }
+
+      h5 {
+        margin-bottom: 0.4rem;
+      }
     }
 
     .social-links {

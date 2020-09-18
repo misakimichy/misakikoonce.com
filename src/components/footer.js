@@ -1,6 +1,9 @@
 import React from 'react';
 import styled from 'styled-components';
 
+// theme
+import { colors } from '../styles/theme';
+
 const Footer = () => (
   <Styles>
     <p>Happily <a href="https://github.com/misakimichy/misakikoonce.com.git" target="_blank">handmade</a> in Seattle with love and coffee. ©2020 misakikoonce.com</p>
@@ -19,6 +22,8 @@ const Styles = styled.footer`
   height: 4vh;
   
   p {
+    font-size: 13px;
+    color: ${colors.mediumGrey};
     a {
       text-decoration: none;
     }

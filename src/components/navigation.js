@@ -4,6 +4,9 @@ import styled from 'styled-components'
 // component
 import Redirect from './redirect';
 
+// theme
+import { colors } from '../styles/theme';
+
 const Navigation = () => (
   <Styles>
     <div className="menu">
@@ -36,15 +39,30 @@ const Styles = styled.nav`
     * {
       text-decoration: none;
 
-      :hover, :focus {
+      :hover {
         text-decoration: underline;
+      }
+
+      :focus {
+        color: ${colors.neonGreen};
       }
     }
   }
 
   @media (max-width: 1024px) {
-     width: 70%;
+    width: 70%;
 
-     margin-left: 30%;
+    margin-left: 30%;
+  }
+
+  @media (max-width: 800px) {
+    margin-top: 0;
+  }
+
+  @media (max-width: 640px) {
+    justify-content: center;
+
+    width: unset;
+    margin-left: unset;
   }
 `;

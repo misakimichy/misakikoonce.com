@@ -127,12 +127,20 @@ export default css`
 
   .tagged-list {
     list-style: none;
-  }
 
+  }
+  
   .list-names {
     display: block;
     margin-bottom: 8px;
-    text-decoration: underline;
+
+    :hover {
+      text-decoration: underline;
+    }
+
+    :focus {
+      color: ${colors.neonGreen};
+    }
   }
 
   code {
@@ -200,7 +208,7 @@ export default css`
 
   @media screen and (max-width: 800px) {
     .main-container {
-      width: unset;
+      width: 80%;
     }
     .container {
       flex-direction: column;
@@ -213,7 +221,13 @@ export default css`
 
   @media screen and (max-width: 640px) {
     .main-container {
-      width: 100%;
+      width: 75%;
+    }
+
+    .project-container {
+      display: flex;
+      flex-direction: column;
+      padding: 0;
     }
   }
 
