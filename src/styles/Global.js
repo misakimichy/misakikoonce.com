@@ -209,6 +209,7 @@ export default css`
   @media screen and (max-width: 800px) {
     .main-container {
       width: 80%;
+      height: calc(96vh - 229px);
     }
     .container {
       flex-direction: column;
@@ -222,6 +223,7 @@ export default css`
   @media screen and (max-width: 640px) {
     .main-container {
       width: 75%;
+      height: calc(96vh - 378px);
     }
 
     .project-container {
