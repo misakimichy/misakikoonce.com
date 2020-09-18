@@ -12,7 +12,7 @@ const ProjectPage = ({ data }) => {
   return (
     <Layout>
       <Styles>
-        <h2 className="section-title">All projects</h2>
+        <h2>All projects</h2>
         <ul className="tagged-list">
           {edges.map(edge => {
             const { title } = edge.node.frontmatter;

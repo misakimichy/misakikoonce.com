@@ -8,7 +8,7 @@ import ProjectCard from './projectCard';
 
 const ProjectSection = ({ cards }) => (
   <Styles>
-    <h2 className="section-title">Projects</h2>
+    <h2>Projects</h2>
     <ul className="project-container">
       {cards.map(card => {
         const { name, path, description, tags, thumbnail } = card;

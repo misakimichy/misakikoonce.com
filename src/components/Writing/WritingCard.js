@@ -17,7 +17,7 @@ const WritingCard = ({
   thumbnail
 }) => (
     <Styles className="card-content-wrapper">
-      <Link to={url} className="no-underline">
+      <Link to={url}>
         <h4>{title}</h4>
         <p>{description}
           <span className="read-more">...read more</span>

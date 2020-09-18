@@ -3,7 +3,7 @@ import styled from 'styled-components';
 
 const Footer = () => (
   <Styles>
-    <p>Happily <a href="https://github.com/misakimichy/misakikoonce.com.git" target="_blank"s>handmade</a> in Seattle with love and coffee. ©2020 misakikoonce.com</p>
+    <p>Happily <a href="https://github.com/misakimichy/misakikoonce.com.git" target="_blank">handmade</a> in Seattle with love and coffee. ©2020 misakikoonce.com</p>
   </Styles>
 )
 

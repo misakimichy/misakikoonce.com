@@ -10,7 +10,7 @@ const Tag = ({ name, count }) => (
   <Styles>
     {typeof window !== 'undefined' && 
       <Link
-        className="no-underline tags"
+        className="tags"
         to={`/tags/${kebabCase(name)}`}
       >
         <button className="tag-button">

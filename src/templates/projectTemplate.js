@@ -24,7 +24,7 @@ const ProjectTemplate = ({ data }) => {
             {tags.map(tag => {
               const link = `/tags/${kebabCase(tag)}`;
               return (
-                <Link to={link} key={tag} className="no-underline tags">
+                <Link to={link} key={tag}>
                   <button type="button" className="tag-button">{tag}</button>
                 </Link>
                 )

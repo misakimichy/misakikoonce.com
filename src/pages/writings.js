@@ -12,7 +12,7 @@ const WritingPage = ({ data }) => {
   return (
     <Layout>
       <Styles>
-        <h2 className="section-title">All writings</h2>
+        <h2>All writings</h2>
         <ul className="tagged-list">
           {edges.map(edge => {
             const { title } = edge.node.frontmatter;

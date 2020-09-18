@@ -11,7 +11,7 @@ import { colors } from '../../styles/theme';
 
 const WritingsSection = ({ cards }) => (
   <Styles>
-    <h2 className="section-title">Writings</h2>
+    <h2>Writings</h2>
       {cards.map(card => {
         const { name, path, description, tags, thumbnail } = card;
         return <WritingCard

@@ -17,7 +17,7 @@ const Tags = ({ pageContext, data }) => {
   return (
     <Layout>
       <Styles>
-        <h2 className="section-title">{tagHeader}</h2>
+        <h2>{tagHeader}</h2>
         <ul className="tagged-list">
           {edges.map(({ node }) => {
             const { title, path } = node.frontmatter;
@@ -72,9 +72,4 @@ export const pageQuery = graphql`
   }
 `;
 
-const Styles = styled.div`
-  .list-names {
-    display: block;
-    margin-bottom: 8px;
-  }
-`;
+const Styles = styled.div``;

@@ -11,4 +11,6 @@ const Writings = ({ name }) => (
 
 export default Writings;
 
-const Styles = styled.li``;
+const Styles = styled.li`
+  text-decoration: underline;
+`;

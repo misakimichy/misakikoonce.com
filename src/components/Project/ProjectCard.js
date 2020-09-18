@@ -20,7 +20,7 @@ const ProjectCard = ({
       <img className="card-thumbnail" src={thumbnail} alt="project thumbnail" />
       <div className="card-content-wrapper">
         {typeof window !== 'undefined' && 
-          <Link to={url} className="no-underline">
+          <Link to={url}>
             <h4>{title}</h4>
             <p>{description}
               <span className="read-more">...read more</span>

@@ -36,42 +36,42 @@ const Sidebar = () => (
   //     return (
   <Styles>
     {typeof window !== 'undefined' &&
-      <Link to="/" className="no-underline profile-image-link">
+      <Link to="/" className="profile-image-link">
         <img className="profile-image" src={profileImage} alt="Misaki Koonce" />
       </Link>
     }
     <div className="name-holder">
-      <h1 style={{marginBottom: '8px'}}>Misaki Koonce</h1>
-      <h5 style={{marginTop: '0'}}>Software Engineer</h5>
+      <h1>Misaki Koonce</h1>
+      <h5>Software Engineer</h5>
       <p>From Tokyo Now in Seattle.</p>
       <p>I like hard problems and challenging myself!</p>
     </div>
     {/* <Link to="/about/">About</Link> */}
     <div className="social-links">
-      <div className="social-link-item">
-        <a className="no-underline" href="/ResumeMisakiKoonce.pdf">
+      <a href="/ResumeMisakiKoonce.pdf">
+        <button>
           <FontAwesomeIcon icon={['far', 'file']} className="icon" />
           <span className="icon-span">Resume</span>
-        </a>
-      </div>
-      <div className="social-link-item">
-        <a className="no-underline" href="https://twitter.com/misakimichy">
+        </button>
+      </a>
+      <a href="https://twitter.com/misakimichy">
+        <button>
           <FontAwesomeIcon icon={['fab', 'twitter']} className="icon" />
           <span className="icon-span">Twitter</span>
-        </a>
-      </div>
-      <div className="social-link-item">
-        <a className="no-underline" href="https://github.com/misakimichy">
+        </button>
+      </a>
+      <a href="https://github.com/misakimichy">
+        <button>
           <FontAwesomeIcon icon={['fab', 'github-alt']} className="icon" />
           <span className="icon-span">Github</span>
-        </a>
-      </div>
-      <div className="social-link-item">
-        <a className="no-underline" href="https://www.linkedin.com/in/misakikoonce">
+        </button>
+      </a>
+      <a href="https://www.linkedin.com/in/misakikoonce">
+        <button>
           <FontAwesomeIcon icon={['fab', 'linkedin-in']} className="icon" />
           <span className="icon-span">LinkedIn</span>
-        </a>
-      </div>
+        </button>
+      </a>
     </div>
   </Styles>
 );
@@ -85,30 +85,60 @@ const Styles = styled.aside`
 
   .profile-image {
     border-radius: 50%;
-    width: 230px;
+    width: 100%;
   }
 
   .name-holder {
     margin-top: 48px;
     margin-bottom: 30px;
+
+    h1 {
+      margin-bottom: 8px;
+    }
+    h5 {
+      margin-top: 0;
+    }
   }
 
   .social-links {
     display: flex;
     flex-direction: column;
-  }
-  
-  .social-link-item {
-    padding: 8px;
+    a {
+      button {
+        background: ${colors.white};
+        border: none;
 
-    .icon {
-      font-size: 1.1em;
+        font-size: 16px;
+        color: ${colors.fontGreen};
+        text-align: inherit;
+        padding: 8px;
+
+        span {
+          margin-left: 8px;
+        }
+      }
+      :hover, :focus {
+        color: ${colors.neonGreen};
+        span {
+          color: ${colors.neonGreen};
+        }
+      }
     }
   }
 
   @media screen and (max-width: 1024px) {
-      width: calc(100vw - 72%);
-      padding: 40px;
+    width: calc(100vw - 77%);
+    padding: 40px;
+
+    .name-holder {
+      h1 {
+        font-size: 3.052em;
+      }
+
+      h5 {
+        font-size: 1.28em;
+      }
+    }
   }
 
   @media screen and (max-width: 800px) {
@@ -129,7 +159,7 @@ const Styles = styled.aside`
     }
 
     .profile-image {
-      max-width: 150px;
+      width: 110%;
     }
 
     .name-holder {

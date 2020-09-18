@@ -8,46 +8,48 @@ export default css`
 
   h1, h2, h3, h4, h5 {
     font-family: 'Benne Regular', serif;
+    line-height: 1.15;
     margin-bottom: 1rem;
+    margin: 2.75rem 0 1.05rem;
   }
 
   h1 {
-    font-size: 67.34px;
+    font-size: 4.209em;
 
     @media (max-width: 800px) {
-      font-size: 1.8rem;
+      font-size: 3.052em;
     }
   }
 
   h2 {
-    font-size: 50.52px;
-    word-spacing: 3px;
-
+    font-size: 3.157em;
+  
     @media (max-width: 800px) {
-      font-size: 1.6rem;
+      font-size: 2.441em;
     }
   }
 
   h3 {
-    font-size: 37.90px;
+    font-size: 2.369em;
 
     @media (max-width: 800px) {
-      font-size: 1.4rem;
+      font-size: 1.953rem;
     }
   }
 
-  /* h4 used for footer */
   h4 {
-    font-size: 28.43px;
-    line-height: 32px;
+    font-size: 1.777em;
+
+    @media (max-width: 800px) {
+      font-size: 1.563rem;
+    }
   }
 
-  /* h5 user in nav bar */
   h5 {
-    font-size: 21.33px;
+    font-size: 1.333em;
   }
 
-  div, p, a, li {
+  div, p, a, li, button {
     font-family: 'Quattrocento Sans', Helvetica, sans-serif;
   }
 
@@ -67,20 +69,20 @@ export default css`
   li {
     margin-bottom: 8px;
   }
-  
 
-  .no-underline {
+  div, a, button {
+    :focus {
+      outline: none;
+    }
+  }
+
+  a {
     text-decoration: none;
   }
 
   .container {
     display: flex;
-    height: 100vh;
-  }
-
-
-  .icon-span {
-    margin-left: 10px
+    height: 96vh;
   }
 
   /* main contents' styling */
@@ -100,10 +102,6 @@ export default css`
     justify-content: center;
   
     width: 100%;
-  }
-
-  .section-title {
-    margin-bottom: 40px;
   }
 
   .tag-item {
@@ -129,6 +127,12 @@ export default css`
 
   .tagged-list {
     list-style: none;
+  }
+
+  .list-names {
+    display: block;
+    margin-bottom: 8px;
+    text-decoration: underline;
   }
 
   code {
