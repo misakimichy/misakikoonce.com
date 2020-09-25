@@ -9,20 +9,18 @@ import ProjectCard from './projectCard';
 const ProjectSection = ({ cards }) => (
   <Styles>
     <h2>Projects</h2>
-    <ul className="project-container">
-      {cards.map(card => {
-        const { name, path, description, tags, thumbnail } = card;
-        return <ProjectCard
-          key={name}
-          className="project-card"
-          title={name}
-          url={path}
-          description={description}
-          tags={tags}
-          thumbnail={thumbnail}
-        />
-      })}
-    </ul>
+    {cards.map(card => {
+      const { name, path, description, tags, thumbnail } = card;
+      return <ProjectCard
+        key={name}
+        className="project-card"
+        title={name}
+        url={path}
+        description={description}
+        tags={tags}
+        thumbnail={thumbnail}
+      />
+    })}
   </Styles>
 )
 

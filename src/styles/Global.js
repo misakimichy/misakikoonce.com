@@ -157,37 +157,21 @@ export default css`
   }
 
   /* Card styling */
-  .card-thumbnail {
-    width: 290px;
-    height: 180px;
-    border: 1px solid ${colors.paleGrey};
-    border-radius: 4px;
-    margin-bottom: 16px;
-  }
-
-  .card-content-wrapper {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-between;
-
-    height: 100%;
-
-    a {
-      h4 {
-        color: ${colors.darkGrey};
-        margin-top: 8px;
-        margin-bottom: 8px;
-      }
-
-      p {
-        color: ${colors.darkGrey};
-        margin-bottom: 32px;
-      }
-    }
-  }
-
   .tag-wrapper {
     display: flex;
+  }
+
+  .card-content {
+    h4 {
+      color: ${colors.darkGrey};
+      margin-top: 8px;
+      margin-bottom: 8px;
+    }
+
+    p {
+      color: ${colors.darkGrey};
+      margin-bottom: 32px;
+    }
   }
 
   /* 
