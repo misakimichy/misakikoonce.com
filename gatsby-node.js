@@ -1,6 +1,4 @@
 const path = require(`path`)
-const _ = require("lodash")
-const { kebabCase } = require('lodash');
 
 exports.createPages = async ({ actions, graphql, reporter }) => {
   const { createPage } = actions
@@ -73,9 +71,9 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
   // Create projects page with template
   result.data.projects.edges.forEach(({ node }) => {
-    const { title } = node.frontmatter;
+    const { path } = node.frontmatter;
     createPage({
-      path: `/projects/${kebabCase(title)}`,
+      path: path,
       component: projectTemplate,
       context: {
         title: projects
@@ -85,9 +83,9 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
 
   // Create writings page with template
   result.data.writings.edges.forEach(({ node }) => {
-    const { title } = node.frontmatter;
+    const { path } = node.frontmatter;
     createPage({
-      path: `/writings/${kebabCase(title)}`,
+      path: path,
       component: writingTemplate,
       context: {
         title: writings
@@ -109,7 +107,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   // Create tags page
   result.data.tagsGroup.group.forEach(tag => {
     createPage({
-      path: `/tags/${_.kebabCase(tag.fieldValue)}/`,
+      path: `/tags/${tag.fieldValue}/`,
       component: tagTemplate,
       context: {
         tag: tag.fieldValue,
