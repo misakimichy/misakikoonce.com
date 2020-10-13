@@ -64,6 +64,7 @@ export default css`
 
   ul {
     margin: 0;
+    list-style: circle;
   }
 
   li {
@@ -162,6 +163,10 @@ export default css`
   }
 
   .card-content {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+
     h4 {
       color: ${colors.darkGrey};
       margin-top: 8px;

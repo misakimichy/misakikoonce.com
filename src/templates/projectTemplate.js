@@ -30,10 +30,12 @@ const ProjectTemplate = ({ data }) => {
                 )
             })}
         </div>
-
-        <div className="iframe-container">
-          <iframe title={title} src={projectUrl} allowFullScreen></iframe>
-        </div>
+        
+        {projectUrl && (
+          <div className="iframe-container">
+            <iframe title={title} src={projectUrl} allowFullScreen></iframe>
+          </div>
+        )}
         <main dangerouslySetInnerHTML={{ __html: html }} />
       </Styles>
     </Layout>
@@ -90,6 +92,10 @@ const Styles = styled.div`
         height: 100%;
       }
     }
+  }
+
+  main {
+    margin-top: 24px;
   }
 
   @media screen and (max-width: 1024px) {

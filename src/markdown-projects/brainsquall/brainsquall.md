@@ -2,11 +2,18 @@
 path: "/projects/brainsquall"
 date: "2020-01-28"
 title: BrainSquall
-projectUrl: ""
+projectUrl: 
 tags: ["React", "JavaScript"]
-description: "BrainSquall is a startup in Seattle area that provides app to gather, organize and share information. "
+description: "BrainSquall is a startup in Seattle area that provides app of combination of diagram, documentation and table, which allow users to gather, organize and share complex information."
 thumbnail: "screenshot.png"
 ---
-I worked at BrainSquall as a Software Engineer for 6 months after I graduated from coding bootcamp.
+BrainSquall is a web application that combines diagram, documentation and table, which allow users to gather, organize and share complex information.
 
-### What did I worked on?
+### What I worked on
+- Identified client-side issues and implemented solutions using React.
+
+- Delivered new UI features collaborating with a UX designer.
+
+- Delivered mobile responsiveness and styling standardization.
+
+- Practiced Agile development methodologies.
