@@ -18,7 +18,7 @@ const ProjectCard = ({
 }) => (
     <Styles>
       <img src={thumbnail} alt="project thumbnail" />
-      <div className="card-content" style={{height: '250px'}}>
+      <div className="card-content" style={{height: '100%'}}>
         {typeof window !== 'undefined' && 
           <Link to={url}>
             <h4>{title}</h4>
@@ -54,11 +54,14 @@ const Styles = styled.div`
   justify-content: flex-start;
   align-items: center;
 
-  padding: 16px;
+  border: 1px solid ${colors.paleGrey};
+  border-radius: 4px;
+
+  padding: 24px;
   margin-bottom: 16px;
   
   :hover {
-    box-shadow: 1px 1px 10px 8px rgba(216,216,216,0.5);
+    box-shadow: ${colors.boxShadow};
   }
 
   img {
