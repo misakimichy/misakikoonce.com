@@ -1,6 +1,5 @@
 import React from 'react';
 import { graphql } from 'gatsby';
-import { kebabCase } from "lodash";
 
 // component
 import Layout from '../components/Layout';

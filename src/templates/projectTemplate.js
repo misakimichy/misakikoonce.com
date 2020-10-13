@@ -1,7 +1,6 @@
 import React from "react";
 import styled from 'styled-components';
 import { Link, graphql } from "gatsby";
-import { kebabCase } from "lodash";
 
 // component
 import Layout from '../components/Layout';
@@ -22,7 +21,7 @@ const ProjectTemplate = ({ data }) => {
         <div className="stack-tag">
           Stack Tag:
             {tags.map(tag => {
-              const link = `/tags/${kebabCase(tag)}`;
+              const link = `/tags/${tag}`;
               return (
                 <Link to={link} key={tag}>
                   <button type="button" className="tag-button">{tag}</button>

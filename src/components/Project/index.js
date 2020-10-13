@@ -1,7 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
 import { graphql } from 'gatsby';
-import { kebabCase } from "lodash";
 
 // component
 import ProjectCard from './projectCard';
