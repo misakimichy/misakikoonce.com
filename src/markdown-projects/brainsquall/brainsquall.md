@@ -1,6 +1,6 @@
 ---
 path: "/projects/brainsquall"
-date: "2020-01-28"
+date: "2020-09-17"
 title: BrainSquall
 projectUrl: 
 tags: ["React", "JavaScript"]
