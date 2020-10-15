@@ -26,7 +26,8 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
               date
               projectUrl
               description
-              tags
+              stackTags
+              techTags
               thumbnail {
                 childImageSharp {
                   fluid {

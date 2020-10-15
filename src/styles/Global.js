@@ -64,11 +64,11 @@ export default css`
 
   ul {
     margin: 0;
-    list-style: circle;
   }
 
   li {
     margin-bottom: 8px;
+    list-style: circle;
   }
 
   div, a, button {

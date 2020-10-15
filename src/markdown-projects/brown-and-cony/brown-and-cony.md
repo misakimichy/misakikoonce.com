@@ -3,7 +3,8 @@ path: "/projects/brown-and-cony"
 date: "2019-05-04"
 title: "Brown and Cony"
 projectUrl: "https://misakimichy.github.io/brown-and-cony/"
-tags: ["HTML", "CSS"]
+stackTags: ["HTML", "CSS"]
+techTags: ["HTML", "CSS", "CSS Variables", "Media Queries"]
 description: "Pure CSS animation project written in HTML and pure CSS. When you hover over Brown, the brown bear, and Cony, the cute rabbit, some animation will start."
 thumbnail: "screenshot.png"
 ---

@@ -3,7 +3,8 @@ path: "/projects/project-miguel"
 date: "2018-10-17"
 title: "Project Miguel"
 projectUrl: "https://misakimichy.github.io/project-miguel/"
-tags: ["HTML", "CSS"]
+stackTags: ["HTML", "CSS"]
+techTags: ["HTML", "CSS", "CSS animation"]
 description: "Miguel, the hedgehog, project is written by HTML and pure CSS. Those little feet move once you open the page."
 thumbnail: "screenshot.png"
 ---

@@ -10,7 +10,7 @@ import { colors } from '../styles/theme';
 
 const ProjectTemplate = ({ data }) => {
   const { frontmatter, html } = data.markdownRemark;
-  const { title, date, tags, projectUrl} = frontmatter;
+  const { title, date, stackTags, techTags, projectUrl} = frontmatter;
 
   return (
     <Layout>
@@ -20,11 +20,11 @@ const ProjectTemplate = ({ data }) => {
 
         <div className="stack-tag">
           Stack Tag:
-            {tags.map(tag => {
-              const link = `/tags/${tag}`;
+            {stackTags.map(stackTag => {
+              const link = `/tags/${stackTag}`;
               return (
-                <Link to={link} key={tag}>
-                  <button type="button" className="tag-button">{tag}</button>
+                <Link to={link} key={stackTag}>
+                  <button type="button" className="tag-button">{stackTag}</button>
                 </Link>
                 )
             })}
@@ -36,6 +36,15 @@ const ProjectTemplate = ({ data }) => {
           </div>
         )}
         <main dangerouslySetInnerHTML={{ __html: html }} />
+
+        <div className="tech-stack">
+          <h4>Technology Used</h4>
+          <ul>
+            {techTags.map(techTag => {
+              return <li key={techTag}>{techTag}</li>
+            })}
+          </ul>
+        </div>
       </Styles>
     </Layout>
   );
@@ -52,7 +61,8 @@ export const pageQuery = graphql`
         path
         title
         projectUrl
-        tags
+        stackTags
+        techTags
       }
     }
   }
@@ -65,6 +75,7 @@ const Styles = styled.div`
   }
 
   .stack-tag {
+    margin-bottom: 16px;
     a {
       :first-child {
         margin-left: 8px;
