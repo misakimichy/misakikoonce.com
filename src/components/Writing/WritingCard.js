@@ -16,11 +16,11 @@ const WritingCard = ({
   tags = [],
   thumbnail
 }) => (
-    <Styles>
+    <Styles tabIndex='0'>
       <Link to={url} className="card-content">
         <h4>{title}</h4>
         <p>{description}
-          <span className="read-more">...read more</span>
+          <span className="read-more" tabIndex='0'>...read more</span>
         </p>
       </Link>
       <div className="tag-wrapper">
@@ -54,7 +54,8 @@ const Styles = styled.div`
   padding: 24px;
   margin-bottom: 16px;
   
-  :hover {
+  :hover,
+  :focus {
     box-shadow: ${colors.boxShadow};
   }
 `;

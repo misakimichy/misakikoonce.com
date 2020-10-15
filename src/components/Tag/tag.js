@@ -9,8 +9,8 @@ const Tag = ({ name, count }) => (
   <Styles>
     {typeof window !== 'undefined' && 
       <Link
-        className="tags"
         to={`/tags/${name}`}
+        tabIndex='1'
       >
         <button className="tag-button">
           {name} {count !== null ? (count) : ''}

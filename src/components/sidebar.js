@@ -48,25 +48,25 @@ const Sidebar = () => (
     {/* <Link to="/about/">About</Link> */}
     <div className="social-links">
       <a href="/ResumeMisakiKoonce.pdf">
-        <button>
+        <button tabIndex='1'>
           <FontAwesomeIcon icon={['far', 'file']} className="icon" />
           <span className="icon-span">Resume</span>
         </button>
       </a>
       <a href="https://twitter.com/misakimichy">
-        <button>
+        <button tabIndex='1'>
           <FontAwesomeIcon icon={['fab', 'twitter']} className="icon" />
           <span className="icon-span">Twitter</span>
         </button>
       </a>
       <a href="https://github.com/misakimichy">
-        <button>
+        <button tabIndex='1'>
           <FontAwesomeIcon icon={['fab', 'github-alt']} className="icon" />
           <span className="icon-span">Github</span>
         </button>
       </a>
       <a href="https://www.linkedin.com/in/misakikoonce">
-        <button>
+        <button tabIndex='1'>
           <FontAwesomeIcon icon={['fab', 'linkedin-in']} className="icon" />
           <span className="icon-span">LinkedIn</span>
         </button>

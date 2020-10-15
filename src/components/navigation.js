@@ -44,6 +44,7 @@ const Styles = styled.nav`
       }
 
       :focus {
+        text-decoration: none;
         color: ${colors.neonGreen};
       }
     }

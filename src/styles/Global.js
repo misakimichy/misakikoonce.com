@@ -57,6 +57,10 @@ export default css`
     color: ${colors.fontGreen};
   }
 
+  span:focus {
+    outline: none;
+  }
+
   p {
     line-height: 29px;
     word-spacing: 0.5px;
@@ -155,6 +159,10 @@ export default css`
 
   .read-more {
     margin-left: 8px;
+
+    :hover, :focus  {
+      color: ${colors.neonGreen};
+    }
   }
 
   /* Card styling */

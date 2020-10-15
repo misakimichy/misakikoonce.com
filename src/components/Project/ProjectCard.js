@@ -16,14 +16,14 @@ const ProjectCard = ({
   stackTags = [],
   thumbnail
 }) => (
-    <Styles>
+    <Styles tabIndex='0'>
       <img src={thumbnail} alt="project thumbnail" />
       <div className="card-content" style={{height: '100%'}}>
         {typeof window !== 'undefined' && 
           <Link to={url}>
             <h4>{title}</h4>
             <p>{description}
-              <span className="read-more">...read more</span>
+              <span className="read-more" tabIndex='0'>...read more</span>
             </p>
           </Link>
         }
@@ -60,7 +60,8 @@ const Styles = styled.div`
   padding: 24px;
   margin-bottom: 16px;
   
-  :hover {
+  :hover,
+  :focus {
     box-shadow: ${colors.boxShadow};
   }
 

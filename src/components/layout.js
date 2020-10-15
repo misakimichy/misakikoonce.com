@@ -60,9 +60,11 @@ const Styles = styled.div`
   
     :hover {
       box-shadow: 3px 4px 4px 0 rgba(216, 216, 216, 0.5);
+      color: ${colors.neonGreen};
     }
     :focus {
       outline: 0;
+      color: ${colors.neonGreen};
     }
   }
 `;
