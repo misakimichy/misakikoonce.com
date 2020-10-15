@@ -10,13 +10,13 @@ const MainView = ({ data }) => {
   const { projects, writings } = data;
 
   const projectsData = projects.edges.map(({ node }) => {
-    const { title, description, tags, path, thumbnail } = node.frontmatter;
+    const { title, description, stackTags, path, thumbnail } = node.frontmatter;
     const { src } = thumbnail.childImageSharp.fluid;
     return {
       name: title,
       path: path,
       description: description,
-      tags: tags,
+      stackTags: stackTags,
       thumbnail: src
     };
   });
@@ -53,7 +53,7 @@ export const pageQuery = graphql`
             title
             path
             date
-            tags
+            stackTags
             projectUrl
             description
             thumbnail {

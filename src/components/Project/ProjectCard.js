@@ -13,7 +13,7 @@ const ProjectCard = ({
   title,
   url,
   description,
-  tags = [],
+  stackTags = [],
   thumbnail
 }) => (
     <Styles>
@@ -28,7 +28,7 @@ const ProjectCard = ({
           </Link>
         }
         <div className="tag-wrapper">
-          {tags.map(tag =>
+          {stackTags.map(tag =>
             <Tag key={tag} name={tag} />
           )}
         </div>
