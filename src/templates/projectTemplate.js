@@ -21,7 +21,7 @@ const ProjectTemplate = ({ data }) => {
         <div className="stack-tag">
           Stack Tag:
             {stackTags.map(stackTag => {
-              const link = `/tags/${stackTag}`;
+              const link = `/tags/${stackTag.toLowerCase()}`;
               return (
                 <Link to={link} key={stackTag}>
                   <button type="button" className="tag-button">{stackTag}</button>

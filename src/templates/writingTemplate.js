@@ -10,7 +10,7 @@ import { colors } from '../styles/theme';
 
 const WritingTemplate = ({ data }) => {
   const { frontmatter, html } = data.markdownRemark;
-  const { title, date, tags } = frontmatter;
+  const { title, date, stackTags } = frontmatter;
 
   return (
     <Layout>
@@ -20,11 +20,11 @@ const WritingTemplate = ({ data }) => {
   
         <div className="stack-tag">
           Stack Tag:
-            {tags.map(tag =>{
-              const link = `/tags/${tag}/`;
+            {stackTags.map(stackTag =>{
+              const link = `/tags/${stackTag.toLowerCase()}/`;
               return (
-                <Link to={link} key={tag}>
-                  <button type="button" className="tag-button">{tag}</button>
+                <Link to={link} key={stackTag}>
+                  <button type="button" className="tag-button">{stackTag}</button>
                 </Link>
               )
             })}
@@ -46,7 +46,7 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         path
         title
-        tags,
+        stackTags,
       }
     }
   }

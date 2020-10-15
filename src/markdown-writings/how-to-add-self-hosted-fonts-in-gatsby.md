@@ -2,7 +2,7 @@
 path: "/writings/how-to-add-self-hosted-fonts-in-gatsby"
 date: "2020-09-16"
 title: "How to add self-hosted fonts in Gatsby"
-tags: ["Gatsby", "React"]
+stackTags: ["Gatsby", "React"]
 description: "I struggled to add self-hosted fonts to my Gatsby project. This is a note to show how I solved it.."
 ---
 

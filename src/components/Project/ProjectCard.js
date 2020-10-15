@@ -42,11 +42,11 @@ ProjectCard.propTypes = {
   title: PropTypes.string.isRequired,
   url: PropTypes.string.isRequired,
   description: PropTypes.string,
-  tags: PropTypes.arrayOf(PropTypes.string)
+  stackTags: PropTypes.arrayOf(PropTypes.string)
 };
 
 ProjectCard.defaultProps = {
-  tags: []
+  stackTags: []
 };
 
 const Styles = styled.div`

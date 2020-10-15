@@ -13,7 +13,7 @@ const WritingCard = ({
   title,
   url,
   description,
-  tags = [],
+  stackTags = [],
   thumbnail
 }) => (
     <Styles tabIndex='0'>
@@ -24,7 +24,7 @@ const WritingCard = ({
         </p>
       </Link>
       <div className="tag-wrapper">
-        {tags.map(tag =>
+        {stackTags.map(tag =>
           <Tag key={tag} name={tag} />
         )}
       </div>
@@ -37,11 +37,11 @@ WritingCard.propTypes = {
   title: PropTypes.string.isRequired,
   url: PropTypes.string.isRequired,
   description: PropTypes.string,
-  tags: PropTypes.arrayOf(PropTypes.string)
+  stackTags: PropTypes.arrayOf(PropTypes.string)
 };
 
 WritingCard.defaultProps = {
-  tags: []
+  stackTags: []
 };
 
 const Styles = styled.div`

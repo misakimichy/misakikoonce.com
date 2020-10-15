@@ -9,7 +9,7 @@ const Tag = ({ name, count }) => (
   <Styles>
     {typeof window !== 'undefined' && 
       <Link
-        to={`/tags/${name}`}
+        to={`/tags/${name.toLowerCase()}`}
         tabIndex='1'
       >
         <button className="tag-button">

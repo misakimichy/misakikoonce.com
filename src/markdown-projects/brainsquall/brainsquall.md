@@ -3,8 +3,8 @@ path: "/projects/brainsquall"
 date: "2020-09-17"
 title: BrainSquall
 projectUrl: 
-stackTags: ["React", "Node.js"]
-techTags: [ "Node.js", "Knex", "React Hooks", "React Conflux","Styled Components", "Figma" ]
+stackTags: ["React", "Nodejs"]
+techTags: [ "Nodejs", "Knex", "React Hooks", "React Conflux","Styled Components", "Figma" ]
 description: "BrainSquall is a startup in Seattle area that provides app of combination of diagram, documentation and table, which allow users to gather, organize and share complex information."
 thumbnail: "screenshot.png"
 ---

@@ -12,14 +12,14 @@ const WritingsSection = ({ cards }) => (
   <Styles>
     <h2>Writings</h2>
       {cards.map(card => {
-        const { name, path, description, tags, thumbnail } = card;
+        const { name, path, description, stackTags, thumbnail } = card;
         return <WritingCard
           key={name}
           className="project-card"
           title={name}
           url={path}
           description={description}
-          tags={tags}
+          stackTags={stackTags}
           thumbnail={thumbnail}
         />
       })}

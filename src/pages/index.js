@@ -22,12 +22,12 @@ const MainView = ({ data }) => {
   });
 
   const writingsData = writings.edges.map(({node}) => {
-    const { title, description, tags, path } = node.frontmatter;
+    const { title, description, stackTags, path } = node.frontmatter;
     return {
       name: title,
       path: path,
       description: description,
-      tags: tags,
+      stackTags: stackTags,
     }
   })
 
@@ -78,7 +78,7 @@ export const pageQuery = graphql`
             path
             date
             description
-            tags
+            stackTags
           }
         }
       }

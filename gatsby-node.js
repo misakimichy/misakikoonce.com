@@ -51,13 +51,13 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
               path
               date
               description
-              tags
+              stackTags
             }
           }
         }
       }
       tagsGroup: allMarkdownRemark(limit: 1000) {
-        group(field: frontmatter___tags) {
+        group(field: frontmatter___stackTags) {
           fieldValue
         }
       }
@@ -108,7 +108,7 @@ exports.createPages = async ({ actions, graphql, reporter }) => {
   // Create tags page
   result.data.tagsGroup.group.forEach(tag => {
     createPage({
-      path: `/tags/${tag.fieldValue}/`,
+      path: `/tags/${tag.fieldValue.toLowerCase()}/`,
       component: tagTemplate,
       context: {
         tag: tag.fieldValue,
