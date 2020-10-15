@@ -22,14 +22,16 @@ const Navigation = () => (
 export default Navigation;
 
 const Styles = styled.nav`
+  position: sticky;
+  top: 0;
   display: flex;
   justify-content: flex-end;
   align-items: center;
 
+  background: white;
   height: 4vh;
-
-  margin-top: 16px;
-  margin-bottom: -24px;
+  padding-top: 8px;
+  z-index: 1;
 
   .menu {
     display: flex;

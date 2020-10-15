@@ -94,7 +94,7 @@ export default css`
   /* projects */
   .main-container {
     width: calc(100vw - 25%);
-    padding: 8px 48px;
+    padding: 0 48px 8px 48px;
 
     overflow: auto;
   }
