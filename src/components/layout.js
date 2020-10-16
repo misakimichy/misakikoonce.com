@@ -37,8 +37,8 @@ const Layout = ({ children }) => (
         <Navigation />
         {children}
       </div>
+      <Footer />
     </div>
-    <Footer />
   </Styles>
 );
 

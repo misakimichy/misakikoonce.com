@@ -70,7 +70,7 @@ const Styles = styled.div`
     margin-right: 24px;
   }
 
-  @media screen and (max-width: 800px) {
+  @media screen and (max-width: 1024px) {
     flex-direction: column;
 
     img {

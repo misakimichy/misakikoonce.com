@@ -15,7 +15,7 @@ const WritingPage = ({ data }) => {
         <ul className="tagged-list">
           {edges.map(edge => {
             const { title, path } = edge.node.frontmatter;
-            return <Link key={title} to={path} className="list-names">{title}</Link>
+            return <Link key={title} to={path} className="list-names"><li>{title}</li></Link>
           })}
         </ul>
       </Styles>

@@ -15,7 +15,7 @@ const Tags = ({ data }) => {
         <ul className="tagged-list">
           {group.map(tag => {
             const { fieldValue, totalCount } = tag;
-            return <Link to={`/tags/${fieldValue.toLowerCase()}`} key={fieldValue} className="list-names">{fieldValue} ({totalCount})</Link>
+            return <Link to={`/tags/${fieldValue.toLowerCase()}`} key={fieldValue} className="list-names"><li>{fieldValue} ({totalCount})</li></Link>
           })}
         </ul>
       </Styles>

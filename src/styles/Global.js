@@ -14,7 +14,7 @@ export default css`
   }
 
   h1 {
-    font-size: 4.209em;
+    font-size: 4.009em;
 
     @media (max-width: 800px) {
       font-size: 3.052em;
@@ -22,7 +22,7 @@ export default css`
   }
 
   h2 {
-    font-size: 3.157em;
+    font-size: 2.957em;
   
     @media (max-width: 800px) {
       font-size: 2.441em;
@@ -96,7 +96,7 @@ export default css`
     width: calc(100vw - 25%);
     padding: 0 48px 8px 48px;
 
-    overflow: auto;
+    overflow-x: auto;
   }
 
   .project-container {
@@ -204,14 +204,20 @@ export default css`
   }
 
   @media screen and (max-width: 800px) {
-    .main-container {
-      width: 80%;
-      height: calc(96vh - 229px);
-    }
     .container {
       flex-direction: column;
       align-items: center;
     }
+
+    .main-container {
+      position: sticky;
+      top: 0;
+
+      width: 80%;
+      height: 92vh;
+      overflow: unset;
+    }
+
     .project-container {
       width: unset;
     }
@@ -220,7 +226,8 @@ export default css`
   @media screen and (max-width: 640px) {
     .main-container {
       width: 75%;
-      height: calc(96vh - 378px);
+      height: calc(93vh - 333px);
+      padding: 0 40px 8px 40px;
     }
 
     .project-container {

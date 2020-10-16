@@ -134,18 +134,13 @@ const Styles = styled.aside`
 
     padding: 0;
 
-    .profile-image-link {
-      display: block;
-      margin: auto 0; 
-    }
-
     .profile-image {
       width: 140px;
     }
 
     .name-holder {
       width: 305px;
-      margin: 48px 16px;
+      margin: 40px 0;
 
       h1 {
         font-size: 2.5em;
@@ -155,11 +150,6 @@ const Styles = styled.aside`
       h5 {
         margin-bottom: 0.4rem;
       }
-    }
-
-    .social-links {
-      margin: auto 0;
-      min-width: 115px;
     }
   }
 
