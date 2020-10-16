@@ -10,33 +10,9 @@ import { colors } from '../styles/theme';
 import profileImage from '../../static/misaki-real.jpeg';
 
 const Sidebar = () => (
-  // <StaticQuery
-  //   query={graphql`
-  //     query SiteQuery {
-  //       site {
-  //         siteMetadata {
-  //           author
-  //           logo
-  //           title
-  //           resume
-  //           description
-  //           socialLinks {
-  //             twitter
-  //             github
-  //             linkedin
-  //           }
-  //         }
-  //       }
-  //     }
-  //   `}
-  //   render={data => {
-  //     const { author, logo, title, resume, description, socialLinks } = data.site.siteMetadata;
-  //     const { twitter, github, linkedin } = socialLinks;
-
-  //     return (
   <Styles>
     {typeof window !== 'undefined' &&
-      <Link to="/" className="profile-image-link">
+      <Link to={window.location.pathname === '/' ? "/about" : "/"} className="profile-image-link">
         <img className="profile-image" src={profileImage} alt="Misaki Koonce" />
       </Link>
     }
