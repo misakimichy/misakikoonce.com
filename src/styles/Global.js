@@ -58,11 +58,11 @@ export default css`
   }
 
   span:focus {
-    outline: none;
+    outline: none
   }
 
   p {
-    line-height: 29px;
+    line-height: 25px;
     word-spacing: 0.5px;
   }
 

@@ -69,4 +69,13 @@ const Styles = styled.div`
     width: 50%;
     margin-right: 24px;
   }
+
+  @media screen and (max-width: 800px) {
+    flex-direction: column;
+
+    img {
+      margin-right: 0;
+      margin-bottom: 24px;
+    }
+  }
 `;
