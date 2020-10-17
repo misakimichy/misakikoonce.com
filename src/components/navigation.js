@@ -56,4 +56,8 @@ const Styles = styled.nav`
 
     width: unset;
   }
+
+  @media screen and (max-width: 480px) {
+    margin-top: 8px;
+  }
 `;

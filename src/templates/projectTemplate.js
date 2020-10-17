@@ -115,4 +115,8 @@ const Styles = styled.div`
       justify-content: space-between;
     }
   }
+
+  @media screen and (max-width: 800px) {
+    margin-bottom: 75px;
+  }
 `;
