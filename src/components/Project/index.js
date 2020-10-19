@@ -28,6 +28,6 @@ export default ProjectSection;
 
 const Styles = styled.div`
   @media screen and (max-width: 800px) {
-    margin-bottom: 75px;
+    margin-bottom: 88px;
   }
 `;

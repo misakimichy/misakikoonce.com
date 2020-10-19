@@ -29,6 +29,7 @@ const Styles = styled.nav`
 
   background: white;
   height: 4vh;
+  margin-top: 16px;
   z-index: 1;
 
   .menu {

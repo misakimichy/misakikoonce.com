@@ -30,7 +30,7 @@ const Styles = styled.footer`
   background: white;
   box-shadow: 0px -2px 8px 2px rgba(216,216,216,0.5);
   width: 100%;
-  height: 3vh;
+  height: 7vh;
   
   p {
     font-size: 13px;
@@ -41,7 +41,6 @@ const Styles = styled.footer`
   }
 
   @media screen and (max-width: 480px) {
-    height: 7vh;
     p {
       width: 65%;
     }

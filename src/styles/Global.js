@@ -225,9 +225,8 @@ export default css`
 
   @media screen and (max-width: 640px) {
     .main-container {
-      width: 75%;
       height: calc(93vh - 333px);
-      padding: 0 40px 8px 40px;
+      padding: 0 32px;
     }
 
     .project-container {
