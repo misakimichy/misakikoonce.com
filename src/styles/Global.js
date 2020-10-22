@@ -150,7 +150,7 @@ export default css`
 
   code {
     background-color: ${colors.codeBackground};
-    color: ${colors.codePink};
+    color: ${colors.white};
     font-weight: bold;
     border-radius: 3px;
 

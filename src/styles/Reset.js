@@ -35,7 +35,6 @@ export default css`
   samp,
   small,
   strike,
-  strong,
   sub,
   sup,
   tt,
