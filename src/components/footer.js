@@ -40,11 +40,8 @@ const Styles = styled.footer`
     }
   }
 
-  @media screen and (max-width: 600px) {
-    height: 7vh;
-  }
-
   @media screen and (max-width: 480px) {
+    height: 7vh;
     p {
       width: 65%;
     }

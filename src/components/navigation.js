@@ -29,7 +29,6 @@ const Styles = styled.nav`
 
   background: white;
   height: 4vh;
-  margin-top: 16px;
   z-index: 1;
 
   .menu {
@@ -56,9 +55,6 @@ const Styles = styled.nav`
     justify-content: flex-end;
 
     width: unset;
-  }
-
-  @media screen and (max-width: 480px) {
     margin-top: 8px;
   }
 `;
