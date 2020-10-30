@@ -10,6 +10,7 @@ const MainView = ({ data }) => {
   const { projects, writings } = data;
 
   const projectsData = projects.edges.map(({ node }) => {
+    console.log(node)
     const { title, description, stackTags, path, thumbnail } = node.frontmatter;
     const { src } = thumbnail.childImageSharp.fluid;
     return {
