@@ -2,7 +2,7 @@
 path: "/projects/would-you-rather"
 date: "2020-11-17"
 title: Would you rather?
-projectUrl: null
+projectUrl: "https://would-you-rather.misakikoonce.com"
 stackTags: ["React", "Redux"]
 techTags: [ "React", "Redux", "React Hooks", "Styled Components"]
 description: 'This is an app that users can answer and create new polls, and see results.'
