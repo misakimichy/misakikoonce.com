@@ -11,10 +11,14 @@ import { colors } from '../../styles/theme';
 
 const ProjectCard = ({ title, url, description, stackTags = [], thumbnail, projectUrl }) => (
   <Styles tabIndex="0">
-    <img src={thumbnail} alt="project thumbnail" />
+    <Link to={url}>
+      <img src={thumbnail} alt="project thumbnail" />
+    </Link>
     <div className="card-content" style={{ height: '100%' }}>
-      <h4>{title}</h4>
-      <p>{description}</p>
+      <Link to={url}>
+        <h4>{title}</h4>
+        <p>{description}</p>
+      </Link>
 
       <div className="tag-wrapper">
         <a href={projectUrl} target="_blank" style={{ marginBottom: '24px', marginRight: '16px' }}>
@@ -76,6 +80,7 @@ const Styles = styled.div`
     flex-direction: column;
 
     img {
+      width: 100%;
       margin-right: 0;
       margin-bottom: 24px;
     }
