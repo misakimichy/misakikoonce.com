@@ -1,5 +1,5 @@
 import React from 'react';
-import styled from 'styled-components'
+import styled from 'styled-components';
 
 // component
 import Redirect from './redirect';
@@ -10,10 +10,10 @@ import { colors } from '../styles/theme';
 const Navigation = () => (
   <Styles>
     <div className="menu">
-      <Redirect redirect='/' text='Home' />
-      <Redirect redirect='/writings' text='Writings' />
-      <Redirect redirect='/projects' text='Projects' />
-      <Redirect redirect='/tags' text='Tags' />
+      <Redirect redirect="/" text="Home" />
+      <Redirect redirect="/writings" text="Writings" />
+      <Redirect redirect="/projects" text="Projects" />
+      <Redirect redirect="/tags" text="Tags" />
     </div>
   </Styles>
 );

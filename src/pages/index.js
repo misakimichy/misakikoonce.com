@@ -22,15 +22,15 @@ const MainView = ({ data }) => {
     };
   });
 
-  const writingsData = writings.edges.map(({node}) => {
+  const writingsData = writings.edges.map(({ node }) => {
     const { title, description, stackTags, path } = node.frontmatter;
     return {
       name: title,
       path,
       description,
       stackTags,
-    }
-  })
+    };
+  });
 
   return (
     <Layout>

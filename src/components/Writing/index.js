@@ -11,9 +11,10 @@ import { colors } from '../../styles/theme';
 const WritingsSection = ({ cards }) => (
   <Styles>
     <h2>Writings</h2>
-      {cards.map(card => {
-        const { name, path, description, stackTags, thumbnail } = card;
-        return <WritingCard
+    {cards.map((card) => {
+      const { name, path, description, stackTags, thumbnail } = card;
+      return (
+        <WritingCard
           key={name}
           className="project-card"
           title={name}
@@ -22,8 +23,9 @@ const WritingsSection = ({ cards }) => (
           stackTags={stackTags}
           thumbnail={thumbnail}
         />
-      })}
-</Styles>
+      );
+    })}
+  </Styles>
 );
 
 export default WritingsSection;

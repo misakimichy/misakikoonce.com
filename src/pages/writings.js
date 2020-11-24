@@ -11,11 +11,15 @@ const WritingPage = ({ data }) => {
   return (
     <Layout>
       <Styles>
-        <h2 >All writings</h2>
+        <h2>All writings</h2>
         <ul className="tagged-list">
-          {edges.map(edge => {
+          {edges.map((edge) => {
             const { title, path } = edge.node.frontmatter;
-            return <Link key={title} to={path} className="list-names"><li>{title}</li></Link>
+            return (
+              <Link key={title} to={path} className="list-names">
+                <li>{title}</li>
+              </Link>
+            );
           })}
         </ul>
       </Styles>

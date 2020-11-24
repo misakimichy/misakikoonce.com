@@ -13,9 +13,19 @@ const Tags = ({ data }) => {
       <Styles>
         <h2>All tags</h2>
         <ul className="tagged-list">
-          {group.map(tag => {
+          {group.map((tag) => {
             const { fieldValue, totalCount } = tag;
-            return <Link to={`/tags/${fieldValue.toLowerCase()}`} key={fieldValue} className="list-names"><li>{fieldValue} ({totalCount})</li></Link>
+            return (
+              <Link
+                to={`/tags/${fieldValue.toLowerCase()}`}
+                key={fieldValue}
+                className="list-names"
+              >
+                <li>
+                  {fieldValue} ({totalCount})
+                </li>
+              </Link>
+            );
           })}
         </ul>
       </Styles>

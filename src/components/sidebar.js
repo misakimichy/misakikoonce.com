@@ -11,11 +11,11 @@ import profileImage from '../../static/misaki-real.jpeg';
 
 const Sidebar = () => (
   <Styles>
-    {typeof window !== 'undefined' &&
-      <Link to={window.location.pathname === '/' ? "/about" : "/"} className="profile-image-link">
+    {typeof window !== 'undefined' && (
+      <Link to={window.location.pathname === '/' ? '/about' : '/'} className="profile-image-link">
         <img className="profile-image" src={profileImage} alt="Misaki Koonce" />
       </Link>
-    }
+    )}
     <div className="name-holder">
       <h1>Misaki Koonce</h1>
       <h5>Software Engineer</h5>
@@ -24,25 +24,25 @@ const Sidebar = () => (
     {/* <Link to="/about/">About</Link> */}
     <div className="social-links">
       <a href="/ResumeMisakiKoonce.pdf">
-        <button tabIndex='1'>
+        <button tabIndex="1">
           <FontAwesomeIcon icon={['far', 'file']} className="icon" />
           <span className="icon-span">Resume</span>
         </button>
       </a>
       <a href="https://twitter.com/misakimichy">
-        <button tabIndex='1'>
+        <button tabIndex="1">
           <FontAwesomeIcon icon={['fab', 'twitter']} className="icon" />
           <span className="icon-span">Twitter</span>
         </button>
       </a>
       <a href="https://github.com/misakimichy">
-        <button tabIndex='1'>
+        <button tabIndex="1">
           <FontAwesomeIcon icon={['fab', 'github-alt']} className="icon" />
           <span className="icon-span">Github</span>
         </button>
       </a>
       <a href="https://www.linkedin.com/in/misakikoonce">
-        <button tabIndex='1'>
+        <button tabIndex="1">
           <FontAwesomeIcon icon={['fab', 'linkedin-in']} className="icon" />
           <span className="icon-span">LinkedIn</span>
         </button>

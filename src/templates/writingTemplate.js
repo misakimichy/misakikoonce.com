@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 import styled from 'styled-components';
-import { Link, graphql } from "gatsby";
+import { Link, graphql } from 'gatsby';
 
 // component
 import Layout from '../components/Layout';
@@ -17,17 +17,19 @@ const WritingTemplate = ({ data }) => {
       <Styles>
         <h2>{title}</h2>
         <p className="date">{date}</p>
-  
+
         <div className="stack-tag">
           Stack Tag:
-            {stackTags.map(stackTag =>{
-              const link = `/tags/${stackTag.toLowerCase()}/`;
-              return (
-                <Link to={link} key={stackTag}>
-                  <button type="button" className="tag-button">{stackTag}</button>
-                </Link>
-              )
-            })}
+          {stackTags.map((stackTag) => {
+            const link = `/tags/${stackTag.toLowerCase()}/`;
+            return (
+              <Link to={link} key={stackTag}>
+                <button type="button" className="tag-button">
+                  {stackTag}
+                </button>
+              </Link>
+            );
+          })}
         </div>
 
         <main dangerouslySetInnerHTML={{ __html: html }} />
@@ -46,7 +48,7 @@ export const pageQuery = graphql`
         date(formatString: "MMMM DD, YYYY")
         path
         title
-        stackTags,
+        stackTags
       }
     }
   }

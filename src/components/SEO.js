@@ -9,18 +9,18 @@ const SEO = () => (
       query seo {
         site {
           siteMetadata {
-            title,
-            description,
-            siteUrl,
-            logo,
+            title
+            description
+            siteUrl
+            logo
             author
           }
         }
       }
     `}
-    render={data => {
+    render={(data) => {
       const { title, description, logo, siteUrl, author } = data.site.siteMetadata;
-      
+
       return (
         <Helmet title={title}>
           <meta name="description" content={description} />

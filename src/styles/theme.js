@@ -3,7 +3,7 @@ export const colors = {
   fontGreen: '#1ca086',
   backgroundGreen: '#2cffd536',
   neonGreen: '#1ee4bd',
-  codeBackground: "#2B213A",
+  codeBackground: '#2B213A',
 
   // greys
   black: '#000000',
@@ -14,7 +14,7 @@ export const colors = {
   white: '#ffffff',
 
   // box-shadow
-  boxShadow: '7px 7px 10px 2px rgba(216,216,216,0.5)'
+  boxShadow: '7px 7px 10px 2px rgba(216,216,216,0.5)',
 };
 
 export const breakpoints = {

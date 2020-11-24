@@ -8,22 +8,24 @@ import ProjectCard from './projectCard';
 const ProjectSection = ({ cards }) => (
   <Styles>
     <h2>Projects</h2>
-    {cards.map(card => {
+    {cards.map((card) => {
       const { name, path, description, stackTags, thumbnail, projectUrl } = card;
 
-      return <ProjectCard
-        key={name}
-        className="project-card"
-        title={name}
-        url={path}
-        description={description}
-        stackTags={stackTags}
-        thumbnail={thumbnail}
-        projectUrl={projectUrl}
-      />
+      return (
+        <ProjectCard
+          key={name}
+          className="project-card"
+          title={name}
+          url={path}
+          description={description}
+          stackTags={stackTags}
+          thumbnail={thumbnail}
+          projectUrl={projectUrl}
+        />
+      );
     })}
   </Styles>
-)
+);
 
 export default ProjectSection;
 

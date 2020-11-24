@@ -1,6 +1,6 @@
-import React from "react";
+import React from 'react';
 import styled from 'styled-components';
-import { Link, graphql } from "gatsby";
+import { Link, graphql } from 'gatsby';
 
 // component
 import Layout from '../components/Layout';
@@ -10,7 +10,7 @@ import { colors } from '../styles/theme';
 
 const ProjectTemplate = ({ data }) => {
   const { frontmatter, html } = data.markdownRemark;
-  const { title, date, stackTags, techTags, projectUrl} = frontmatter;
+  const { title, date, stackTags, techTags, projectUrl } = frontmatter;
 
   return (
     <Layout>
@@ -20,16 +20,18 @@ const ProjectTemplate = ({ data }) => {
 
         <div className="stack-tag">
           Stack Tag:
-            {stackTags.map(stackTag => {
-              const link = `/tags/${stackTag.toLowerCase()}`;
-              return (
-                <Link to={link} key={stackTag}>
-                  <button type="button" className="tag-button">{stackTag}</button>
-                </Link>
-                )
-            })}
+          {stackTags.map((stackTag) => {
+            const link = `/tags/${stackTag.toLowerCase()}`;
+            return (
+              <Link to={link} key={stackTag}>
+                <button type="button" className="tag-button">
+                  {stackTag}
+                </button>
+              </Link>
+            );
+          })}
         </div>
-        
+
         {projectUrl && (
           <div className="iframe-container">
             <iframe title={title} src={projectUrl} allowFullScreen></iframe>
@@ -40,8 +42,8 @@ const ProjectTemplate = ({ data }) => {
         <div className="tech-stack">
           <h4>Technology Used</h4>
           <ul>
-            {techTags.map(techTag => {
-              return <li key={techTag}>{techTag}</li>
+            {techTags.map((techTag) => {
+              return <li key={techTag}>{techTag}</li>;
             })}
           </ul>
         </div>
@@ -84,7 +86,7 @@ const Styles = styled.div`
   }
 
   .iframe-container {
-    border:1px solid ${colors.paleGrey};
+    border: 1px solid ${colors.paleGrey};
     border-radius: 4px;
     box-shadow: 3px 4px 4px 0 rgba(216, 216, 216, 0.5);
 
