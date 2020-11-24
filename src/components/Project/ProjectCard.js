@@ -9,37 +9,34 @@ import Tag from '../Tag/tag';
 // style
 import { colors } from '../../styles/theme';
 
-const ProjectCard = ({
-  title,
-  url,
-  description,
-  stackTags = [],
-  thumbnail,
-  projectUrl
-}) => (
-    <Styles tabIndex='0'>
-      <img src={thumbnail} alt="project thumbnail" />
-      <div className="card-content" style={{height: '100%'}}>
-        <h4>{title}</h4>
-        <p>{description}</p>
+const ProjectCard = ({ title, url, description, stackTags = [], thumbnail, projectUrl }) => (
+  <Styles tabIndex="0">
+    <img src={thumbnail} alt="project thumbnail" />
+    <div className="card-content" style={{ height: '100%' }}>
+      <h4>{title}</h4>
+      <p>{description}</p>
 
-        <div className="tag-wrapper">
-        <a href={projectUrl} target="_blank" style={{marginBottom: '24px', marginRight: '16px'}}>
-          <span className="link" tabIndex='0'>See project</span>
+      <div className="tag-wrapper">
+        <a href={projectUrl} target="_blank" style={{ marginBottom: '24px', marginRight: '16px' }}>
+          <span className="link" tabIndex="0">
+            See project
+          </span>
         </a>
         <Link to={url}>
-            <span className="link" tabIndex='0'>Read more</span>
+          <span className="link" tabIndex="0">
+            Read more
+          </span>
         </Link>
-        </div>
-  
-        <div className="tag-wrapper">
-          {stackTags.map(tag =>
-            <Tag key={tag} name={tag} />
-          )}
-        </div>
       </div>
-    </Styles>
-  );
+
+      <div className="tag-wrapper">
+        {stackTags.map((tag) => (
+          <Tag key={tag} name={tag} />
+        ))}
+      </div>
+    </div>
+  </Styles>
+);
 
 export default ProjectCard;
 
@@ -47,11 +44,11 @@ ProjectCard.propTypes = {
   title: PropTypes.string.isRequired,
   url: PropTypes.string.isRequired,
   description: PropTypes.string,
-  stackTags: PropTypes.arrayOf(PropTypes.string)
+  stackTags: PropTypes.arrayOf(PropTypes.string),
 };
 
 ProjectCard.defaultProps = {
-  stackTags: []
+  stackTags: [],
 };
 
 const Styles = styled.div`
@@ -64,7 +61,7 @@ const Styles = styled.div`
 
   padding: 24px;
   margin-bottom: 16px;
-  
+
   :hover,
   :focus {
     box-shadow: ${colors.boxShadow};

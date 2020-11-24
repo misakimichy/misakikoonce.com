@@ -6,7 +6,11 @@ import { colors, breakpoints } from './theme';
 export default css`
   @import url('https://fonts.googleapis.com/css2?family=Quattrocento+Sans&display=swap');
 
-  h1, h2, h3, h4, h5 {
+  h1,
+  h2,
+  h3,
+  h4,
+  h5 {
     font-family: 'Benne Regular', serif;
     line-height: 1.15;
     margin-bottom: 1rem;
@@ -23,7 +27,7 @@ export default css`
 
   h2 {
     font-size: 2.957em;
-  
+
     @media (max-width: 800px) {
       font-size: 2.441em;
     }
@@ -49,16 +53,21 @@ export default css`
     font-size: 1.333em;
   }
 
-  div, p, a, li, button {
+  div,
+  p,
+  a,
+  li,
+  button {
     font-family: 'Quattrocento Sans', Helvetica, sans-serif;
   }
 
-  a, span {
+  a,
+  span {
     color: ${colors.fontGreen};
   }
 
   span:focus {
-    outline: none
+    outline: none;
   }
 
   p {
@@ -75,7 +84,9 @@ export default css`
     list-style: circle;
   }
 
-  div, a, button {
+  div,
+  a,
+  button {
     :focus {
       outline: none;
     }
@@ -105,7 +116,7 @@ export default css`
     gap: 32px;
     -webkit-box-pack: center;
     justify-content: center;
-  
+
     width: 100%;
   }
 
@@ -132,9 +143,8 @@ export default css`
 
   .tagged-list {
     list-style: none;
-
   }
-  
+
   .list-names {
     display: block;
     margin-bottom: 8px;
@@ -158,14 +168,15 @@ export default css`
   }
 
   .link {
-    border-bottom: 1px solid transparent;
-  
-  :hover {
+    color: ${colors.black};
     border-bottom: 1px solid ${colors.fontGreen};
-  }
-  :focus  {
+
+    :hover {
+      border-bottom: 1px solid ${colors.fontGreen};
+    }
+    :focus {
       color: ${colors.neonGreen};
-      border-bottom: 1px solid ${colors.neonGreen};
+      border-bottom: 1px solid transparent;
     }
   }
 
@@ -244,7 +255,7 @@ export default css`
     .title {
       font-size: 30px;
     }
-  
+
     .stack-tag {
       display: flex;
     }
