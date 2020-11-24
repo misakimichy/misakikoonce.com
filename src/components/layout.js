@@ -52,9 +52,9 @@ const Styles = styled.div`
     border: 1px solid ${colors.lightGrey};
     border-radius: 4px;
 
-    height: 30px;
+    min-height: 30px;
 
-    margin-right: 10px;
+    margin-right: 16px;
 
     cursor: pointer;
   

@@ -14,19 +14,24 @@ const ProjectCard = ({
   url,
   description,
   stackTags = [],
-  thumbnail
+  thumbnail,
+  projectUrl
 }) => (
     <Styles tabIndex='0'>
       <img src={thumbnail} alt="project thumbnail" />
       <div className="card-content" style={{height: '100%'}}>
-        {typeof window !== 'undefined' && 
-          <Link to={url}>
-            <h4>{title}</h4>
-            <p>{description}
-              <span className="read-more" tabIndex='0'>...read more</span>
-            </p>
-          </Link>
-        }
+        <h4>{title}</h4>
+        <p>{description}</p>
+
+        <div className="tag-wrapper">
+        <a href={projectUrl} target="_blank" style={{marginBottom: '24px', marginRight: '16px'}}>
+          <span className="link" tabIndex='0'>See project</span>
+        </a>
+        <Link to={url}>
+            <span className="link" tabIndex='0'>Read more</span>
+        </Link>
+        </div>
+  
         <div className="tag-wrapper">
           {stackTags.map(tag =>
             <Tag key={tag} name={tag} />

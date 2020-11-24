@@ -9,7 +9,7 @@ const ProjectSection = ({ cards }) => (
   <Styles>
     <h2>Projects</h2>
     {cards.map(card => {
-      const { name, path, description, stackTags, thumbnail } = card;
+      const { name, path, description, stackTags, thumbnail, projectUrl } = card;
 
       return <ProjectCard
         key={name}
@@ -19,6 +19,7 @@ const ProjectSection = ({ cards }) => (
         description={description}
         stackTags={stackTags}
         thumbnail={thumbnail}
+        projectUrl={projectUrl}
       />
     })}
   </Styles>

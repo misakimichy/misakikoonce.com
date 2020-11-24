@@ -20,7 +20,7 @@ const WritingCard = ({
       <Link to={url} className="card-content">
         <h4>{title}</h4>
         <p>{description}
-          <span className="read-more" tabIndex='0'>...read more</span>
+          <span className="link" tabIndex='0'>...read more</span>
         </p>
       </Link>
       <div className="tag-wrapper">

@@ -157,11 +157,15 @@ export default css`
     padding: 2px 5px;
   }
 
-  .read-more {
-    margin-left: 8px;
-
-    :hover, :focus  {
+  .link {
+    border-bottom: 1px solid transparent;
+  
+  :hover {
+    border-bottom: 1px solid ${colors.fontGreen};
+  }
+  :focus  {
       color: ${colors.neonGreen};
+      border-bottom: 1px solid ${colors.neonGreen};
     }
   }
 
@@ -183,7 +187,7 @@ export default css`
 
     p {
       color: ${colors.darkGrey};
-      margin-bottom: 32px;
+      margin-bottom: 16px;
     }
   }
 

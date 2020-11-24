@@ -7,16 +7,14 @@ import { colors } from '../../styles/theme';
 
 const Tag = ({ name, count }) => (
   <Styles>
-    {typeof window !== 'undefined' && 
-      <Link
-        to={`/tags/${name.toLowerCase()}`}
-        tabIndex='1'
-      >
-        <button className="tag-button">
-          {name} {count !== null ? (count) : ''}
-        </button>
-      </Link>
-    }
+    <Link
+      to={`/tags/${name.toLowerCase()}`}
+      tabIndex='1'
+    >
+      <button className="tag-button">
+        {name} {count !== null ? (count) : ''}
+      </button>
+    </Link>
   </Styles>
 );
 

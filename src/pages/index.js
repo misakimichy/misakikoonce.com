@@ -10,14 +10,15 @@ const MainView = ({ data }) => {
   const { projects, writings } = data;
 
   const projectsData = projects.edges.map(({ node }) => {
-    const { title, description, stackTags, path, thumbnail } = node.frontmatter;
+    const { title, description, stackTags, path, thumbnail, projectUrl } = node.frontmatter;
     const { src } = thumbnail.childImageSharp.fluid;
     return {
       name: title,
-      path: path,
-      description: description,
-      stackTags: stackTags,
-      thumbnail: src
+      thumbnail: src,
+      stackTags,
+      path,
+      description,
+      projectUrl,
     };
   });
 
@@ -25,16 +26,16 @@ const MainView = ({ data }) => {
     const { title, description, stackTags, path } = node.frontmatter;
     return {
       name: title,
-      path: path,
-      description: description,
-      stackTags: stackTags,
+      path,
+      description,
+      stackTags,
     }
   })
 
   return (
     <Layout>
-      <WritingSection cards={writingsData} />
       <ProjectSection cards={projectsData} />
+      <WritingSection cards={writingsData} />
     </Layout>
   );
 };
@@ -53,6 +54,7 @@ export const pageQuery = graphql`
             title
             path
             date
+            projectUrl
             stackTags
             projectUrl
             description
