@@ -2,7 +2,7 @@
 path: "/projects/my-bookshelf"
 date: "2020-10-30"
 title: 📚 My Bookshelf 📚
-projectUrl: null
+projectUrl: "https://my-bookshelf.misakikoonce.com"
 stackTags: ["React"]
 techTags: [ "React", "React Hooks", "Styled Components"]
 description: 'This is an app that allow you to create your own bookshelf. You can organize your books in three different bookshelves, "currently reading", "want to read", and "read".'
