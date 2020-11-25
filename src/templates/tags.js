@@ -20,7 +20,7 @@ const Tags = ({ pageContext, data }) => {
             const { title, path } = node.frontmatter;
             return (
               <Link key={title} to={path} className="list-names">
-                {title}
+                <li>{title}</li>
               </Link>
             );
           })}

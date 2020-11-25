@@ -1,6 +1,6 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link, graphql } from 'gatsby';
+import { graphql } from 'gatsby';
 
 // component
 import Layout from '../components/Layout';
@@ -27,9 +27,21 @@ const ProjectTemplate = ({ data }) => {
         </div>
 
         {projectUrl && (
-          <div className="iframe-container">
-            <iframe title={title} src={projectUrl} allowFullScreen></iframe>
-          </div>
+          <>
+            <div className="iframe-container">
+              <iframe title={title} src={projectUrl} allowFullScreen></iframe>
+            </div>
+
+            <a
+              href={projectUrl}
+              target="_blank"
+              style={{ marginBottom: '24px', marginRight: '16px' }}
+            >
+              <span className="link" tabIndex="0">
+                Use the app 👉
+              </span>
+            </a>
+          </>
         )}
         <main dangerouslySetInnerHTML={{ __html: html }} />
 

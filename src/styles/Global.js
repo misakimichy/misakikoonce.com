@@ -132,8 +132,7 @@ export default css`
   }
 
   .date {
-    font-size: 18px;
-    margin-bottom: 16px;
+    margin-top: -16px;
   }
 
   .title {
