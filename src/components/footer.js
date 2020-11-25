@@ -45,6 +45,7 @@ const Styles = styled.footer`
 
   @media screen and (max-width: 480px) {
     height: 7vh;
+    padding: 8px;
     p {
       width: 65%;
     }
