@@ -11,9 +11,8 @@ import { colors } from '../../styles/theme';
 
 const ProjectCard = ({ title, url, description, stackTags, thumbnail, projectUrl }) => (
   <Styles tabIndex="0">
-    <Link to={url}>
-      <img src={thumbnail} alt="project thumbnail" />
-    </Link>
+    <img src={thumbnail} alt="project thumbnail" />
+
     <div className="card-content" style={{ height: '100%' }}>
       <Link to={url}>
         <h4>{title}</h4>
