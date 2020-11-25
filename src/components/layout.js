@@ -53,8 +53,7 @@ const Styles = styled.div`
     border-radius: 4px;
 
     min-height: 30px;
-
-    margin-right: 16px;
+    white-space: nowrap;
 
     cursor: pointer;
 

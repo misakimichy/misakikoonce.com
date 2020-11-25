@@ -9,7 +9,7 @@ import Tag from '../Tag/tag';
 // style
 import { colors } from '../../styles/theme';
 
-const WritingCard = ({ title, url, description, stackTags = [], thumbnail }) => (
+const WritingCard = ({ title, url, description, stackTags, thumbnail }) => (
   <Styles tabIndex="0">
     <Link to={url} className="card-content">
       <h4>{title}</h4>
@@ -21,8 +21,8 @@ const WritingCard = ({ title, url, description, stackTags = [], thumbnail }) => 
       </p>
     </Link>
     <div className="tag-wrapper">
-      {stackTags.map((tag) => (
-        <Tag key={tag} name={tag} />
+      {stackTags.map((tag, index) => (
+        <Tag key={tag} name={tag} count={stackTags.length} index={index} />
       ))}
     </div>
   </Styles>
