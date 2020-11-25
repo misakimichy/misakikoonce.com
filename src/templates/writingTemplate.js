@@ -1,9 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link, graphql } from 'gatsby';
+import { graphql } from 'gatsby';
 
 // component
 import Layout from '../components/Layout';
+import Tag from '../components/Tag/tag';
 
 // theme
 import { colors } from '../styles/theme';
@@ -20,15 +21,8 @@ const WritingTemplate = ({ data }) => {
 
         <div className="stack-tag">
           Stack Tag:
-          {stackTags.map((stackTag) => {
-            const link = `/tags/${stackTag.toLowerCase()}/`;
-            return (
-              <Link to={link} key={stackTag}>
-                <button type="button" className="tag-button">
-                  {stackTag}
-                </button>
-              </Link>
-            );
+          {stackTags.map((tag, index) => {
+            return <Tag key={tag} name={tag} count={stackTags.length} index={index} />;
           })}
         </div>
 
@@ -55,20 +49,11 @@ export const pageQuery = graphql`
 `;
 
 const Styles = styled.div`
-  .date {
-    font-size: 18px;
-    text-align: end;
-  }
-
   .stack-tag {
-    margin-bottom: 24px;
-    a {
-      :first-child {
-        margin-left: 8px;
-      }
+    div {
+      margin-right: 0;
     }
   }
-
   @media screen and (max-width: 1024px) {
     .project-title-wrapper {
       display: flex;

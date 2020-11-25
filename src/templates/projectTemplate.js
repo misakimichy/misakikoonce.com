@@ -1,9 +1,10 @@
 import React from 'react';
 import styled from 'styled-components';
-import { Link, graphql } from 'gatsby';
+import { graphql } from 'gatsby';
 
 // component
 import Layout from '../components/Layout';
+import Tag from '../components/Tag/tag';
 
 // theme
 import { colors } from '../styles/theme';
@@ -20,22 +21,27 @@ const ProjectTemplate = ({ data }) => {
 
         <div className="stack-tag">
           Stack Tag:
-          {stackTags.map((stackTag) => {
-            const link = `/tags/${stackTag.toLowerCase()}`;
-            return (
-              <Link to={link} key={stackTag}>
-                <button type="button" className="tag-button">
-                  {stackTag}
-                </button>
-              </Link>
-            );
+          {stackTags.map((tag, index) => {
+            return <Tag key={tag} name={tag} count={stackTags.length} index={index} />;
           })}
         </div>
 
         {projectUrl && (
-          <div className="iframe-container">
-            <iframe title={title} src={projectUrl} allowFullScreen></iframe>
-          </div>
+          <>
+            <div className="iframe-container">
+              <iframe title={title} src={projectUrl} allowFullScreen></iframe>
+            </div>
+
+            <a
+              href={projectUrl}
+              target="_blank"
+              style={{ marginBottom: '24px', marginRight: '16px' }}
+            >
+              <span className="link" tabIndex="0">
+                Use the app 👉
+              </span>
+            </a>
+          </>
         )}
         <main dangerouslySetInnerHTML={{ __html: html }} />
 
@@ -71,20 +77,6 @@ export const pageQuery = graphql`
 `;
 
 const Styles = styled.div`
-  .date {
-    font-size: 18px;
-    text-align: end;
-  }
-
-  .stack-tag {
-    margin-bottom: 16px;
-    a {
-      :first-child {
-        margin-left: 8px;
-      }
-    }
-  }
-
   .iframe-container {
     border: 1px solid ${colors.paleGrey};
     border-radius: 4px;
@@ -116,9 +108,5 @@ const Styles = styled.div`
       align-items: center;
       justify-content: space-between;
     }
-  }
-
-  @media screen and (max-width: 800px) {
-    margin-bottom: 88px;
   }
 `;

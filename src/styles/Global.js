@@ -20,7 +20,7 @@ export default css`
   h1 {
     font-size: 4.009em;
 
-    @media (max-width: 800px) {
+    @media screen and (max-width: 800px) {
       font-size: 3.052em;
     }
   }
@@ -28,7 +28,7 @@ export default css`
   h2 {
     font-size: 2.957em;
 
-    @media (max-width: 800px) {
+    @media screen and (max-width: 800px) {
       font-size: 2.441em;
     }
   }
@@ -36,7 +36,7 @@ export default css`
   h3 {
     font-size: 2.369em;
 
-    @media (max-width: 800px) {
+    @media screen and (max-width: 800px) {
       font-size: 1.953rem;
     }
   }
@@ -44,7 +44,7 @@ export default css`
   h4 {
     font-size: 1.777em;
 
-    @media (max-width: 800px) {
+    @media screen and (max-width: 800px) {
       font-size: 1.563rem;
     }
   }
@@ -131,10 +131,26 @@ export default css`
     margin-right: calc(1.45rem / 2);
   }
 
+  .date {
+    margin-top: -16px;
+  }
+
   .title {
     font-size: 40px;
     font-weight: bold;
     margin-bottom: 0.5rem;
+  }
+
+  .stack-tag {
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap;
+    margin-bottom: 24px;
+    a {
+      :first-child {
+        margin-left: 8px;
+      }
+    }
   }
 
   .to-home {
@@ -183,6 +199,9 @@ export default css`
   /* Card styling */
   .tag-wrapper {
     display: flex;
+    div {
+      margin-right: 8px;
+    }
   }
 
   .card-content {
@@ -255,9 +274,4 @@ export default css`
     .title {
       font-size: 30px;
     }
-
-    .stack-tag {
-      display: flex;
-    }
-  }
 `;

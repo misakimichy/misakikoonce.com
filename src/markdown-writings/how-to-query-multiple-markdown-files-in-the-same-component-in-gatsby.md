@@ -2,7 +2,7 @@
 path: '/writings/how-to-query-multiple-markdown-files-in-the-same-component-in-gatsby'
 date: '2020-09-16'
 title: 'How to query multiple markdown files in the same component in Gatsby'
-stackTags: ['Gatsby', 'React']
+stackTags: ['Gatsby']
 description: 'I explain how to query multiple markdown files in the same component in Gatsby.'
 ---
 
