@@ -1,7 +1,7 @@
 ---
 path: '/projects/my-bookshelf'
 date: '2020-10-30'
-title: 📚 My Bookshelf 📚
+title: My Bookshelf
 projectUrl: 'https://my-bookshelf.misakikoonce.com'
 stackTags: ['React']
 techTags: ['React', 'React Hooks', 'Styled Components']
