@@ -76,7 +76,8 @@ const Styles = styled.div`
   }
 
   img {
-    width: 50%;
+    width: 350px;
+    height: 205px;
     margin-right: 24px;
   }
 
