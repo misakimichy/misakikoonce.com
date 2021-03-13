@@ -1,6 +1,6 @@
 ---
 path: '/projects/my-bookshelf'
-date: '2020-10-30'
+date: '2019-10-30'
 title: My Bookshelf
 projectUrl: 'https://my-bookshelf.misakikoonce.com'
 stackTags: ['React']

@@ -1,6 +1,6 @@
 ---
 path: '/projects/would-you-rather'
-date: '2020-11-17'
+date: '2019-01-17'
 title: Would you rather?
 projectUrl: 'https://would-you-rather.misakikoonce.com'
 stackTags: ['React', 'Redux']

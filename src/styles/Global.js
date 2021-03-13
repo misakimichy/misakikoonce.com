@@ -35,7 +35,6 @@ export default css`
 
   h3 {
     font-size: 2.369em;
-
     @media screen and (max-width: 800px) {
       font-size: 1.953rem;
     }
