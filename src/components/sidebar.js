@@ -9,7 +9,6 @@ import { colors } from '../styles/theme';
 // asset
 import profileImage from '../../static/misaki-real.jpeg';
 
-import GatsbyConfig from '../../gatsby-config';
 import gatsbyConfig from '../../gatsby-config';
 
 const Sidebar = ({ data }) => {
