@@ -43,6 +43,7 @@ export default css`
 
   h4 {
     font-size: 1.777em;
+    font-weight: 500;
 
     @media screen and (max-width: 800px) {
       font-size: 1.563rem;
@@ -51,6 +52,7 @@ export default css`
 
   h5 {
     font-size: 1.333em;
+    font-weight: 500;
   }
 
   div,
