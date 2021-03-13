@@ -5,20 +5,22 @@ import { Link } from 'gatsby';
 // theme
 import { colors } from '../styles/theme';
 
-const Footer = () => (
-  <Styles>
-    <p>
-      Happily
-      <a href="https://github.com/misakimichy/misakikoonce.com.git" target="_blank">
-        {' '}
-        handmade{' '}
-      </a>
-      with 🧡 and ☕️. ©2020
-      <Link to="/about"> Misaki Koonce</Link>
-    </p>
-  </Styles>
-);
-
+const Footer = () => {
+  const year = new Date().getFullYear();
+  return (
+    <Styles>
+      <p>
+        Happily
+        <a href="https://github.com/misakimichy/misakikoonce.com.git" target="_blank">
+          {' '}
+          handmade{' '}
+        </a>
+        with 🧡 and ☕️. ©{year}
+        <Link to="/about"> Misaki Koonce</Link>
+      </p>
+    </Styles>
+  );
+};
 export default Footer;
 
 const Styles = styled.footer`

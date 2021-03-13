@@ -20,7 +20,12 @@ const ProjectCard = ({ title, url, description, stackTags, thumbnail, projectUrl
       </Link>
 
       <div className="tag-wrapper">
-        <a href={projectUrl} target="_blank" style={{ marginBottom: '24px', marginRight: '16px' }}>
+        <a
+          href={projectUrl}
+          target="_blank"
+          style={{ marginBottom: '24px', marginRight: '16px' }}
+          target="_blank"
+        >
           <span className="link" tabIndex="0">
             See project
           </span>

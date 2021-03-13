@@ -16,8 +16,10 @@ export default () => (
         pair-programmed a few applications a day, worked on a solo project every Friday, and created
         two applications with 4 peers with vanilla JavaScript, React, and C#. While I was on the
         cootcamp, I found a cool tech startup called{' '}
-        <a href="https://www.brainsquall.co/">BrainSquall</a>, and I joined their engineering team
-        as a Software Engineer intern.
+        <a href="https://www.brainsquall.co/" target="_blank">
+          BrainSquall
+        </a>
+        , and I joined their engineering team as a Software Engineer intern.
       </p>
 
       <h3>What am I currently learning?</h3>
@@ -25,11 +27,14 @@ export default () => (
 
       <h3>This is me! - Besides tech</h3>
       <p>
-        😽I like spending time with my twin kittens,{' '}
-        <a href="https://www.instagram.com/pnwbubbies/">Coop and Tot</a>.
+        😽 I like spending time with my twin kittens,{' '}
+        <a href="https://www.instagram.com/pnwbubbies/" target="_blank">
+          Coop and Tot
+        </a>
+        .
       </p>
-      <p>👩🏻‍🍳I'm a foodie. I'm into Korean food lately and I enjoy making kimchi at home.</p>
-      <p>🧗🏻‍♀️I enjoy bouldering even though I'm afraid of height!</p>
+      <p>👩🏻‍🍳 I'm a foodie. I'm into Korean food lately and I enjoy making kimchi at home.</p>
+      <p>🧗🏻‍♀️ I enjoy bouldering even though I'm afraid of height!</p>
     </Styles>
   </Layout>
 );
