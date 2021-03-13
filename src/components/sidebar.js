@@ -9,47 +9,62 @@ import { colors } from '../styles/theme';
 // asset
 import profileImage from '../../static/misaki-real.jpeg';
 
-const Sidebar = () => (
-  <Styles>
-    {typeof window !== 'undefined' && (
-      <Link to={window.location.pathname === '/' ? '/about' : '/'} className="profile-image-link">
-        <img className="profile-image" src={profileImage} alt="Misaki Koonce" />
-      </Link>
-    )}
-    <div className="name-holder">
-      <h1>Misaki Koonce</h1>
-      <h5>Software Engineer</h5>
-      <p>From Tokyo Now in Seattle.I like hard problems and challenging myself!</p>
-    </div>
-    {/* <Link to="/about/">About</Link> */}
-    <div className="social-links">
-      <a href="/ResumeMisakiKoonce.pdf">
-        <button tabIndex="1">
-          <FontAwesomeIcon icon={['far', 'file']} className="icon" />
-          <span className="icon-span">Resume</span>
-        </button>
-      </a>
-      <a href="https://twitter.com/misakimichy">
-        <button tabIndex="1">
-          <FontAwesomeIcon icon={['fab', 'twitter']} className="icon" />
-          <span className="icon-span">Twitter</span>
-        </button>
-      </a>
-      <a href="https://github.com/misakimichy">
-        <button tabIndex="1">
-          <FontAwesomeIcon icon={['fab', 'github-alt']} className="icon" />
-          <span className="icon-span">Github</span>
-        </button>
-      </a>
-      <a href="https://www.linkedin.com/in/misakikoonce">
-        <button tabIndex="1">
-          <FontAwesomeIcon icon={['fab', 'linkedin-in']} className="icon" />
-          <span className="icon-span">LinkedIn</span>
-        </button>
-      </a>
-    </div>
-  </Styles>
-);
+import GatsbyConfig from '../../gatsby-config';
+import gatsbyConfig from '../../gatsby-config';
+
+const Sidebar = ({ data }) => {
+  const {
+    logo,
+    role,
+    author,
+    siteUrl,
+    description,
+    socialLinks,
+    resume,
+  } = gatsbyConfig.siteMetadata;
+  const { twitter, github, linkedin } = socialLinks;
+  return (
+    <Styles>
+      {typeof window !== 'undefined' && (
+        <Link to={window.location.pathname === '/' ? '/about' : '/'} className="profile-image-link">
+          <img className="profile-image" src={logo} alt="Misaki Koonce" />
+        </Link>
+      )}
+      <div className="name-holder">
+        <h1>{author}</h1>
+        <h5>{role}</h5>
+        <p>{description}</p>
+      </div>
+      {/* <Link to="/about/">About</Link> */}
+      <div className="social-links">
+        <a href="/ResumeMisakiKoonce.pdf" target="_blank">
+          <button tabIndex="1">
+            <FontAwesomeIcon icon={['far', 'file']} className="icon" />
+            <span className="icon-span">Resume</span>
+          </button>
+        </a>
+        <a href={twitter} target="_blank">
+          <button tabIndex="1">
+            <FontAwesomeIcon icon={['fab', 'twitter']} className="icon" />
+            <span className="icon-span">Twitter</span>
+          </button>
+        </a>
+        <a href={github} target="_blank">
+          <button tabIndex="1">
+            <FontAwesomeIcon icon={['fab', 'github-alt']} className="icon" />
+            <span className="icon-span">Github</span>
+          </button>
+        </a>
+        <a href={linkedin} target="_blank">
+          <button tabIndex="1">
+            <FontAwesomeIcon icon={['fab', 'linkedin-in']} className="icon" />
+            <span className="icon-span">LinkedIn</span>
+          </button>
+        </a>
+      </div>
+    </Styles>
+  );
+};
 
 export default Sidebar;
 

@@ -1,21 +1,24 @@
 module.exports = {
   siteMetadata: {
-    title: "Misaki Koonce | Software Engineer",
+    title: 'Misaki Koonce | Software Engineer',
     logo: '/misaki-real.jpeg',
-    author: "Misaki Koonce",
-    siteUrl: "https://misakikoonce.com",
-    description: "Software Engineer. From Tokyo Now in Seattle. I like developing applications with React.",
+    role: 'Software Engineer',
+    author: 'Misaki Koonce',
+    siteUrl: 'https://misakikoonce.com',
+    description:
+      'Software Engineer. From Tokyo Now in Seattle. I like developing applications with React.',
     socialLinks: {
-      twitter: "https://twitter.com/misakimichy",
-      github: "https://github.com/misakimichy",
-      linkedin: "https://www.linkedin.com/in/misakikoonce",
+      twitter: 'https://twitter.com/misakimichy',
+      github: 'https://github.com/misakimichy',
+      linkedin: 'https://www.linkedin.com/in/misakikoonce',
     },
     contact: {
-      email: "misaki.koonce@gmail.com"
+      email: 'misaki.koonce@gmail.com',
     },
-    resume: "/ResumeMisakiKoonce.pdf"
+    resume: '/ResumeMisakiKoonce.pdf',
   },
-  plugins: [{
+  plugins: [
+    {
       resolve: `gatsby-source-filesystem`,
       options: {
         path: `${__dirname}/src/markdown-projects`,
@@ -39,7 +42,8 @@ module.exports = {
     {
       resolve: `gatsby-transformer-remark`,
       options: {
-        plugins: [{
+        plugins: [
+          {
             resolve: `gatsby-remark-images`,
             options: {
               maxWidth: 590,
@@ -62,7 +66,7 @@ module.exports = {
             resolve: `gatsby-remark-highlight-code`,
             options: {
               theme: 'synthwave',
-            }
+            },
           },
         ],
       },
@@ -75,6 +79,6 @@ module.exports = {
     `gatsby-plugin-sharp`,
     `gatsby-plugin-react-helmet`,
     `gatsby-plugin-slug`,
-    `gatsby-plugin-styled-components`
+    `gatsby-plugin-styled-components`,
   ],
-}
+};
