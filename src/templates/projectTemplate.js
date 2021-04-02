@@ -38,7 +38,7 @@ const ProjectTemplate = ({ data }) => {
               style={{ marginBottom: '24px', marginRight: '16px' }}
             >
               <span className="link" tabIndex="0">
-                Use the app 👉
+                Visit this project 👉
               </span>
             </a>
           </>
