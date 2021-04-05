@@ -80,7 +80,6 @@ const Styles = styled.div`
   .iframe-container {
     border: 1px solid ${colors.paleGrey};
     border-radius: 4px;
-    box-shadow: 3px 4px 4px 0 rgba(216, 216, 216, 0.5);
 
     height: 500px;
 
