@@ -261,7 +261,7 @@ export default css`
   @media screen and (max-width: 640px) {
     .main-container {
       height: calc(93vh - 333px);
-      padding: 0 32px;
+      padding: 0 16px;
     }
 
     .project-container {
@@ -272,6 +272,10 @@ export default css`
   }
 
   @media screen and (max-width: 480px) {
+    .main-container {
+      width: 85%;
+      padding: 0;
+    }
     .title {
       font-size: 30px;
     }

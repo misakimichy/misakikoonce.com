@@ -86,8 +86,20 @@ const Styles = styled.div`
 
     img {
       width: 100%;
+      height: 100%;
       margin-right: 0;
       margin-bottom: 24px;
+    }
+  }
+
+  @media screen and (max-width: 480px) {
+    border: unset;
+    border-bottom: 1px solid ${colors.paleGrey};
+    border-radius: 0;
+    padding: 16px 0;
+
+    .card-content {
+      padding: 8px;
     }
   }
 `;

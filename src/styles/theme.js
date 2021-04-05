@@ -14,7 +14,7 @@ export const colors = {
   white: '#ffffff',
 
   // box-shadow
-  boxShadow: '7px 7px 10px 2px rgba(216,216,216,0.5)',
+  boxShadow: '0px 0px 10px rgba(0, 0, 0, 0.2)',
 };
 
 export const breakpoints = {
