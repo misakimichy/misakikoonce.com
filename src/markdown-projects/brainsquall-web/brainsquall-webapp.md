@@ -9,7 +9,7 @@ description: 'BrainSquall is a startup in the Seattle area that provides app of 
 thumbnail: 'screenshot.png'
 ---
 
-BrainSquall is a startup in the Seattle area that provides app of combination of diagram, documentation and table that allows users to gather, organize and share complex information fast and intelligently..
+BrainSquall is a startup in the Seattle area that provides app of combination of diagram, documentation and table that allows users to gather, organize and share complex information fast and intelligently.
 
 ### What I worked on
 
