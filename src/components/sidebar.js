@@ -40,7 +40,7 @@ const Sidebar = ({ data }) => {
       <div className="social-links">
         <a href={`mailto: ${email}`} target="_blank">
           <button tabIndex="1">
-            {/* <FontAwesomeIcon icon={['far', 'envelope']} className="icon" /> */}
+            <FontAwesomeIcon icon={['far', 'envelope']} className="icon" />
             <span className="icon-span">E-mail</span>
           </button>
         </a>

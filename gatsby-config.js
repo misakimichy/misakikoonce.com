@@ -72,7 +72,15 @@ module.exports = {
     },
     {
       resolve: `gatsby-plugin-manifest`,
-      options: {},
+      options: {
+        name: `Portfolio`,
+        short_name: `Portfolio`,
+        start_url: `${__dirname}/`,
+        background_color: `#f7f0eb`,
+        theme_color: `#a2466c`,
+        display: `standalone`,
+        icon: '/misaki-real.jpeg',
+      },
     },
     `gatsby-transformer-sharp`,
     `gatsby-plugin-sharp`,
