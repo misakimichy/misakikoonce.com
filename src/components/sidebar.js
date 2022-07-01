@@ -12,16 +12,7 @@ import profileImage from '../../static/misaki-real.jpeg';
 import gatsbyConfig from '../../gatsby-config';
 
 const Sidebar = ({ data }) => {
-  const {
-    logo,
-    role,
-    author,
-    siteUrl,
-    description,
-    socialLinks,
-    resume,
-    contact,
-  } = gatsbyConfig.siteMetadata;
+  const { logo, role, author, siteUrl, socialLinks, resume, contact } = gatsbyConfig.siteMetadata;
   const { twitter, github, linkedin } = socialLinks;
   const { email } = contact;
   return (
@@ -34,16 +25,16 @@ const Sidebar = ({ data }) => {
       <div className="name-holder">
         <h1>{author}</h1>
         <h5>{role}</h5>
-        <p>{description}</p>
+        <p>
+          I'm currently taking a sabbatical. But feel free to{' '}
+          <a href={`mailto: ${email}`} target="_blank">
+            contact me
+          </a>
+          😃
+        </p>
       </div>
       {/* <Link to="/about/">About</Link> */}
       <div className="social-links">
-        <a href={`mailto: ${email}`} target="_blank">
-          <button tabIndex="1">
-            <FontAwesomeIcon icon={['far', 'envelope']} className="icon" />
-            <span className="icon-span">E-mail</span>
-          </button>
-        </a>
         <a href="/ResumeMisakiKoonce.pdf" target="_blank">
           <button tabIndex="1">
             <FontAwesomeIcon icon={['far', 'file']} className="icon" />

@@ -5,7 +5,8 @@ module.exports = {
     role: 'Software Engineer',
     author: 'Misaki Koonce',
     siteUrl: 'https://misakikoonce.com',
-    description: "I'm currently taking a sabbatical. But feel free to contact me 😃",
+    description:
+      'Software Engineer. From Tokyo Now in Texas. I like developing applications with React.',
     socialLinks: {
       twitter: 'https://twitter.com/misakimichy',
       github: 'https://github.com/misakimichy',
