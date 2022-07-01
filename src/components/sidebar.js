@@ -20,8 +20,10 @@ const Sidebar = ({ data }) => {
     description,
     socialLinks,
     resume,
+    contact,
   } = gatsbyConfig.siteMetadata;
   const { twitter, github, linkedin } = socialLinks;
+  const { email } = contact;
   return (
     <Styles>
       {typeof window !== 'undefined' && (
@@ -36,18 +38,24 @@ const Sidebar = ({ data }) => {
       </div>
       {/* <Link to="/about/">About</Link> */}
       <div className="social-links">
+        <a href={`mailto: ${email}`} target="_blank">
+          <button tabIndex="1">
+            {/* <FontAwesomeIcon icon={['far', 'envelope']} className="icon" /> */}
+            <span className="icon-span">E-mail</span>
+          </button>
+        </a>
         <a href="/ResumeMisakiKoonce.pdf" target="_blank">
           <button tabIndex="1">
             <FontAwesomeIcon icon={['far', 'file']} className="icon" />
             <span className="icon-span">Resume</span>
           </button>
         </a>
-        <a href={twitter} target="_blank">
+        {/* <a href={twitter} target="_blank">
           <button tabIndex="1">
             <FontAwesomeIcon icon={['fab', 'twitter']} className="icon" />
             <span className="icon-span">Twitter</span>
           </button>
-        </a>
+        </a> */}
         <a href={github} target="_blank">
           <button tabIndex="1">
             <FontAwesomeIcon icon={['fab', 'github-alt']} className="icon" />
