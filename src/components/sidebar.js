@@ -28,7 +28,7 @@ const Sidebar = ({ data }) => {
         <p>
           I'm currently taking a sabbatical. But feel free to{' '}
           <a href={`mailto: ${email}`} target="_blank">
-            contact me
+            contact me{' '}
           </a>
           😃
         </p>
