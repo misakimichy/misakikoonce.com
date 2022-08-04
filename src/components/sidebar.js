@@ -34,19 +34,19 @@ const Sidebar = ({ data }) => {
         </p>
       </div>
       {/* <Link to="/about/">About</Link> */}
-      <div className="social-links">
+      {/* <div className="social-links">
         <a href="/ResumeMisakiKoonce.pdf" target="_blank">
           <button tabIndex="1">
             <FontAwesomeIcon icon={['far', 'file']} className="icon" />
             <span className="icon-span">Resume</span>
           </button>
         </a>
-        {/* <a href={twitter} target="_blank">
+        <a href={twitter} target="_blank">
           <button tabIndex="1">
             <FontAwesomeIcon icon={['fab', 'twitter']} className="icon" />
             <span className="icon-span">Twitter</span>
           </button>
-        </a> */}
+        </a>
         <a href={github} target="_blank">
           <button tabIndex="1">
             <FontAwesomeIcon icon={['fab', 'github-alt']} className="icon" />
@@ -59,7 +59,7 @@ const Sidebar = ({ data }) => {
             <span className="icon-span">LinkedIn</span>
           </button>
         </a>
-      </div>
+      </div> */}
     </Styles>
   );
 };

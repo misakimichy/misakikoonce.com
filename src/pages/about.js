@@ -16,13 +16,13 @@ export default () => (
 
       <h3>This is me! - Besides tech</h3>
       <p>
-        😽 I love spending time with Bubbies,{' '}
+        😽 I love spending time with our sweet cats, Bubbies,{' '}
         <a href="https://www.instagram.com/pnwbubbies/" target="_blank">
           Coop and Tot
         </a>
         .
       </p>
-      <p>👩🏻‍🍳 I'm a foodie.</p>
+      <p>👩🏻‍🍳 I'm a foodie and love cooking.</p>
       <p>🧗🏻‍♀️ I enjoy climbing.</p>
     </Styles>
   </Layout>
